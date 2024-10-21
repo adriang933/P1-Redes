@@ -3036,7 +3036,7 @@ LOAD c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32
  .FlashConfig   0x00000400       0x10 ./startup/startup_MKW41Z4.o
                 0x00000410                . = ALIGN (0x4)
 
-.text           0x00000420    0x1a188
+.text           0x00000420    0x1a180
                 0x00000420                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(.text))
  .text          0x00000420       0x48 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
@@ -3330,1747 +3330,1747 @@ LOAD c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32
  .text.App_StartScan
                 0x00007060       0xc8 ./source/mwa_coordinator.o
  .text.App_HandleScanEdConfirm
-                0x00007128      0x148 ./source/mwa_coordinator.o
+                0x00007128      0x140 ./source/mwa_coordinator.o
  .text.App_StartCoordinator
-                0x00007270      0x160 ./source/mwa_coordinator.o
+                0x00007268      0x160 ./source/mwa_coordinator.o
  .text.App_SendAssociateResponse
-                0x000073d0      0x100 ./source/mwa_coordinator.o
+                0x000073c8      0x100 ./source/mwa_coordinator.o
  .text.App_HandleMlmeInput
-                0x000074d0       0x6c ./source/mwa_coordinator.o
+                0x000074c8       0x6c ./source/mwa_coordinator.o
  .text.App_HandleMcpsInput
-                0x0000753c       0x5c ./source/mwa_coordinator.o
+                0x00007534       0x5c ./source/mwa_coordinator.o
  .text.App_TransmitUartData
-                0x00007598      0x1a4 ./source/mwa_coordinator.o
+                0x00007590      0x1a4 ./source/mwa_coordinator.o
  .text.App_HandleKeys
-                0x0000773c       0x40 ./source/mwa_coordinator.o
+                0x00007734       0x40 ./source/mwa_coordinator.o
  .text.MLME_NWK_SapHandler
-                0x0000777c       0x34 ./source/mwa_coordinator.o
-                0x0000777c                MLME_NWK_SapHandler
+                0x00007774       0x34 ./source/mwa_coordinator.o
+                0x00007774                MLME_NWK_SapHandler
  .text.MCPS_NWK_SapHandler
-                0x000077b0       0x34 ./source/mwa_coordinator.o
-                0x000077b0                MCPS_NWK_SapHandler
+                0x000077a8       0x34 ./source/mwa_coordinator.o
+                0x000077a8                MCPS_NWK_SapHandler
  .text.HardFault_Handler
-                0x000077e4       0x30 ./source/semihost_hardfault.o
-                0x000077e4                HardFault_Handler
+                0x000077dc       0x30 ./source/semihost_hardfault.o
+                0x000077dc                HardFault_Handler
  .text.NVIC_EnableIRQ
-                0x00007814       0x2c ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x0000780c       0x2c ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
  .text.NVIC_SetPendingIRQ
-                0x00007840       0x30 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00007838       0x30 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
  .text.NVIC_ClearPendingIRQ
-                0x00007870       0x30 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00007868       0x30 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
  .text.NVIC_SetPriority
-                0x000078a0       0xdc ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00007898       0xdc ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
  .text.ProtectFromXcvrInterrupt
-                0x0000797c       0x3c ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
-                0x0000797c                ProtectFromXcvrInterrupt
+                0x00007974       0x3c ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00007974                ProtectFromXcvrInterrupt
  .text.UnprotectFromXcvrInterrupt
-                0x000079b8       0x44 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
-                0x000079b8                UnprotectFromXcvrInterrupt
+                0x000079b0       0x44 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x000079b0                UnprotectFromXcvrInterrupt
  .text.PhyIsrPassRxParams
-                0x000079fc       0x1c ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
-                0x000079fc                PhyIsrPassRxParams
+                0x000079f4       0x1c ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x000079f4                PhyIsrPassRxParams
  .text.PhyIsrSeqCleanup
-                0x00007a18       0x5c ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00007a10       0x5c ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
  .text.PhyIsrTimeoutCleanup
-                0x00007a74       0x60 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00007a6c       0x60 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
  .text.Phy_GetEnergyLevel
-                0x00007ad4       0x58 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
-                0x00007ad4                Phy_GetEnergyLevel
+                0x00007acc       0x58 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00007acc                Phy_GetEnergyLevel
  .text.PHY_InterruptHandler
-                0x00007b2c      0x368 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
-                0x00007b2c                PHY_InterruptHandler
+                0x00007b24      0x368 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00007b24                PHY_InterruptHandler
  .text.PHY_InstallIsr
-                0x00007e94       0x30 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
-                0x00007e94                PHY_InstallIsr
+                0x00007e8c       0x30 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00007e8c                PHY_InstallIsr
  .text.Phy_GetRxParams
-                0x00007ec4       0x74 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00007ebc       0x74 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
  .text.PhyHwInit
-                0x00007f38      0x13c ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x00007f38                PhyHwInit
+                0x00007f30      0x13c ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x00007f30                PhyHwInit
  .text.PhyAbort
-                0x00008074       0xb4 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x00008074                PhyAbort
+                0x0000806c       0xb4 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x0000806c                PhyAbort
  .text.PhyPpGetState
-                0x00008128       0x1c ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x00008128                PhyPpGetState
+                0x00008120       0x1c ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x00008120                PhyPpGetState
  .text.PhyPpSetPanId
-                0x00008144       0x70 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x00008144                PhyPpSetPanId
+                0x0000813c       0x70 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x0000813c                PhyPpSetPanId
  .text.PhyPpSetShortAddr
-                0x000081b4       0x70 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x000081b4                PhyPpSetShortAddr
+                0x000081ac       0x70 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x000081ac                PhyPpSetShortAddr
  .text.PhyPpSetLongAddr
-                0x00008224       0x60 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x00008224                PhyPpSetLongAddr
+                0x0000821c       0x60 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x0000821c                PhyPpSetLongAddr
  .text.PhyPpSetMacRole
-                0x00008284       0x90 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x00008284                PhyPpSetMacRole
+                0x0000827c       0x90 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x0000827c                PhyPpSetMacRole
  .text.PhyPpSetPromiscuous
-                0x00008314       0x5c ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x00008314                PhyPpSetPromiscuous
+                0x0000830c       0x5c ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x0000830c                PhyPpSetPromiscuous
  .text.PhyPp_IndirectQueueInsert
-                0x00008370       0x6c ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x00008370                PhyPp_IndirectQueueInsert
+                0x00008368       0x6c ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x00008368                PhyPp_IndirectQueueInsert
  .text.PhyPp_RemoveFromIndirect
-                0x000083dc       0x60 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x000083dc                PhyPp_RemoveFromIndirect
+                0x000083d4       0x60 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x000083d4                PhyPp_RemoveFromIndirect
  .text.PhyPpIsTxAckDataPending
-                0x0000843c       0x4c ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x0000843c                PhyPpIsTxAckDataPending
+                0x00008434       0x4c ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x00008434                PhyPpIsTxAckDataPending
  .text.PhyPlmeSetPwrState
-                0x00008488      0x128 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x00008488                PhyPlmeSetPwrState
+                0x00008480      0x128 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x00008480                PhyPlmeSetPwrState
  .text.PhyPdDataRequest
-                0x000085b0      0x1b0 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
-                0x000085b0                PhyPdDataRequest
+                0x000085a8      0x1b0 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x000085a8                PhyPdDataRequest
  .text.PhyPlmeRxRequest
-                0x00008760      0x16c ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
-                0x00008760                PhyPlmeRxRequest
+                0x00008758      0x16c ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x00008758                PhyPlmeRxRequest
  .text.PhyPlmeCcaEdRequest
-                0x000088cc      0x11c ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
-                0x000088cc                PhyPlmeCcaEdRequest
+                0x000088c4      0x11c ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x000088c4                PhyPlmeCcaEdRequest
  .text.PhyPlmeSetCurrentChannelRequest
-                0x000089e8       0x8c ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
-                0x000089e8                PhyPlmeSetCurrentChannelRequest
+                0x000089e0       0x8c ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x000089e0                PhyPlmeSetCurrentChannelRequest
  .text.PhyPlmeGetCurrentChannelRequest
-                0x00008a74       0x3c ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
-                0x00008a74                PhyPlmeGetCurrentChannelRequest
+                0x00008a6c       0x3c ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x00008a6c                PhyPlmeGetCurrentChannelRequest
  .text.PhyPlmeSetPwrLevelRequest
-                0x00008ab0       0x7c ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
-                0x00008ab0                PhyPlmeSetPwrLevelRequest
+                0x00008aa8       0x7c ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x00008aa8                PhyPlmeSetPwrLevelRequest
  .text.PhyPlmeGetPwrLevelRequest
-                0x00008b2c       0x34 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
-                0x00008b2c                PhyPlmeGetPwrLevelRequest
+                0x00008b24       0x34 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x00008b24                PhyPlmeGetPwrLevelRequest
  .text.PhyPlmeSetPIBRequest
-                0x00008b60      0x1d0 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
-                0x00008b60                PhyPlmeSetPIBRequest
+                0x00008b58      0x1d0 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x00008b58                PhyPlmeSetPIBRequest
  .text.PhyPlmeGetPIBRequest
-                0x00008d30      0x3c0 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
-                0x00008d30                PhyPlmeGetPIBRequest
+                0x00008d28      0x3c0 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x00008d28                PhyPlmeGetPIBRequest
  .text.PhyRxRetry
-                0x000090f0       0x74 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x000090e8       0x74 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
  .text.Phy_Init
-                0x00009164       0x40 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00009164                Phy_Init
+                0x0000915c       0x40 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x0000915c                Phy_Init
  .text.Phy_RegisterSapHandlers
-                0x000091a4       0x24 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x000091a4                Phy_RegisterSapHandlers
+                0x0000919c       0x24 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x0000919c                Phy_RegisterSapHandlers
  .text.Phy24Task
-                0x000091c8      0x260 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x000091c0      0x260 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
  .text.MAC_PD_SapHandler
-                0x00009428       0xb0 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00009428                MAC_PD_SapHandler
+                0x00009420       0xb0 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009420                MAC_PD_SapHandler
  .text.MAC_PLME_SapHandler
-                0x000094d8      0x194 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x000094d8                MAC_PLME_SapHandler
+                0x000094d0      0x194 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x000094d0                MAC_PLME_SapHandler
  .text.Phy_HandlePdDataReq
-                0x0000966c      0x188 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009664      0x188 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
  .text.Phy_EnterIdle
-                0x000097f4       0x88 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x000097ec       0x88 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
  .text.PhyPlmeSetFrameWaitTime
-                0x0000987c       0x1c ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x0000987c                PhyPlmeSetFrameWaitTime
+                0x00009874       0x1c ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009874                PhyPlmeSetFrameWaitTime
  .text.PhyPlmeSetRxOnWhenIdle
-                0x00009898       0x88 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00009898                PhyPlmeSetRxOnWhenIdle
+                0x00009890       0x88 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009890                PhyPlmeSetRxOnWhenIdle
  .text.PhyIsIdleRx
-                0x00009920       0x4c ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00009920                PhyIsIdleRx
+                0x00009918       0x4c ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009918                PhyIsIdleRx
  .text.Radio_Phy_PdDataConfirm
-                0x0000996c       0x94 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x0000996c                Radio_Phy_PdDataConfirm
+                0x00009964       0x94 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009964                Radio_Phy_PdDataConfirm
  .text.Radio_Phy_PdDataIndication
-                0x00009a00       0x24 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00009a00                Radio_Phy_PdDataIndication
+                0x000099f8       0x24 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x000099f8                Radio_Phy_PdDataIndication
  .text.Radio_Phy_PlmeCcaConfirm
-                0x00009a24       0x34 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00009a24                Radio_Phy_PlmeCcaConfirm
+                0x00009a1c       0x34 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009a1c                Radio_Phy_PlmeCcaConfirm
  .text.Radio_Phy_PlmeEdConfirm
-                0x00009a58       0x34 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00009a58                Radio_Phy_PlmeEdConfirm
+                0x00009a50       0x34 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009a50                Radio_Phy_PlmeEdConfirm
  .text.Radio_Phy_TimeRxTimeoutIndication
-                0x00009a8c       0x30 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00009a8c                Radio_Phy_TimeRxTimeoutIndication
+                0x00009a84       0x30 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009a84                Radio_Phy_TimeRxTimeoutIndication
  .text.Radio_Phy_PlmeRxWatermark
-                0x00009abc       0xb8 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00009abc                Radio_Phy_PlmeRxWatermark
+                0x00009ab4       0xb8 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009ab4                Radio_Phy_PlmeRxWatermark
  .text.Radio_Phy_PlmeFilterFailRx
-                0x00009b74       0x54 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00009b74                Radio_Phy_PlmeFilterFailRx
+                0x00009b6c       0x54 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009b6c                Radio_Phy_PlmeFilterFailRx
  .text.PLME_SendMessage
-                0x00009bc8       0xd4 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009bc0       0xd4 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
  .text.PD_SendMessage
-                0x00009c9c      0x268 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009c94      0x268 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
  .text.Phy_SendLatePLME
-                0x00009f04       0x24 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009efc       0x24 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
  .text.Phy_SendLatePD
-                0x00009f28       0x24 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009f20       0x24 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
  .text.Radio_Phy_Notify
-                0x00009f4c       0x18 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00009f4c                Radio_Phy_Notify
+                0x00009f44       0x18 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00009f44                Radio_Phy_Notify
  .text.PhyTimeSetEventTrigger
-                0x00009f64       0x68 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x00009f64                PhyTimeSetEventTrigger
+                0x00009f5c       0x68 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x00009f5c                PhyTimeSetEventTrigger
  .text.PhyTimeDisableEventTrigger
-                0x00009fcc       0x5c ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x00009fcc                PhyTimeDisableEventTrigger
+                0x00009fc4       0x5c ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x00009fc4                PhyTimeDisableEventTrigger
  .text.PhyTimeSetEventTimeout
-                0x0000a028       0x74 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a028                PhyTimeSetEventTimeout
+                0x0000a020       0x74 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a020                PhyTimeSetEventTimeout
  .text.PhyTimeGetEventTimeout
-                0x0000a09c       0x20 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a09c                PhyTimeGetEventTimeout
+                0x0000a094       0x20 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a094                PhyTimeGetEventTimeout
  .text.PhyTimeDisableEventTimeout
-                0x0000a0bc       0x60 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a0bc                PhyTimeDisableEventTimeout
+                0x0000a0b4       0x60 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a0b4                PhyTimeDisableEventTimeout
  .text.PhyTimeReadClock
-                0x0000a11c       0x28 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a11c                PhyTimeReadClock
+                0x0000a114       0x28 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a114                PhyTimeReadClock
  .text.PhyTimeSetWaitTimeout
-                0x0000a144       0x6c ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a144                PhyTimeSetWaitTimeout
+                0x0000a13c       0x6c ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a13c                PhyTimeSetWaitTimeout
  .text.PhyTimeDisableWaitTimeout
-                0x0000a1b0       0x50 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a1b0                PhyTimeDisableWaitTimeout
+                0x0000a1a8       0x50 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a1a8                PhyTimeDisableWaitTimeout
  .text.PhyTime_ISR
-                0x0000a200       0x54 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a200                PhyTime_ISR
+                0x0000a1f8       0x54 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a1f8                PhyTime_ISR
  .text.PhyTime_TimerInit
-                0x0000a254       0x90 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a254                PhyTime_TimerInit
+                0x0000a24c       0x90 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a24c                PhyTime_TimerInit
  .text.PhyTime_GetTimestamp
-                0x0000a2e4       0x80 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a2e4                PhyTime_GetTimestamp
+                0x0000a2dc       0x80 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a2dc                PhyTime_GetTimestamp
  .text.PhyTime_ScheduleEvent
-                0x0000a364       0xe8 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a364                PhyTime_ScheduleEvent
+                0x0000a35c       0xe8 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a35c                PhyTime_ScheduleEvent
  .text.PhyTime_CancelEvent
-                0x0000a44c       0xa4 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a44c                PhyTime_CancelEvent
+                0x0000a444       0xa4 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a444                PhyTime_CancelEvent
  .text.PhyTime_CancelEventsWithParam
-                0x0000a4f0       0xac ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a4f0                PhyTime_CancelEventsWithParam
+                0x0000a4e8       0xac ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a4e8                PhyTime_CancelEventsWithParam
  .text.PhyTime_RunCallback
-                0x0000a59c       0x70 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a59c                PhyTime_RunCallback
+                0x0000a594       0x70 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a594                PhyTime_RunCallback
  .text.PhyTime_Maintenance
-                0x0000a60c       0xa8 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
-                0x0000a60c                PhyTime_Maintenance
+                0x0000a604       0xa8 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a604                PhyTime_Maintenance
  .text.PhyTime_OverflowCB
-                0x0000a6b4       0x50 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a6ac       0x50 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
  .text.PhyTime_GetNextEvent
-                0x0000a704       0x74 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
+                0x0000a6fc       0x74 ./ieee_802.15.4/phy/source/MKW41Z/PhyTime.o
  .text.MAC_Init
-                0x0000a778       0x68 ./ieee_802.15.4/mac/source/App/MacGlobals.o
-                0x0000a778                MAC_Init
+                0x0000a770       0x68 ./ieee_802.15.4/mac/source/App/MacGlobals.o
+                0x0000a770                MAC_Init
  .text.xEventGroupSetBitsFromISR
-                0x0000a7e0       0x2c ./freertos/event_groups.o
-                0x0000a7e0                xEventGroupSetBitsFromISR
+                0x0000a7d8       0x2c ./freertos/event_groups.o
+                0x0000a7d8                xEventGroupSetBitsFromISR
  .text.prvSetupTimerInterrupt
-                0x0000a80c       0x40 ./freertos/fsl_tickless_lptmr.o
-                0x0000a80c                prvSetupTimerInterrupt
+                0x0000a804       0x40 ./freertos/fsl_tickless_lptmr.o
+                0x0000a804                prvSetupTimerInterrupt
  .text.pvPortMalloc
-                0x0000a84c      0x14c ./freertos/heap_4.o
-                0x0000a84c                pvPortMalloc
+                0x0000a844      0x14c ./freertos/heap_4.o
+                0x0000a844                pvPortMalloc
  .text.vPortFree
-                0x0000a998       0x90 ./freertos/heap_4.o
-                0x0000a998                vPortFree
+                0x0000a990       0x90 ./freertos/heap_4.o
+                0x0000a990                vPortFree
  .text.prvHeapInit
-                0x0000aa28       0xc0 ./freertos/heap_4.o
+                0x0000aa20       0xc0 ./freertos/heap_4.o
  .text.prvInsertBlockIntoFreeList
-                0x0000aae8       0xb0 ./freertos/heap_4.o
+                0x0000aae0       0xb0 ./freertos/heap_4.o
  .text.pxPortInitialiseStack
-                0x0000ab98       0x54 ./freertos/port.o
-                0x0000ab98                pxPortInitialiseStack
+                0x0000ab90       0x54 ./freertos/port.o
+                0x0000ab90                pxPortInitialiseStack
  .text.prvTaskExitError
-                0x0000abec       0x18 ./freertos/port.o
+                0x0000abe4       0x18 ./freertos/port.o
  .text.xPortStartScheduler
-                0x0000ac04       0x44 ./freertos/port.o
-                0x0000ac04                xPortStartScheduler
+                0x0000abfc       0x44 ./freertos/port.o
+                0x0000abfc                xPortStartScheduler
  .text.vPortYield
-                0x0000ac48       0x20 ./freertos/port.o
-                0x0000ac48                vPortYield
+                0x0000ac40       0x20 ./freertos/port.o
+                0x0000ac40                vPortYield
  .text.vPortEnterCritical
-                0x0000ac68       0x24 ./freertos/port.o
-                0x0000ac68                vPortEnterCritical
+                0x0000ac60       0x24 ./freertos/port.o
+                0x0000ac60                vPortEnterCritical
  .text.vPortExitCritical
-                0x0000ac8c       0x30 ./freertos/port.o
-                0x0000ac8c                vPortExitCritical
+                0x0000ac84       0x30 ./freertos/port.o
+                0x0000ac84                vPortExitCritical
  .text.SysTick_Handler
-                0x0000acbc       0x34 ./freertos/port.o
-                0x0000acbc                SysTick_Handler
+                0x0000acb4       0x34 ./freertos/port.o
+                0x0000acb4                SysTick_Handler
  .text.vQueueAddToRegistry
-                0x0000acf0       0x50 ./freertos/queue.o
-                0x0000acf0                vQueueAddToRegistry
+                0x0000ace8       0x50 ./freertos/queue.o
+                0x0000ace8                vQueueAddToRegistry
  .text.prvInitialiseNewTask
-                0x0000ad40      0x12c ./freertos/tasks.o
+                0x0000ad38      0x12c ./freertos/tasks.o
  .text.prvAddNewTaskToReadyList
-                0x0000ae6c       0xd0 ./freertos/tasks.o
+                0x0000ae64       0xd0 ./freertos/tasks.o
  .text.vTaskStartScheduler
-                0x0000af3c       0x78 ./freertos/tasks.o
-                0x0000af3c                vTaskStartScheduler
+                0x0000af34       0x78 ./freertos/tasks.o
+                0x0000af34                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x0000afb4       0x18 ./freertos/tasks.o
-                0x0000afb4                vTaskSuspendAll
+                0x0000afac       0x18 ./freertos/tasks.o
+                0x0000afac                vTaskSuspendAll
  .text.xTaskResumeAll
-                0x0000afcc      0x118 ./freertos/tasks.o
-                0x0000afcc                xTaskResumeAll
+                0x0000afc4      0x118 ./freertos/tasks.o
+                0x0000afc4                xTaskResumeAll
  .text.xTaskGetTickCount
-                0x0000b0e4       0x1c ./freertos/tasks.o
-                0x0000b0e4                xTaskGetTickCount
+                0x0000b0dc       0x1c ./freertos/tasks.o
+                0x0000b0dc                xTaskGetTickCount
  .text.xTaskIncrementTick
-                0x0000b100      0x14c ./freertos/tasks.o
-                0x0000b100                xTaskIncrementTick
+                0x0000b0f8      0x14c ./freertos/tasks.o
+                0x0000b0f8                xTaskIncrementTick
  .text.vTaskSwitchContext
-                0x0000b24c       0xa4 ./freertos/tasks.o
-                0x0000b24c                vTaskSwitchContext
+                0x0000b244       0xa4 ./freertos/tasks.o
+                0x0000b244                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x0000b2f0       0x3c ./freertos/tasks.o
-                0x0000b2f0                vTaskPlaceOnEventList
+                0x0000b2e8       0x3c ./freertos/tasks.o
+                0x0000b2e8                vTaskPlaceOnEventList
  .text.vTaskPlaceOnUnorderedEventList
-                0x0000b32c       0x5c ./freertos/tasks.o
-                0x0000b32c                vTaskPlaceOnUnorderedEventList
+                0x0000b324       0x5c ./freertos/tasks.o
+                0x0000b324                vTaskPlaceOnUnorderedEventList
  .text.vTaskPlaceOnEventListRestricted
-                0x0000b388       0x4c ./freertos/tasks.o
-                0x0000b388                vTaskPlaceOnEventListRestricted
+                0x0000b380       0x4c ./freertos/tasks.o
+                0x0000b380                vTaskPlaceOnEventListRestricted
  .text.xTaskRemoveFromEventList
-                0x0000b3d4       0xb8 ./freertos/tasks.o
-                0x0000b3d4                xTaskRemoveFromEventList
+                0x0000b3cc       0xb8 ./freertos/tasks.o
+                0x0000b3cc                xTaskRemoveFromEventList
  .text.xTaskRemoveFromUnorderedEventList
-                0x0000b48c       0xb0 ./freertos/tasks.o
-                0x0000b48c                xTaskRemoveFromUnorderedEventList
+                0x0000b484       0xb0 ./freertos/tasks.o
+                0x0000b484                xTaskRemoveFromUnorderedEventList
  .text.vTaskSetTimeOutState
-                0x0000b53c       0x34 ./freertos/tasks.o
-                0x0000b53c                vTaskSetTimeOutState
+                0x0000b534       0x34 ./freertos/tasks.o
+                0x0000b534                vTaskSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x0000b570       0x9c ./freertos/tasks.o
-                0x0000b570                xTaskCheckForTimeOut
+                0x0000b568       0x9c ./freertos/tasks.o
+                0x0000b568                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x0000b60c       0x14 ./freertos/tasks.o
-                0x0000b60c                vTaskMissedYield
+                0x0000b604       0x14 ./freertos/tasks.o
+                0x0000b604                vTaskMissedYield
  .text.prvIdleTask
-                0x0000b620       0x20 ./freertos/tasks.o
+                0x0000b618       0x20 ./freertos/tasks.o
  .text.prvInitialiseTaskLists
-                0x0000b640       0x88 ./freertos/tasks.o
+                0x0000b638       0x88 ./freertos/tasks.o
  .text.prvCheckTasksWaitingTermination
-                0x0000b6c8       0x78 ./freertos/tasks.o
+                0x0000b6c0       0x78 ./freertos/tasks.o
  .text.prvResetNextTaskUnblockTime
-                0x0000b740       0x48 ./freertos/tasks.o
+                0x0000b738       0x48 ./freertos/tasks.o
  .text.xTaskGetCurrentTaskHandle
-                0x0000b788       0x1c ./freertos/tasks.o
-                0x0000b788                xTaskGetCurrentTaskHandle
+                0x0000b780       0x1c ./freertos/tasks.o
+                0x0000b780                xTaskGetCurrentTaskHandle
  .text.xTaskGetSchedulerState
-                0x0000b7a4       0x38 ./freertos/tasks.o
-                0x0000b7a4                xTaskGetSchedulerState
+                0x0000b79c       0x38 ./freertos/tasks.o
+                0x0000b79c                xTaskGetSchedulerState
  .text.vTaskPriorityInherit
-                0x0000b7dc       0xbc ./freertos/tasks.o
-                0x0000b7dc                vTaskPriorityInherit
+                0x0000b7d4       0xbc ./freertos/tasks.o
+                0x0000b7d4                vTaskPriorityInherit
  .text.xTaskPriorityDisinherit
-                0x0000b898       0xb8 ./freertos/tasks.o
-                0x0000b898                xTaskPriorityDisinherit
+                0x0000b890       0xb8 ./freertos/tasks.o
+                0x0000b890                xTaskPriorityDisinherit
  .text.uxTaskResetEventItemValue
-                0x0000b950       0x2c ./freertos/tasks.o
-                0x0000b950                uxTaskResetEventItemValue
+                0x0000b948       0x2c ./freertos/tasks.o
+                0x0000b948                uxTaskResetEventItemValue
  .text.pvTaskIncrementMutexHeldCount
-                0x0000b97c       0x24 ./freertos/tasks.o
-                0x0000b97c                pvTaskIncrementMutexHeldCount
+                0x0000b974       0x24 ./freertos/tasks.o
+                0x0000b974                pvTaskIncrementMutexHeldCount
  .text.prvAddCurrentTaskToDelayedList
-                0x0000b9a0       0xa8 ./freertos/tasks.o
+                0x0000b998       0xa8 ./freertos/tasks.o
  .text.xTimerCreateTimerTask
-                0x0000ba48       0x54 ./freertos/timers.o
-                0x0000ba48                xTimerCreateTimerTask
+                0x0000ba40       0x54 ./freertos/timers.o
+                0x0000ba40                xTimerCreateTimerTask
  .text.xTimerGenericCommand
-                0x0000ba9c       0x94 ./freertos/timers.o
-                0x0000ba9c                xTimerGenericCommand
+                0x0000ba94       0x94 ./freertos/timers.o
+                0x0000ba94                xTimerGenericCommand
  .text.prvProcessExpiredTimer
-                0x0000bb30       0x70 ./freertos/timers.o
+                0x0000bb28       0x70 ./freertos/timers.o
  .text.prvProcessTimerOrBlockTask
-                0x0000bba0       0x8c ./freertos/timers.o
+                0x0000bb98       0x8c ./freertos/timers.o
  .text.prvGetNextExpireTime
-                0x0000bc2c       0x40 ./freertos/timers.o
+                0x0000bc24       0x40 ./freertos/timers.o
  .text.prvSampleTimeNow
-                0x0000bc6c       0x40 ./freertos/timers.o
+                0x0000bc64       0x40 ./freertos/timers.o
  .text.prvInsertTimerInActiveList
-                0x0000bcac       0x84 ./freertos/timers.o
+                0x0000bca4       0x84 ./freertos/timers.o
  .text.prvProcessReceivedCommands
-                0x0000bd30      0x128 ./freertos/timers.o
+                0x0000bd28      0x128 ./freertos/timers.o
  .text.prvSwitchTimerLists
-                0x0000be58       0xb4 ./freertos/timers.o
+                0x0000be50       0xb4 ./freertos/timers.o
  .text.prvCheckForValidListAndQueue
-                0x0000bf0c       0x74 ./freertos/timers.o
+                0x0000bf04       0x74 ./freertos/timers.o
  .text.xTimerPendFunctionCallFromISR
-                0x0000bf80       0x4c ./freertos/timers.o
-                0x0000bf80                xTimerPendFunctionCallFromISR
+                0x0000bf78       0x4c ./freertos/timers.o
+                0x0000bf78                xTimerPendFunctionCallFromISR
  .text.XCVR_Init
-                0x0000bfcc      0x128 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
-                0x0000bfcc                XCVR_Init
+                0x0000bfc4      0x128 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
+                0x0000bfc4                XCVR_Init
  .text.XCVR_GetDefaultConfig
-                0x0000c0f4      0x174 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
-                0x0000c0f4                XCVR_GetDefaultConfig
+                0x0000c0ec      0x174 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
+                0x0000c0ec                XCVR_GetDefaultConfig
  .text.XCVR_Configure
-                0x0000c268      0x98c ./framework/XCVR/MKW41Z4/fsl_xcvr.o
-                0x0000c268                XCVR_Configure
+                0x0000c260      0x98c ./framework/XCVR/MKW41Z4/fsl_xcvr.o
+                0x0000c260                XCVR_Configure
  .text.XcvrPanic
-                0x0000cbf4       0x40 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
-                0x0000cbf4                XcvrPanic
+                0x0000cbec       0x40 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
+                0x0000cbec                XcvrPanic
  .text.XCVR_SetXtalTrim
-                0x0000cc34       0x64 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
-                0x0000cc34                XCVR_SetXtalTrim
+                0x0000cc2c       0x64 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
+                0x0000cc2c                XCVR_SetXtalTrim
  .text.XCVR_OverrideChannel
-                0x0000cc98      0x140 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
-                0x0000cc98                XCVR_OverrideChannel
+                0x0000cc90      0x140 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
+                0x0000cc90                XCVR_OverrideChannel
  .text.XCVR_ForceRxWu
-                0x0000cdd8       0x1c ./framework/XCVR/MKW41Z4/fsl_xcvr.o
-                0x0000cdd8                XCVR_ForceRxWu
+                0x0000cdd0       0x1c ./framework/XCVR/MKW41Z4/fsl_xcvr.o
+                0x0000cdd0                XCVR_ForceRxWu
  .text.XCVR_ForceRxWd
-                0x0000cdf4       0x1c ./framework/XCVR/MKW41Z4/fsl_xcvr.o
-                0x0000cdf4                XCVR_ForceRxWd
+                0x0000cdec       0x1c ./framework/XCVR/MKW41Z4/fsl_xcvr.o
+                0x0000cdec                XCVR_ForceRxWd
  .text.calc_dcoc_dac_step
-                0x0000ce10       0x88 ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
-                0x0000ce10                calc_dcoc_dac_step
+                0x0000ce08       0x88 ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
+                0x0000ce08                calc_dcoc_dac_step
  .text.rx_dc_est_average
-                0x0000ce98      0x1a0 ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
-                0x0000ce98                rx_dc_est_average
+                0x0000ce90      0x1a0 ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
+                0x0000ce90                rx_dc_est_average
  .text.rx_bba_dcoc_dac_trim_DCest
-                0x0000d038      0x7bc ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
-                0x0000d038                rx_bba_dcoc_dac_trim_DCest
+                0x0000d030      0x7bc ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
+                0x0000d030                rx_bba_dcoc_dac_trim_DCest
  .text.DCOC_DAC_INIT_Cal
-                0x0000d7f4      0x5f0 ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
-                0x0000d7f4                DCOC_DAC_INIT_Cal
+                0x0000d7ec      0x5f0 ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
+                0x0000d7ec                DCOC_DAC_INIT_Cal
  .text.read_first_ifr_word
-                0x0000dde4       0x20 ./framework/XCVR/MKW41Z4/ifr_radio.o
-                0x0000dde4                read_first_ifr_word
+                0x0000dddc       0x20 ./framework/XCVR/MKW41Z4/ifr_radio.o
+                0x0000dddc                read_first_ifr_word
  .text.read_another_ifr_word
-                0x0000de04       0x2c ./framework/XCVR/MKW41Z4/ifr_radio.o
-                0x0000de04                read_another_ifr_word
+                0x0000ddfc       0x2c ./framework/XCVR/MKW41Z4/ifr_radio.o
+                0x0000ddfc                read_another_ifr_word
  .text.read_resource_ifr
-                0x0000de30       0xd4 ./framework/XCVR/MKW41Z4/ifr_radio.o
-                0x0000de30                read_resource_ifr
+                0x0000de28       0xd4 ./framework/XCVR/MKW41Z4/ifr_radio.o
+                0x0000de28                read_resource_ifr
  .text.handle_ifr
-                0x0000df04      0x184 ./framework/XCVR/MKW41Z4/ifr_radio.o
-                0x0000df04                handle_ifr
+                0x0000defc      0x184 ./framework/XCVR/MKW41Z4/ifr_radio.o
+                0x0000defc                handle_ifr
  .text.NVIC_EnableIRQ
-                0x0000e088       0x2c ./framework/TimersManager/Source/TMR_Adapter.o
+                0x0000e080       0x2c ./framework/TimersManager/Source/TMR_Adapter.o
  .text.NVIC_ClearPendingIRQ
-                0x0000e0b4       0x30 ./framework/TimersManager/Source/TMR_Adapter.o
+                0x0000e0ac       0x30 ./framework/TimersManager/Source/TMR_Adapter.o
  .text.NVIC_SetPriority
-                0x0000e0e4       0xdc ./framework/TimersManager/Source/TMR_Adapter.o
+                0x0000e0dc       0xdc ./framework/TimersManager/Source/TMR_Adapter.o
  .text.StackTimer_Init
-                0x0000e1c0       0x98 ./framework/TimersManager/Source/TMR_Adapter.o
-                0x0000e1c0                StackTimer_Init
+                0x0000e1b8       0x98 ./framework/TimersManager/Source/TMR_Adapter.o
+                0x0000e1b8                StackTimer_Init
  .text.StackTimer_Enable
-                0x0000e258       0x1c ./framework/TimersManager/Source/TMR_Adapter.o
-                0x0000e258                StackTimer_Enable
+                0x0000e250       0x1c ./framework/TimersManager/Source/TMR_Adapter.o
+                0x0000e250                StackTimer_Enable
  .text.StackTimer_Disable
-                0x0000e274       0x18 ./framework/TimersManager/Source/TMR_Adapter.o
-                0x0000e274                StackTimer_Disable
+                0x0000e26c       0x18 ./framework/TimersManager/Source/TMR_Adapter.o
+                0x0000e26c                StackTimer_Disable
  .text.StackTimer_GetCounterValue
-                0x0000e28c       0x14 ./framework/TimersManager/Source/TMR_Adapter.o
-                0x0000e28c                StackTimer_GetCounterValue
+                0x0000e284       0x14 ./framework/TimersManager/Source/TMR_Adapter.o
+                0x0000e284                StackTimer_GetCounterValue
  .text.StackTimer_SetOffsetTicks
-                0x0000e2a0       0x24 ./framework/TimersManager/Source/TMR_Adapter.o
-                0x0000e2a0                StackTimer_SetOffsetTicks
+                0x0000e298       0x24 ./framework/TimersManager/Source/TMR_Adapter.o
+                0x0000e298                StackTimer_SetOffsetTicks
  .text.StackTimer_ClearIntFlag
-                0x0000e2c4       0x30 ./framework/TimersManager/Source/TMR_Adapter.o
-                0x0000e2c4                StackTimer_ClearIntFlag
+                0x0000e2bc       0x30 ./framework/TimersManager/Source/TMR_Adapter.o
+                0x0000e2bc                StackTimer_ClearIntFlag
  .text.TMR_GetTimerStatus
-                0x0000e2f4       0x28 ./framework/TimersManager/Source/TimersManager.o
+                0x0000e2ec       0x28 ./framework/TimersManager/Source/TimersManager.o
  .text.TMR_SetTimerStatus
-                0x0000e31c       0x44 ./framework/TimersManager/Source/TimersManager.o
+                0x0000e314       0x44 ./framework/TimersManager/Source/TimersManager.o
  .text.TMR_GetTimerType
-                0x0000e360       0x28 ./framework/TimersManager/Source/TimersManager.o
+                0x0000e358       0x28 ./framework/TimersManager/Source/TimersManager.o
  .text.TMR_SetTimerType
-                0x0000e388       0x44 ./framework/TimersManager/Source/TimersManager.o
+                0x0000e380       0x44 ./framework/TimersManager/Source/TimersManager.o
  .text.TmrTicksFromMilliseconds
-                0x0000e3cc       0x48 ./framework/TimersManager/Source/TimersManager.o
-                0x0000e3cc                TmrTicksFromMilliseconds
+                0x0000e3c4       0x48 ./framework/TimersManager/Source/TimersManager.o
+                0x0000e3c4                TmrTicksFromMilliseconds
  .text.TMR_Init
-                0x0000e414       0x80 ./framework/TimersManager/Source/TimersManager.o
-                0x0000e414                TMR_Init
+                0x0000e40c       0x80 ./framework/TimersManager/Source/TimersManager.o
+                0x0000e40c                TMR_Init
  .text.TMR_NotifyClkChanged
-                0x0000e494       0x44 ./framework/TimersManager/Source/TimersManager.o
-                0x0000e494                TMR_NotifyClkChanged
+                0x0000e48c       0x44 ./framework/TimersManager/Source/TimersManager.o
+                0x0000e48c                TMR_NotifyClkChanged
  .text.TMR_AllocateTimer
-                0x0000e4d8       0x50 ./framework/TimersManager/Source/TimersManager.o
-                0x0000e4d8                TMR_AllocateTimer
+                0x0000e4d0       0x50 ./framework/TimersManager/Source/TimersManager.o
+                0x0000e4d0                TMR_AllocateTimer
  .text.StackTimer_ISR
-                0x0000e528       0x24 ./framework/TimersManager/Source/TimersManager.o
+                0x0000e520       0x24 ./framework/TimersManager/Source/TimersManager.o
  .text.TMR_StartTimer
-                0x0000e54c       0xe8 ./framework/TimersManager/Source/TimersManager.o
-                0x0000e54c                TMR_StartTimer
+                0x0000e544       0xe8 ./framework/TimersManager/Source/TimersManager.o
+                0x0000e544                TMR_StartTimer
  .text.TMR_StopTimer
-                0x0000e634       0xe8 ./framework/TimersManager/Source/TimersManager.o
-                0x0000e634                TMR_StopTimer
+                0x0000e62c       0xe8 ./framework/TimersManager/Source/TimersManager.o
+                0x0000e62c                TMR_StopTimer
  .text.TMR_Task
-                0x0000e71c      0x4fc ./framework/TimersManager/Source/TimersManager.o
-                0x0000e71c                TMR_Task
+                0x0000e714      0x4fc ./framework/TimersManager/Source/TimersManager.o
+                0x0000e714                TMR_Task
  .text.TMR_EnableTimer
-                0x0000ec18       0x84 ./framework/TimersManager/Source/TimersManager.o
-                0x0000ec18                TMR_EnableTimer
+                0x0000ec10       0x84 ./framework/TimersManager/Source/TimersManager.o
+                0x0000ec10                TMR_EnableTimer
  .text.NVIC_EnableIRQ
-                0x0000ec9c       0x2c ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
+                0x0000ec94       0x2c ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
  .text.NVIC_SetPriority
-                0x0000ecc8       0xdc ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
+                0x0000ecc0       0xdc ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
  .text.LPUART_Initialize
-                0x0000eda4       0xe8 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
-                0x0000eda4                LPUART_Initialize
+                0x0000ed9c       0xe8 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
+                0x0000ed9c                LPUART_Initialize
  .text.LPUART_SetBaudrate
-                0x0000ee8c       0x44 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
-                0x0000ee8c                LPUART_SetBaudrate
+                0x0000ee84       0x44 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
+                0x0000ee84                LPUART_SetBaudrate
  .text.LPUART_SendData
-                0x0000eed0       0xc0 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
-                0x0000eed0                LPUART_SendData
+                0x0000eec8       0xc0 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
+                0x0000eec8                LPUART_SendData
  .text.LPUART_InstallRxCalback
-                0x0000ef90       0x44 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
-                0x0000ef90                LPUART_InstallRxCalback
+                0x0000ef88       0x44 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
+                0x0000ef88                LPUART_InstallRxCalback
  .text.LPUART_InstallTxCalback
-                0x0000efd4       0x44 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
-                0x0000efd4                LPUART_InstallTxCalback
+                0x0000efcc       0x44 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
+                0x0000efcc                LPUART_InstallTxCalback
  .text.LPUART_IsTxActive
-                0x0000f018       0x58 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
-                0x0000f018                LPUART_IsTxActive
+                0x0000f010       0x58 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
+                0x0000f010                LPUART_IsTxActive
  .text.LPUART_ISR
-                0x0000f070      0x17c ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
+                0x0000f068      0x17c ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
  .text.SerialManager_Init
-                0x0000f1ec       0x80 ./framework/SerialManager/Source/SerialManager.o
-                0x0000f1ec                SerialManager_Init
+                0x0000f1e4       0x80 ./framework/SerialManager/Source/SerialManager.o
+                0x0000f1e4                SerialManager_Init
  .text.SerialManagerTask
-                0x0000f26c      0x1c4 ./framework/SerialManager/Source/SerialManager.o
-                0x0000f26c                SerialManagerTask
+                0x0000f264      0x1c4 ./framework/SerialManager/Source/SerialManager.o
+                0x0000f264                SerialManagerTask
  .text.Serial_InitInterface
-                0x0000f430      0x190 ./framework/SerialManager/Source/SerialManager.o
-                0x0000f430                Serial_InitInterface
+                0x0000f428      0x190 ./framework/SerialManager/Source/SerialManager.o
+                0x0000f428                Serial_InitInterface
  .text.Serial_AsyncWrite
-                0x0000f5c0      0x1bc ./framework/SerialManager/Source/SerialManager.o
-                0x0000f5c0                Serial_AsyncWrite
+                0x0000f5b8      0x1bc ./framework/SerialManager/Source/SerialManager.o
+                0x0000f5b8                Serial_AsyncWrite
  .text.Serial_SyncWrite
-                0x0000f77c       0xe0 ./framework/SerialManager/Source/SerialManager.o
-                0x0000f77c                Serial_SyncWrite
+                0x0000f774       0xe0 ./framework/SerialManager/Source/SerialManager.o
+                0x0000f774                Serial_SyncWrite
  .text.Serial_Read
-                0x0000f85c      0x124 ./framework/SerialManager/Source/SerialManager.o
-                0x0000f85c                Serial_Read
+                0x0000f854      0x124 ./framework/SerialManager/Source/SerialManager.o
+                0x0000f854                Serial_Read
  .text.Serial_RxBufferByteCount
-                0x0000f980      0x10c ./framework/SerialManager/Source/SerialManager.o
-                0x0000f980                Serial_RxBufferByteCount
+                0x0000f978      0x10c ./framework/SerialManager/Source/SerialManager.o
+                0x0000f978                Serial_RxBufferByteCount
  .text.Serial_SetRxCallBack
-                0x0000fa8c       0x78 ./framework/SerialManager/Source/SerialManager.o
-                0x0000fa8c                Serial_SetRxCallBack
+                0x0000fa84       0x78 ./framework/SerialManager/Source/SerialManager.o
+                0x0000fa84                Serial_SetRxCallBack
  .text.Serial_SetBaudRate
-                0x0000fb04       0x94 ./framework/SerialManager/Source/SerialManager.o
-                0x0000fb04                Serial_SetBaudRate
+                0x0000fafc       0x94 ./framework/SerialManager/Source/SerialManager.o
+                0x0000fafc                Serial_SetBaudRate
  .text.Serial_WriteInternal
-                0x0000fb98      0x12c ./framework/SerialManager/Source/SerialManager.o
+                0x0000fb90      0x12c ./framework/SerialManager/Source/SerialManager.o
  .text.SerialManager_RxNotify
-                0x0000fcc4       0xc8 ./framework/SerialManager/Source/SerialManager.o
-                0x0000fcc4                SerialManager_RxNotify
+                0x0000fcbc       0xc8 ./framework/SerialManager/Source/SerialManager.o
+                0x0000fcbc                SerialManager_RxNotify
  .text.SerialManager_TxNotify
-                0x0000fd8c       0xf4 ./framework/SerialManager/Source/SerialManager.o
-                0x0000fd8c                SerialManager_TxNotify
+                0x0000fd84       0xf4 ./framework/SerialManager/Source/SerialManager.o
+                0x0000fd84                SerialManager_TxNotify
  .text.Serial_TxQueueMaintenance
-                0x0000fe80      0x15c ./framework/SerialManager/Source/SerialManager.o
+                0x0000fe78      0x15c ./framework/SerialManager/Source/SerialManager.o
  .text.Serial_UartRxCb
-                0x0000ffdc       0x5c ./framework/SerialManager/Source/SerialManager.o
+                0x0000ffd4       0x5c ./framework/SerialManager/Source/SerialManager.o
  .text.SecLib_Init
-                0x00010038       0x3c ./framework/SecLib/SecLib.o
-                0x00010038                SecLib_Init
+                0x00010030       0x3c ./framework/SecLib/SecLib.o
+                0x00010030                SecLib_Init
  .text.AES_128_CCM
-                0x00010074       0xec ./framework/SecLib/SecLib.o
-                0x00010074                AES_128_CCM
+                0x0001006c       0xec ./framework/SecLib/SecLib.o
+                0x0001006c                AES_128_CCM
  .text.NVIC_EnableIRQ
-                0x00010160       0x2c ./framework/RNG/Source/RNG.o
+                0x00010158       0x2c ./framework/RNG/Source/RNG.o
  .text.RNG_Init
-                0x0001018c       0xe0 ./framework/RNG/Source/RNG.o
-                0x0001018c                RNG_Init
+                0x00010184       0xe0 ./framework/RNG/Source/RNG.o
+                0x00010184                RNG_Init
  .text.TRNG_ISR
-                0x0001026c       0x3c ./framework/RNG/Source/RNG.o
+                0x00010264       0x3c ./framework/RNG/Source/RNG.o
  .text.OSA_SemaphorePost
-                0x000102a8       0x9c ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x000102a8                OSA_SemaphorePost
+                0x000102a0       0x9c ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x000102a0                OSA_SemaphorePost
  .text.OSA_EventCreate
-                0x00010344       0x70 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00010344                OSA_EventCreate
+                0x0001033c       0x70 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x0001033c                OSA_EventCreate
  .text.OSA_EventSet
-                0x000103b4       0xa0 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x000103b4                OSA_EventSet
+                0x000103ac       0xa0 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x000103ac                OSA_EventSet
  .text.OSA_EventWait
-                0x00010454       0xa4 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00010454                OSA_EventWait
+                0x0001044c       0xa4 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x0001044c                OSA_EventWait
  .text.OSA_InterruptEnable
-                0x000104f8       0x4c ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x000104f8                OSA_InterruptEnable
+                0x000104f0       0x4c ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x000104f0                OSA_InterruptEnable
  .text.OSA_InterruptDisable
-                0x00010544       0x4c ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00010544                OSA_InterruptDisable
- .text.main     0x00010590       0x24 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00010590                main
+                0x0001053c       0x4c ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x0001053c                OSA_InterruptDisable
+ .text.main     0x00010588       0x24 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00010588                main
  .text.MEM_Init
-                0x000105b4       0xc4 ./framework/MemManager/Source/MemManager.o
-                0x000105b4                MEM_Init
+                0x000105ac       0xc4 ./framework/MemManager/Source/MemManager.o
+                0x000105ac                MEM_Init
  .text.MEM_BufferAllocWithId
-                0x00010678       0xb8 ./framework/MemManager/Source/MemManager.o
-                0x00010678                MEM_BufferAllocWithId
+                0x00010670       0xb8 ./framework/MemManager/Source/MemManager.o
+                0x00010670                MEM_BufferAllocWithId
  .text.MEM_BufferFree
-                0x00010730       0xb0 ./framework/MemManager/Source/MemManager.o
-                0x00010730                MEM_BufferFree
+                0x00010728       0xb0 ./framework/MemManager/Source/MemManager.o
+                0x00010728                MEM_BufferFree
  .text.LED_Init
-                0x000107e0       0x2c ./framework/LED/Source/LED.o
-                0x000107e0                LED_Init
+                0x000107d8       0x2c ./framework/LED/Source/LED.o
+                0x000107d8                LED_Init
  .text.LED_Operate
-                0x0001080c       0x8c ./framework/LED/Source/LED.o
-                0x0001080c                LED_Operate
+                0x00010804       0x8c ./framework/LED/Source/LED.o
+                0x00010804                LED_Operate
  .text.LED_StartBlip
-                0x00010898       0x64 ./framework/LED/Source/LED.o
-                0x00010898                LED_StartBlip
+                0x00010890       0x64 ./framework/LED/Source/LED.o
+                0x00010890                LED_StartBlip
  .text.LED_StopFlash
-                0x000108fc       0x4c ./framework/LED/Source/LED.o
-                0x000108fc                LED_StopFlash
+                0x000108f4       0x4c ./framework/LED/Source/LED.o
+                0x000108f4                LED_StopFlash
  .text.LED_SetLed
-                0x00010948       0xb8 ./framework/LED/Source/LED.o
-                0x00010948                LED_SetLed
+                0x00010940       0xb8 ./framework/LED/Source/LED.o
+                0x00010940                LED_SetLed
  .text.LED_StartFlashWithPeriod
-                0x00010a00       0x58 ./framework/LED/Source/LED.o
-                0x00010a00                LED_StartFlashWithPeriod
+                0x000109f8       0x58 ./framework/LED/Source/LED.o
+                0x000109f8                LED_StartFlashWithPeriod
  .text.LED_StartSerialFlashWithPeriod
-                0x00010a58       0x74 ./framework/LED/Source/LED.o
-                0x00010a58                LED_StartSerialFlashWithPeriod
+                0x00010a50       0x74 ./framework/LED/Source/LED.o
+                0x00010a50                LED_StartSerialFlashWithPeriod
  .text.LED_StopSerialFlash
-                0x00010acc       0x44 ./framework/LED/Source/LED.o
-                0x00010acc                LED_StopSerialFlash
+                0x00010ac4       0x44 ./framework/LED/Source/LED.o
+                0x00010ac4                LED_StopSerialFlash
  .text.LED_DecrementBlip
-                0x00010b10       0x8c ./framework/LED/Source/LED.o
+                0x00010b08       0x8c ./framework/LED/Source/LED.o
  .text.LED_FlashTimeout
-                0x00010b9c       0x74 ./framework/LED/Source/LED.o
+                0x00010b94       0x74 ./framework/LED/Source/LED.o
  .text.KbGpioInit
-                0x00010c10       0x58 ./framework/Keyboard/Source/Keyboard.o
+                0x00010c08       0x58 ./framework/Keyboard/Source/Keyboard.o
  .text.KBD_KeySwitchPortGet
-                0x00010c68       0x7c ./framework/Keyboard/Source/Keyboard.o
+                0x00010c60       0x7c ./framework/Keyboard/Source/Keyboard.o
  .text.KBD_KeyCheck
-                0x00010ce4       0xa0 ./framework/Keyboard/Source/Keyboard.o
- .text.KeyScan  0x00010d84      0x154 ./framework/Keyboard/Source/Keyboard.o
+                0x00010cdc       0xa0 ./framework/Keyboard/Source/Keyboard.o
+ .text.KeyScan  0x00010d7c      0x154 ./framework/Keyboard/Source/Keyboard.o
  .text.Switch_CheckIRQ
-                0x00010ed8       0x50 ./framework/Keyboard/Source/Keyboard.o
+                0x00010ed0       0x50 ./framework/Keyboard/Source/Keyboard.o
  .text.KBD_Init
-                0x00010f28       0xdc ./framework/Keyboard/Source/Keyboard.o
-                0x00010f28                KBD_Init
+                0x00010f20       0xdc ./framework/Keyboard/Source/Keyboard.o
+                0x00010f20                KBD_Init
  .text.Switch_Press_ISR
-                0x00011004       0x70 ./framework/Keyboard/Source/Keyboard.o
-                0x00011004                Switch_Press_ISR
+                0x00010ffc       0x70 ./framework/Keyboard/Source/Keyboard.o
+                0x00010ffc                Switch_Press_ISR
  .text.NVIC_EnableIRQ
-                0x00011074       0x2c ./framework/GPIO/GPIO_Adapter.o
+                0x0001106c       0x2c ./framework/GPIO/GPIO_Adapter.o
  .text.NVIC_ClearPendingIRQ
-                0x000110a0       0x30 ./framework/GPIO/GPIO_Adapter.o
+                0x00011098       0x30 ./framework/GPIO/GPIO_Adapter.o
  .text.NVIC_SetPriority
-                0x000110d0       0xdc ./framework/GPIO/GPIO_Adapter.o
+                0x000110c8       0xdc ./framework/GPIO/GPIO_Adapter.o
  .text.NVIC_GetPriority
-                0x000111ac       0x7c ./framework/GPIO/GPIO_Adapter.o
+                0x000111a4       0x7c ./framework/GPIO/GPIO_Adapter.o
  .text.PORT_SetPinConfig
-                0x00011228       0x38 ./framework/GPIO/GPIO_Adapter.o
+                0x00011220       0x38 ./framework/GPIO/GPIO_Adapter.o
  .text.PORT_SetPinMux
-                0x00011260       0x40 ./framework/GPIO/GPIO_Adapter.o
+                0x00011258       0x40 ./framework/GPIO/GPIO_Adapter.o
  .text.PORT_SetPinInterruptConfig
-                0x000112a0       0x40 ./framework/GPIO/GPIO_Adapter.o
+                0x00011298       0x40 ./framework/GPIO/GPIO_Adapter.o
  .text.GpioSetPinMux
-                0x000112e0       0x44 ./framework/GPIO/GPIO_Adapter.o
-                0x000112e0                GpioSetPinMux
+                0x000112d8       0x44 ./framework/GPIO/GPIO_Adapter.o
+                0x000112d8                GpioSetPinMux
  .text.GpioClearPinIntFlag
-                0x00011324       0x34 ./framework/GPIO/GPIO_Adapter.o
-                0x00011324                GpioClearPinIntFlag
+                0x0001131c       0x34 ./framework/GPIO/GPIO_Adapter.o
+                0x0001131c                GpioClearPinIntFlag
  .text.GpioIsPinIntPending
-                0x00011358       0x38 ./framework/GPIO/GPIO_Adapter.o
-                0x00011358                GpioIsPinIntPending
+                0x00011350       0x38 ./framework/GPIO/GPIO_Adapter.o
+                0x00011350                GpioIsPinIntPending
  .text.GpioSetPinOutput
-                0x00011390       0x34 ./framework/GPIO/GPIO_Adapter.o
-                0x00011390                GpioSetPinOutput
+                0x00011388       0x34 ./framework/GPIO/GPIO_Adapter.o
+                0x00011388                GpioSetPinOutput
  .text.GpioClearPinOutput
-                0x000113c4       0x34 ./framework/GPIO/GPIO_Adapter.o
-                0x000113c4                GpioClearPinOutput
+                0x000113bc       0x34 ./framework/GPIO/GPIO_Adapter.o
+                0x000113bc                GpioClearPinOutput
  .text.GpioTogglePinOutput
-                0x000113f8       0x34 ./framework/GPIO/GPIO_Adapter.o
-                0x000113f8                GpioTogglePinOutput
+                0x000113f0       0x34 ./framework/GPIO/GPIO_Adapter.o
+                0x000113f0                GpioTogglePinOutput
  .text.GpioReadPinInput
-                0x0001142c       0x30 ./framework/GPIO/GPIO_Adapter.o
-                0x0001142c                GpioReadPinInput
+                0x00011424       0x30 ./framework/GPIO/GPIO_Adapter.o
+                0x00011424                GpioReadPinInput
  .text.GpioInputPinInit
-                0x0001145c      0x104 ./framework/GPIO/GPIO_Adapter.o
-                0x0001145c                GpioInputPinInit
+                0x00011454      0x104 ./framework/GPIO/GPIO_Adapter.o
+                0x00011454                GpioInputPinInit
  .text.GpioOutputPinInit
-                0x00011560      0x100 ./framework/GPIO/GPIO_Adapter.o
-                0x00011560                GpioOutputPinInit
+                0x00011558      0x100 ./framework/GPIO/GPIO_Adapter.o
+                0x00011558                GpioOutputPinInit
  .text.GpioInstallIsr
-                0x00011660      0x2c4 ./framework/GPIO/GPIO_Adapter.o
-                0x00011660                GpioInstallIsr
+                0x00011658      0x2c4 ./framework/GPIO/GPIO_Adapter.o
+                0x00011658                GpioInstallIsr
  .text.Gpio_CommonIsr
-                0x00011924       0xb0 ./framework/GPIO/GPIO_Adapter.o
+                0x0001191c       0xb0 ./framework/GPIO/GPIO_Adapter.o
  .text.Gpio_InstallPortISR
-                0x000119d4       0x60 ./framework/GPIO/GPIO_Adapter.o
+                0x000119cc       0x60 ./framework/GPIO/GPIO_Adapter.o
  .text.NV_ComputeCrcOverHWParameters
-                0x00011a34       0xd0 ./framework/Flash/Internal/Flash_Adapter.o
+                0x00011a2c       0xd0 ./framework/Flash/Internal/Flash_Adapter.o
  .text.NV_ReadHWParameters
-                0x00011b04       0x68 ./framework/Flash/Internal/Flash_Adapter.o
-                0x00011b04                NV_ReadHWParameters
+                0x00011afc       0x68 ./framework/Flash/Internal/Flash_Adapter.o
+                0x00011afc                NV_ReadHWParameters
  .text.CLOCK_EnableClock
-                0x00011b6c       0x34 ./framework/DCDC/Source/DCDC.o
+                0x00011b64       0x34 ./framework/DCDC/Source/DCDC.o
  .text.ADC16_GetChannelConversionValue
-                0x00011ba0       0x30 ./framework/DCDC/Source/DCDC.o
+                0x00011b98       0x30 ./framework/DCDC/Source/DCDC.o
  .text.DCDC_MakeADCConversion
-                0x00011bd0       0x44 ./framework/DCDC/Source/DCDC.o
+                0x00011bc8       0x44 ./framework/DCDC/Source/DCDC.o
  .text.DCDC_AdjustVbatDiv
-                0x00011c14       0x68 ./framework/DCDC/Source/DCDC.o
+                0x00011c0c       0x68 ./framework/DCDC/Source/DCDC.o
  .text.DCDC_Get1P8VOutputTargetAndVBatInmV
-                0x00011c7c       0xf4 ./framework/DCDC/Source/DCDC.o
+                0x00011c74       0xf4 ./framework/DCDC/Source/DCDC.o
  .text.DCDC_mVTo1P8OutputTargetBoost
-                0x00011d70      0x168 ./framework/DCDC/Source/DCDC.o
+                0x00011d68      0x168 ./framework/DCDC/Source/DCDC.o
  .text.DCDC_mVTo1P8OutputTargetBuck
-                0x00011ed8       0xe4 ./framework/DCDC/Source/DCDC.o
+                0x00011ed0       0xe4 ./framework/DCDC/Source/DCDC.o
  .text.DCDC_mVToMcuVOutputTargetBoost
-                0x00011fbc       0x8c ./framework/DCDC/Source/DCDC.o
-                0x00011fbc                DCDC_mVToMcuVOutputTargetBoost
+                0x00011fb4       0x8c ./framework/DCDC/Source/DCDC.o
+                0x00011fb4                DCDC_mVToMcuVOutputTargetBoost
  .text.DCDC_GetOutputTargetsBoost
-                0x00012048       0xcc ./framework/DCDC/Source/DCDC.o
+                0x00012040       0xcc ./framework/DCDC/Source/DCDC.o
  .text.DCDC_GetOutputTargetsBuck
-                0x00012114       0x88 ./framework/DCDC/Source/DCDC.o
+                0x0001210c       0x88 ./framework/DCDC/Source/DCDC.o
  .text.DCDC_VBatMonitorBoost
-                0x0001219c      0x1b8 ./framework/DCDC/Source/DCDC.o
+                0x00012194      0x1b8 ./framework/DCDC/Source/DCDC.o
  .text.DCDC_VBatMonitorBuck
-                0x00012354      0x1bc ./framework/DCDC/Source/DCDC.o
+                0x0001234c      0x1bc ./framework/DCDC/Source/DCDC.o
  .text.DCDC_Init
-                0x00012510      0x218 ./framework/DCDC/Source/DCDC.o
-                0x00012510                DCDC_Init
+                0x00012508      0x218 ./framework/DCDC/Source/DCDC.o
+                0x00012508                DCDC_Init
  .text.CLOCK_EnableClock
-                0x00012728       0x34 ./drivers/fsl_adc16.o
+                0x00012720       0x34 ./drivers/fsl_adc16.o
  .text.ADC16_GetInstance
-                0x0001275c       0x48 ./drivers/fsl_adc16.o
+                0x00012754       0x48 ./drivers/fsl_adc16.o
  .text.ADC16_Init
-                0x000127a4      0x114 ./drivers/fsl_adc16.o
-                0x000127a4                ADC16_Init
+                0x0001279c      0x114 ./drivers/fsl_adc16.o
+                0x0001279c                ADC16_Init
  .text.ADC16_SetChannelConfig
-                0x000128b8       0x6c ./drivers/fsl_adc16.o
-                0x000128b8                ADC16_SetChannelConfig
+                0x000128b0       0x6c ./drivers/fsl_adc16.o
+                0x000128b0                ADC16_SetChannelConfig
  .text.ADC16_GetChannelStatusFlags
-                0x00012924       0x40 ./drivers/fsl_adc16.o
-                0x00012924                ADC16_GetChannelStatusFlags
+                0x0001291c       0x40 ./drivers/fsl_adc16.o
+                0x0001291c                ADC16_GetChannelStatusFlags
  .text.CLOCK_SetEr32kClock
-                0x00012964       0x34 ./drivers/fsl_clock.o
+                0x0001295c       0x34 ./drivers/fsl_clock.o
  .text.CLOCK_GetMcgExtClkFreq
-                0x00012998       0x70 ./drivers/fsl_clock.o
+                0x00012990       0x70 ./drivers/fsl_clock.o
  .text.CLOCK_GetFllExtRefClkFreq
-                0x00012a08       0xc0 ./drivers/fsl_clock.o
+                0x00012a00       0xc0 ./drivers/fsl_clock.o
  .text.CLOCK_GetInternalRefClkSelectFreq
-                0x00012ac8       0x40 ./drivers/fsl_clock.o
+                0x00012ac0       0x40 ./drivers/fsl_clock.o
  .text.CLOCK_GetFllRefClkFreq
-                0x00012b08       0x2c ./drivers/fsl_clock.o
+                0x00012b00       0x2c ./drivers/fsl_clock.o
  .text.CLOCK_GetOscRangeFromFreq
-                0x00012b34       0x4c ./drivers/fsl_clock.o
+                0x00012b2c       0x4c ./drivers/fsl_clock.o
  .text.CLOCK_GetOsc0ErClkFreq
-                0x00012b80       0x28 ./drivers/fsl_clock.o
-                0x00012b80                CLOCK_GetOsc0ErClkFreq
+                0x00012b78       0x28 ./drivers/fsl_clock.o
+                0x00012b78                CLOCK_GetOsc0ErClkFreq
  .text.CLOCK_SetSimConfig
-                0x00012ba8       0x2c ./drivers/fsl_clock.o
-                0x00012ba8                CLOCK_SetSimConfig
+                0x00012ba0       0x2c ./drivers/fsl_clock.o
+                0x00012ba0                CLOCK_SetSimConfig
  .text.CLOCK_GetFllFreq
-                0x00012bd4       0x78 ./drivers/fsl_clock.o
-                0x00012bd4                CLOCK_GetFllFreq
+                0x00012bcc       0x78 ./drivers/fsl_clock.o
+                0x00012bcc                CLOCK_GetFllFreq
  .text.CLOCK_GetInternalRefClkFreq
-                0x00012c4c       0x28 ./drivers/fsl_clock.o
-                0x00012c4c                CLOCK_GetInternalRefClkFreq
+                0x00012c44       0x28 ./drivers/fsl_clock.o
+                0x00012c44                CLOCK_GetInternalRefClkFreq
  .text.CLOCK_SetExternalRefClkConfig
-                0x00012c74       0x80 ./drivers/fsl_clock.o
-                0x00012c74                CLOCK_SetExternalRefClkConfig
+                0x00012c6c       0x80 ./drivers/fsl_clock.o
+                0x00012c6c                CLOCK_SetExternalRefClkConfig
  .text.CLOCK_SetInternalRefClkConfig
-                0x00012cf4      0x124 ./drivers/fsl_clock.o
-                0x00012cf4                CLOCK_SetInternalRefClkConfig
+                0x00012cec      0x124 ./drivers/fsl_clock.o
+                0x00012cec                CLOCK_SetInternalRefClkConfig
  .text.CLOCK_InitOsc0
-                0x00012e18       0x68 ./drivers/fsl_clock.o
-                0x00012e18                CLOCK_InitOsc0
+                0x00012e10       0x68 ./drivers/fsl_clock.o
+                0x00012e10                CLOCK_InitOsc0
  .text.CLOCK_SetFeeMode
-                0x00012e80      0x138 ./drivers/fsl_clock.o
-                0x00012e80                CLOCK_SetFeeMode
+                0x00012e78      0x138 ./drivers/fsl_clock.o
+                0x00012e78                CLOCK_SetFeeMode
  .text.__assertion_failed
-                0x00012fb8       0x1c ./drivers/fsl_common.o
-                0x00012fb8                __assertion_failed
+                0x00012fb0       0x1c ./drivers/fsl_common.o
+                0x00012fb0                __assertion_failed
  .text.InstallIRQHandler
-                0x00012fd4       0x98 ./drivers/fsl_common.o
-                0x00012fd4                InstallIRQHandler
+                0x00012fcc       0x98 ./drivers/fsl_common.o
+                0x00012fcc                InstallIRQHandler
  .text.DSPI_CommonIRQHandler
-                0x0001306c       0x40 ./drivers/fsl_dspi.o
+                0x00013064       0x40 ./drivers/fsl_dspi.o
  .text.SPI0_DriverIRQHandler
-                0x000130ac       0x34 ./drivers/fsl_dspi.o
-                0x000130ac                SPI0_DriverIRQHandler
+                0x000130a4       0x34 ./drivers/fsl_dspi.o
+                0x000130a4                SPI0_DriverIRQHandler
  .text.SPI1_DriverIRQHandler
-                0x000130e0       0x34 ./drivers/fsl_dspi.o
-                0x000130e0                SPI1_DriverIRQHandler
+                0x000130d8       0x34 ./drivers/fsl_dspi.o
+                0x000130d8                SPI1_DriverIRQHandler
  .text.GPIO_PinInit
-                0x00013114       0x64 ./drivers/fsl_gpio.o
-                0x00013114                GPIO_PinInit
+                0x0001310c       0x64 ./drivers/fsl_gpio.o
+                0x0001310c                GPIO_PinInit
  .text.I2C_TransferCommonIRQHandler
-                0x00013178       0x58 ./drivers/fsl_i2c.o
+                0x00013170       0x58 ./drivers/fsl_i2c.o
  .text.I2C0_DriverIRQHandler
-                0x000131d0       0x20 ./drivers/fsl_i2c.o
-                0x000131d0                I2C0_DriverIRQHandler
+                0x000131c8       0x20 ./drivers/fsl_i2c.o
+                0x000131c8                I2C0_DriverIRQHandler
  .text.I2C1_DriverIRQHandler
-                0x000131f0       0x20 ./drivers/fsl_i2c.o
-                0x000131f0                I2C1_DriverIRQHandler
+                0x000131e8       0x20 ./drivers/fsl_i2c.o
+                0x000131e8                I2C1_DriverIRQHandler
  .text.CLOCK_EnableClock
-                0x00013210       0x34 ./drivers/fsl_lpuart.o
+                0x00013208       0x34 ./drivers/fsl_lpuart.o
  .text.LPUART_GetInstance
-                0x00013244       0x48 ./drivers/fsl_lpuart.o
-                0x00013244                LPUART_GetInstance
+                0x0001323c       0x48 ./drivers/fsl_lpuart.o
+                0x0001323c                LPUART_GetInstance
  .text.LPUART_Init
-                0x0001328c      0x284 ./drivers/fsl_lpuart.o
-                0x0001328c                LPUART_Init
+                0x00013284      0x284 ./drivers/fsl_lpuart.o
+                0x00013284                LPUART_Init
  .text.LPUART_GetDefaultConfig
-                0x00013510       0x50 ./drivers/fsl_lpuart.o
-                0x00013510                LPUART_GetDefaultConfig
+                0x00013508       0x50 ./drivers/fsl_lpuart.o
+                0x00013508                LPUART_GetDefaultConfig
  .text.LPUART_SetBaudRate
-                0x00013560      0x188 ./drivers/fsl_lpuart.o
-                0x00013560                LPUART_SetBaudRate
+                0x00013558      0x188 ./drivers/fsl_lpuart.o
+                0x00013558                LPUART_SetBaudRate
  .text.LPUART_GetEnabledInterrupts
-                0x000136e8       0x30 ./drivers/fsl_lpuart.o
-                0x000136e8                LPUART_GetEnabledInterrupts
+                0x000136e0       0x30 ./drivers/fsl_lpuart.o
+                0x000136e0                LPUART_GetEnabledInterrupts
  .text.LPUART_ClearStatusFlags
-                0x00013718       0x88 ./drivers/fsl_lpuart.o
-                0x00013718                LPUART_ClearStatusFlags
+                0x00013710       0x88 ./drivers/fsl_lpuart.o
+                0x00013710                LPUART_ClearStatusFlags
  .text.LPUART0_DriverIRQHandler
-                0x000137a0       0x24 ./drivers/fsl_lpuart.o
-                0x000137a0                LPUART0_DriverIRQHandler
+                0x00013798       0x24 ./drivers/fsl_lpuart.o
+                0x00013798                LPUART0_DriverIRQHandler
  .text.CLOCK_EnableClock
-                0x000137c4       0x34 ./drivers/fsl_ltc.o
+                0x000137bc       0x34 ./drivers/fsl_ltc.o
  .text.ltc_clear_all
-                0x000137f8       0x20 ./drivers/fsl_ltc.o
-                0x000137f8                ltc_clear_all
+                0x000137f0       0x20 ./drivers/fsl_ltc.o
+                0x000137f0                ltc_clear_all
  .text.ltc_symmetric_alg_state
-                0x00013818       0x74 ./drivers/fsl_ltc.o
+                0x00013810       0x74 ./drivers/fsl_ltc.o
  .text.LTC_Init
-                0x0001388c       0x1c ./drivers/fsl_ltc.o
-                0x0001388c                LTC_Init
+                0x00013884       0x1c ./drivers/fsl_ltc.o
+                0x00013884                LTC_Init
  .text.ltc_aes_ccm_process_aad
-                0x000138a8      0x1b4 ./drivers/fsl_ltc.o
+                0x000138a0      0x1b4 ./drivers/fsl_ltc.o
  .text.ltc_aes_ccm_process
-                0x00013a5c      0x160 ./drivers/fsl_ltc.o
+                0x00013a54      0x160 ./drivers/fsl_ltc.o
  .text.CLOCK_EnableClock
-                0x00013bbc       0x34 ./drivers/fsl_tpm.o
+                0x00013bb4       0x34 ./drivers/fsl_tpm.o
  .text.TPM_GetInstance
-                0x00013bf0       0x54 ./drivers/fsl_tpm.o
+                0x00013be8       0x54 ./drivers/fsl_tpm.o
  .text.TPM_Init
-                0x00013c44       0xec ./drivers/fsl_tpm.o
-                0x00013c44                TPM_Init
+                0x00013c3c       0xec ./drivers/fsl_tpm.o
+                0x00013c3c                TPM_Init
  .text.TPM_SetupOutputCompare
-                0x00013d30      0x130 ./drivers/fsl_tpm.o
-                0x00013d30                TPM_SetupOutputCompare
+                0x00013d28      0x130 ./drivers/fsl_tpm.o
+                0x00013d28                TPM_SetupOutputCompare
  .text.CLOCK_EnableClock
-                0x00013e60       0x34 ./drivers/fsl_trng.o
+                0x00013e58       0x34 ./drivers/fsl_trng.o
  .text.trng_GetInstance
-                0x00013e94       0x48 ./drivers/fsl_trng.o
+                0x00013e8c       0x48 ./drivers/fsl_trng.o
  .text.TRNG_GetDefaultConfig
-                0x00013edc       0xe0 ./drivers/fsl_trng.o
-                0x00013edc                TRNG_GetDefaultConfig
+                0x00013ed4       0xe0 ./drivers/fsl_trng.o
+                0x00013ed4                TRNG_GetDefaultConfig
  .text.trng_SetRetryCount
-                0x00013fbc       0x50 ./drivers/fsl_trng.o
+                0x00013fb4       0x50 ./drivers/fsl_trng.o
  .text.trng_SetStatisticalCheckLimit
-                0x0001400c      0x320 ./drivers/fsl_trng.o
+                0x00014004      0x320 ./drivers/fsl_trng.o
  .text.trng_ApplyUserConfig
-                0x0001432c      0x1c4 ./drivers/fsl_trng.o
+                0x00014324      0x1c4 ./drivers/fsl_trng.o
  .text.TRNG_Init
-                0x000144f0       0xb8 ./drivers/fsl_trng.o
-                0x000144f0                TRNG_Init
+                0x000144e8       0xb8 ./drivers/fsl_trng.o
+                0x000144e8                TRNG_Init
  .text.CLOCK_EnableClock
-                0x000145a8       0x34 ./board/board.o
+                0x000145a0       0x34 ./board/board.o
  .text.hardware_init
-                0x000145dc      0x15c ./board/board.o
-                0x000145dc                hardware_init
+                0x000145d4      0x15c ./board/board.o
+                0x000145d4                hardware_init
  .text.NMI_Handler
-                0x00014738       0x20 ./board/board.o
-                0x00014738                NMI_Handler
+                0x00014730       0x20 ./board/board.o
+                0x00014730                NMI_Handler
  .text.BOARD_DCDCInit
-                0x00014758       0x18 ./board/board.o
-                0x00014758                BOARD_DCDCInit
+                0x00014750       0x18 ./board/board.o
+                0x00014750                BOARD_DCDCInit
  .text.BOARD_GetLpuartClock
-                0x00014770       0x68 ./board/board.o
-                0x00014770                BOARD_GetLpuartClock
+                0x00014768       0x68 ./board/board.o
+                0x00014768                BOARD_GetLpuartClock
  .text.BOARD_GetTpmClock
-                0x000147d8       0x68 ./board/board.o
-                0x000147d8                BOARD_GetTpmClock
+                0x000147d0       0x68 ./board/board.o
+                0x000147d0                BOARD_GetTpmClock
  .text.CLOCK_EnableClock
-                0x00014840       0x34 ./board/clock_config.o
+                0x00014838       0x34 ./board/clock_config.o
  .text.CLOCK_DisableClock
-                0x00014874       0x38 ./board/clock_config.o
+                0x0001486c       0x38 ./board/clock_config.o
  .text.CLOCK_SetLpuartClock
-                0x000148ac       0x38 ./board/clock_config.o
+                0x000148a4       0x38 ./board/clock_config.o
  .text.CLOCK_SetTpmClock
-                0x000148e4       0x38 ./board/clock_config.o
+                0x000148dc       0x38 ./board/clock_config.o
  .text.CLOCK_SetSimSafeDivs
-                0x0001491c       0x1c ./board/clock_config.o
+                0x00014914       0x1c ./board/clock_config.o
  .text.CLOCK_SetXtal0Freq
-                0x00014938       0x1c ./board/clock_config.o
+                0x00014930       0x1c ./board/clock_config.o
  .text.CLOCK_SetXtal32Freq
-                0x00014954       0x1c ./board/clock_config.o
+                0x0001494c       0x1c ./board/clock_config.o
  .text.RTC_SetOscCapLoad
-                0x00014970       0x34 ./board/clock_config.o
+                0x00014968       0x34 ./board/clock_config.o
  .text.CLOCK_CONFIG_FllStableDelay
-                0x000149a4       0x28 ./board/clock_config.o
+                0x0001499c       0x28 ./board/clock_config.o
  .text.CLOCK_CONFIG_SetRtcClock
-                0x000149cc       0x4c ./board/clock_config.o
+                0x000149c4       0x4c ./board/clock_config.o
  .text.CLOCK_CONFIG_EnableRtcOsc
-                0x00014a18       0x50 ./board/clock_config.o
+                0x00014a10       0x50 ./board/clock_config.o
  .text.BOARD_RfOscInit
-                0x00014a68       0xc8 ./board/clock_config.o
-                0x00014a68                BOARD_RfOscInit
+                0x00014a60       0xc8 ./board/clock_config.o
+                0x00014a60                BOARD_RfOscInit
  .text.BOARD_InitOsc0
-                0x00014b30       0x30 ./board/clock_config.o
-                0x00014b30                BOARD_InitOsc0
+                0x00014b28       0x30 ./board/clock_config.o
+                0x00014b28                BOARD_InitOsc0
  .text.BOARD_BootClockRUN
-                0x00014b60       0x6c ./board/clock_config.o
-                0x00014b60                BOARD_BootClockRUN
+                0x00014b58       0x6c ./board/clock_config.o
+                0x00014b58                BOARD_BootClockRUN
  .text.CLOCK_EnableClock
-                0x00014bcc       0x34 ./board/pin_mux.o
+                0x00014bc4       0x34 ./board/pin_mux.o
  .text.PORT_SetPinMux
-                0x00014c00       0x40 ./board/pin_mux.o
+                0x00014bf8       0x40 ./board/pin_mux.o
  .text.BOARD_InitButtons
-                0x00014c40       0x34 ./board/pin_mux.o
-                0x00014c40                BOARD_InitButtons
+                0x00014c38       0x34 ./board/pin_mux.o
+                0x00014c38                BOARD_InitButtons
  .text.BOARD_InitLEDs
-                0x00014c74       0x78 ./board/pin_mux.o
-                0x00014c74                BOARD_InitLEDs
+                0x00014c6c       0x78 ./board/pin_mux.o
+                0x00014c6c                BOARD_InitLEDs
  .text.BOARD_InitLPUART
-                0x00014cec       0x4c ./board/pin_mux.o
-                0x00014cec                BOARD_InitLPUART
+                0x00014ce4       0x4c ./board/pin_mux.o
+                0x00014ce4                BOARD_InitLPUART
  .text.SystemInit
-                0x00014d38       0x18 ./CMSIS/system_MKW41Z4.o
-                0x00014d38                SystemInit
- .text.roundf   0x00014d50       0x48 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a(lib_a-sf_round.o)
-                0x00014d50                roundf
- .text.exit     0x00014d98       0x20 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-exit.o)
-                0x00014d98                exit
+                0x00014d30       0x18 ./CMSIS/system_MKW41Z4.o
+                0x00014d30                SystemInit
+ .text.roundf   0x00014d48       0x48 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libm.a(lib_a-sf_round.o)
+                0x00014d48                roundf
+ .text.exit     0x00014d90       0x20 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-exit.o)
+                0x00014d90                exit
  .text.__libc_init_array
-                0x00014db8       0x44 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-init.o)
-                0x00014db8                __libc_init_array
- .text.memcpy   0x00014dfc       0xa4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-memcpy-stub.o)
-                0x00014dfc                memcpy
- .text.memset   0x00014ea0       0xa8 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-memset.o)
-                0x00014ea0                memset
- .text.strlen   0x00014f48       0x5c c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
-                0x00014f48                strlen
+                0x00014db0       0x44 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-init.o)
+                0x00014db0                __libc_init_array
+ .text.memcpy   0x00014df4       0xa4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-memcpy-stub.o)
+                0x00014df4                memcpy
+ .text.memset   0x00014e98       0xa8 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-memset.o)
+                0x00014e98                memset
+ .text.strlen   0x00014f40       0x5c c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-strlen-stub.o)
+                0x00014f40                strlen
  .text.startup.register_fini
-                0x00014fa4       0x18 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-__call_atexit.o)
+                0x00014f9c       0x18 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-__call_atexit.o)
  .text.__call_exitprocs
-                0x00014fbc       0xf8 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-__call_atexit.o)
-                0x00014fbc                __call_exitprocs
- .text.atexit   0x000150b4       0x10 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-atexit.o)
-                0x000150b4                atexit
+                0x00014fb4       0xf8 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-__call_atexit.o)
+                0x00014fb4                __call_exitprocs
+ .text.atexit   0x000150ac       0x10 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-atexit.o)
+                0x000150ac                atexit
  .text.__libc_fini_array
-                0x000150c4       0x28 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-fini.o)
-                0x000150c4                __libc_fini_array
+                0x000150bc       0x28 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-fini.o)
+                0x000150bc                __libc_fini_array
  .text.__retarget_lock_acquire_recursive
-                0x000150ec        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
-                0x000150ec                __retarget_lock_acquire_recursive
+                0x000150e4        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
+                0x000150e4                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x000150f0        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
-                0x000150f0                __retarget_lock_release_recursive
+                0x000150e8        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-lock.o)
+                0x000150e8                __retarget_lock_release_recursive
  .text.__register_exitproc
-                0x000150f4       0xac c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-__atexit.o)
-                0x000150f4                __register_exitproc
- .text._exit    0x000151a0        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
-                0x000151a0                _exit
+                0x000150ec       0xac c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-__atexit.o)
+                0x000150ec                __register_exitproc
+ .text._exit    0x00015198        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(_exit.o)
+                0x00015198                _exit
  .text.DbgConsole_PrintfPaddingCharacter
-                0x000151a4       0x48 ./utilities/fsl_debug_console.o
+                0x0001519c       0x48 ./utilities/fsl_debug_console.o
  .text.DbgConsole_ConvertRadixNumToString
-                0x000151ec      0x114 ./utilities/fsl_debug_console.o
+                0x000151e4      0x114 ./utilities/fsl_debug_console.o
  .text.DbgConsole_PrintfFormattedData
-                0x00015300      0x33a ./utilities/fsl_debug_console.o
+                0x000152f8      0x33a ./utilities/fsl_debug_console.o
  .text.App_WaitMsg
-                0x0001563a       0x32 ./source/mwa_coordinator.o
+                0x00015632       0x32 ./source/mwa_coordinator.o
  .text.MPM_AcquirePAN
-                0x0001566c       0x12 ./ieee_802.15.4/phy/source/MKW41Z/MPM.o
-                0x0001566c                MPM_AcquirePAN
+                0x00015664       0x12 ./ieee_802.15.4/phy/source/MKW41Z/MPM.o
+                0x00015664                MPM_AcquirePAN
  .text.MPM_ReleasePAN
-                0x0001567e       0x12 ./ieee_802.15.4/phy/source/MKW41Z/MPM.o
-                0x0001567e                MPM_ReleasePAN
+                0x00015676       0x12 ./ieee_802.15.4/phy/source/MKW41Z/MPM.o
+                0x00015676                MPM_ReleasePAN
  .text.PHY_ForceIrqPending
-                0x00015690       0x10 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
-                0x00015690                PHY_ForceIrqPending
+                0x00015688       0x10 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00015688                PHY_ForceIrqPending
  .text.Phy_LqiConvert
-                0x000156a0       0x46 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x00015698       0x46 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
  .text.BindToPHY
-                0x000156e6       0x12 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x000156e6                BindToPHY
+                0x000156de       0x12 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x000156de                BindToPHY
  .text.Phy_SetSequenceTiming
-                0x000156f8       0x9e ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x000156f8                Phy_SetSequenceTiming
+                0x000156f0       0x9e ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x000156f0                Phy_SetSequenceTiming
  .text.Radio_Phy_TimeWaitTimeoutIndication
-                0x00015796       0x14 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x00015796                Radio_Phy_TimeWaitTimeoutIndication
+                0x0001578e       0x14 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x0001578e                Radio_Phy_TimeWaitTimeoutIndication
  .text.Radio_Phy_TimeStartEventIndication
-                0x000157aa       0x10 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x000157aa                Radio_Phy_TimeStartEventIndication
+                0x000157a2       0x10 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x000157a2                Radio_Phy_TimeStartEventIndication
  .text.Radio_Phy_PlmeSyncLossIndication
-                0x000157ba       0x1c ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x000157ba                Radio_Phy_PlmeSyncLossIndication
+                0x000157b2       0x1c ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x000157b2                Radio_Phy_PlmeSyncLossIndication
  .text.MAC_Monitor
-                0x000157d6       0x24 ./ieee_802.15.4/mac/source/App/FsciMacCommands.o
-                0x000157d6                MAC_Monitor
+                0x000157ce       0x24 ./ieee_802.15.4/mac/source/App/FsciMacCommands.o
+                0x000157ce                MAC_Monitor
  .text.xEventGroupCreate
-                0x000157fa       0x30 ./freertos/event_groups.o
-                0x000157fa                xEventGroupCreate
+                0x000157f2       0x30 ./freertos/event_groups.o
+                0x000157f2                xEventGroupCreate
  .text.xEventGroupWaitBits
-                0x0001582a      0x148 ./freertos/event_groups.o
-                0x0001582a                xEventGroupWaitBits
+                0x00015822      0x148 ./freertos/event_groups.o
+                0x00015822                xEventGroupWaitBits
  .text.xEventGroupSetBits
-                0x00015972       0xf2 ./freertos/event_groups.o
-                0x00015972                xEventGroupSetBits
+                0x0001596a       0xf2 ./freertos/event_groups.o
+                0x0001596a                xEventGroupSetBits
  .text.vEventGroupSetBitsCallback
-                0x00015a64       0x1e ./freertos/event_groups.o
-                0x00015a64                vEventGroupSetBitsCallback
+                0x00015a5c       0x1e ./freertos/event_groups.o
+                0x00015a5c                vEventGroupSetBitsCallback
  .text.prvTestWaitCondition
-                0x00015a82       0x3e ./freertos/event_groups.o
+                0x00015a7a       0x3e ./freertos/event_groups.o
  .text.vListInitialise
-                0x00015ac0       0x3c ./freertos/list.o
-                0x00015ac0                vListInitialise
+                0x00015ab8       0x3c ./freertos/list.o
+                0x00015ab8                vListInitialise
  .text.vListInitialiseItem
-                0x00015afc       0x16 ./freertos/list.o
-                0x00015afc                vListInitialiseItem
+                0x00015af4       0x16 ./freertos/list.o
+                0x00015af4                vListInitialiseItem
  .text.vListInsertEnd
-                0x00015b12       0x44 ./freertos/list.o
-                0x00015b12                vListInsertEnd
+                0x00015b0a       0x44 ./freertos/list.o
+                0x00015b0a                vListInsertEnd
  .text.vListInsert
-                0x00015b56       0x6c ./freertos/list.o
-                0x00015b56                vListInsert
+                0x00015b4e       0x6c ./freertos/list.o
+                0x00015b4e                vListInsert
  .text.uxListRemove
-                0x00015bc2       0x50 ./freertos/list.o
-                0x00015bc2                uxListRemove
+                0x00015bba       0x50 ./freertos/list.o
+                0x00015bba                uxListRemove
  .text.SVC_Handler
-                0x00015c12        0xa ./freertos/port.o
-                0x00015c12                SVC_Handler
+                0x00015c0a        0xa ./freertos/port.o
+                0x00015c0a                SVC_Handler
  .text.ulSetInterruptMaskFromISR
-                0x00015c1c        0xc ./freertos/port.o
-                0x00015c1c                ulSetInterruptMaskFromISR
+                0x00015c14        0xc ./freertos/port.o
+                0x00015c14                ulSetInterruptMaskFromISR
  .text.vClearInterruptMaskFromISR
-                0x00015c28        0x8 ./freertos/port.o
-                0x00015c28                vClearInterruptMaskFromISR
+                0x00015c20        0x8 ./freertos/port.o
+                0x00015c20                vClearInterruptMaskFromISR
  .text.xQueueGenericReset
-                0x00015c30       0xa8 ./freertos/queue.o
-                0x00015c30                xQueueGenericReset
+                0x00015c28       0xa8 ./freertos/queue.o
+                0x00015c28                xQueueGenericReset
  .text.xQueueGenericCreate
-                0x00015cd8       0x64 ./freertos/queue.o
-                0x00015cd8                xQueueGenericCreate
+                0x00015cd0       0x64 ./freertos/queue.o
+                0x00015cd0                xQueueGenericCreate
  .text.prvInitialiseNewQueue
-                0x00015d3c       0x4e ./freertos/queue.o
+                0x00015d34       0x4e ./freertos/queue.o
  .text.prvInitialiseMutex
-                0x00015d8a       0x34 ./freertos/queue.o
+                0x00015d82       0x34 ./freertos/queue.o
  .text.xQueueCreateMutex
-                0x00015dbe       0x38 ./freertos/queue.o
-                0x00015dbe                xQueueCreateMutex
+                0x00015db6       0x38 ./freertos/queue.o
+                0x00015db6                xQueueCreateMutex
  .text.xQueueGetMutexHolder
-                0x00015df6       0x2e ./freertos/queue.o
-                0x00015df6                xQueueGetMutexHolder
+                0x00015dee       0x2e ./freertos/queue.o
+                0x00015dee                xQueueGetMutexHolder
  .text.xQueueCreateCountingSemaphore
-                0x00015e24       0x46 ./freertos/queue.o
-                0x00015e24                xQueueCreateCountingSemaphore
+                0x00015e1c       0x46 ./freertos/queue.o
+                0x00015e1c                xQueueCreateCountingSemaphore
  .text.xQueueGenericSend
-                0x00015e6a      0x188 ./freertos/queue.o
-                0x00015e6a                xQueueGenericSend
+                0x00015e62      0x188 ./freertos/queue.o
+                0x00015e62                xQueueGenericSend
  .text.xQueueGenericSendFromISR
-                0x00015ff2       0xe2 ./freertos/queue.o
-                0x00015ff2                xQueueGenericSendFromISR
+                0x00015fea       0xe2 ./freertos/queue.o
+                0x00015fea                xQueueGenericSendFromISR
  .text.xQueueGiveFromISR
-                0x000160d4       0xca ./freertos/queue.o
-                0x000160d4                xQueueGiveFromISR
+                0x000160cc       0xca ./freertos/queue.o
+                0x000160cc                xQueueGiveFromISR
  .text.xQueueGenericReceive
-                0x0001619e      0x1c8 ./freertos/queue.o
-                0x0001619e                xQueueGenericReceive
+                0x00016196      0x1c8 ./freertos/queue.o
+                0x00016196                xQueueGenericReceive
  .text.prvCopyDataToQueue
-                0x00016366       0xd6 ./freertos/queue.o
+                0x0001635e       0xd6 ./freertos/queue.o
  .text.prvCopyDataFromQueue
-                0x0001643c       0x4c ./freertos/queue.o
+                0x00016434       0x4c ./freertos/queue.o
  .text.prvUnlockQueue
-                0x00016488       0xbc ./freertos/queue.o
+                0x00016480       0xbc ./freertos/queue.o
  .text.prvIsQueueEmpty
-                0x00016544       0x2c ./freertos/queue.o
+                0x0001653c       0x2c ./freertos/queue.o
  .text.prvIsQueueFull
-                0x00016570       0x30 ./freertos/queue.o
+                0x00016568       0x30 ./freertos/queue.o
  .text.vQueueWaitForMessageRestricted
-                0x000165a0       0x66 ./freertos/queue.o
-                0x000165a0                vQueueWaitForMessageRestricted
+                0x00016598       0x66 ./freertos/queue.o
+                0x00016598                vQueueWaitForMessageRestricted
  .text.xTaskCreate
-                0x00016606       0x90 ./freertos/tasks.o
-                0x00016606                xTaskCreate
+                0x000165fe       0x90 ./freertos/tasks.o
+                0x000165fe                xTaskCreate
  .text.prvDeleteTCB
-                0x00016696       0x22 ./freertos/tasks.o
+                0x0001668e       0x22 ./freertos/tasks.o
  .text.prvTimerTask
-                0x000166b8       0x28 ./freertos/timers.o
+                0x000166b0       0x28 ./freertos/timers.o
  .text.XcvrCalDelay
-                0x000166e0       0x20 ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
-                0x000166e0                XcvrCalDelay
+                0x000166d8       0x20 ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
+                0x000166d8                XcvrCalDelay
  .text.store_sw_trim
-                0x00016700       0x96 ./framework/XCVR/MKW41Z4/ifr_radio.o
-                0x00016700                store_sw_trim
+                0x000166f8       0x96 ./framework/XCVR/MKW41Z4/ifr_radio.o
+                0x000166f8                store_sw_trim
  .text.TPM_GetStatusFlags
-                0x00016796       0x14 ./framework/TimersManager/Source/TMR_Adapter.o
+                0x0001678e       0x14 ./framework/TimersManager/Source/TMR_Adapter.o
  .text.TPM_ClearStatusFlags
-                0x000167aa       0x18 ./framework/TimersManager/Source/TMR_Adapter.o
+                0x000167a2       0x18 ./framework/TimersManager/Source/TMR_Adapter.o
  .text.TPM_StartTimer
-                0x000167c2       0x3a ./framework/TimersManager/Source/TMR_Adapter.o
+                0x000167ba       0x3a ./framework/TimersManager/Source/TMR_Adapter.o
  .text.TPM_StopTimer
-                0x000167fc       0x2c ./framework/TimersManager/Source/TMR_Adapter.o
+                0x000167f4       0x2c ./framework/TimersManager/Source/TMR_Adapter.o
  .text.StackTimer_GetInputFrequency
-                0x00016828       0x24 ./framework/TimersManager/Source/TMR_Adapter.o
-                0x00016828                StackTimer_GetInputFrequency
+                0x00016820       0x24 ./framework/TimersManager/Source/TMR_Adapter.o
+                0x00016820                StackTimer_GetInputFrequency
  .text.TMR_IsTimerActive
-                0x0001684c       0x28 ./framework/TimersManager/Source/TimersManager.o
-                0x0001684c                TMR_IsTimerActive
+                0x00016844       0x28 ./framework/TimersManager/Source/TimersManager.o
+                0x00016844                TMR_IsTimerActive
  .text.TMR_StartLowPowerTimer
-                0x00016874       0x40 ./framework/TimersManager/Source/TimersManager.o
-                0x00016874                TMR_StartLowPowerTimer
+                0x0001686c       0x40 ./framework/TimersManager/Source/TimersManager.o
+                0x0001686c                TMR_StartLowPowerTimer
  .text.TMR_StartIntervalTimer
-                0x000168b4       0x32 ./framework/TimersManager/Source/TimersManager.o
-                0x000168b4                TMR_StartIntervalTimer
+                0x000168ac       0x32 ./framework/TimersManager/Source/TimersManager.o
+                0x000168ac                TMR_StartIntervalTimer
  .text.LPUART_WriteByte
-                0x000168e6       0x1e ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
+                0x000168de       0x1e ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
  .text.LPUART_ReadByte
-                0x00016904       0x16 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
+                0x000168fc       0x16 ./framework/SerialManager/Source/UART_Adapter/UART_Adapter.o
  .text.Serial_Print
-                0x0001691a       0x78 ./framework/SerialManager/Source/SerialManager.o
-                0x0001691a                Serial_Print
+                0x00016912       0x78 ./framework/SerialManager/Source/SerialManager.o
+                0x00016912                Serial_Print
  .text.Serial_PrintHex
-                0x00016992      0x196 ./framework/SerialManager/Source/SerialManager.o
-                0x00016992                Serial_PrintHex
+                0x0001698a      0x196 ./framework/SerialManager/Source/SerialManager.o
+                0x0001698a                Serial_PrintHex
  .text.Serial_SyncTxCallback
-                0x00016b28       0x1e ./framework/SerialManager/Source/SerialManager.o
+                0x00016b20       0x1e ./framework/SerialManager/Source/SerialManager.o
  .text.Serial_UartTxCb
-                0x00016b46       0x1a ./framework/SerialManager/Source/SerialManager.o
+                0x00016b3e       0x1a ./framework/SerialManager/Source/SerialManager.o
  .text.EnableIRQ
-                0x00016b60       0x2c ./framework/RNG/Source/RNG.o
+                0x00016b58       0x2c ./framework/RNG/Source/RNG.o
  .text.RNG_GetRandomNo
-                0x00016b8c       0x2c ./framework/RNG/Source/RNG.o
-                0x00016b8c                RNG_GetRandomNo
- .text.panic    0x00016bb8       0x16 ./framework/Panic/Source/Panic.o
-                0x00016bb8                panic
+                0x00016b84       0x2c ./framework/RNG/Source/RNG.o
+                0x00016b84                RNG_GetRandomNo
+ .text.panic    0x00016bb0       0x16 ./framework/Panic/Source/Panic.o
+                0x00016bb0                panic
  .text.startup_task
-                0x00016bce       0x12 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00016bce                startup_task
+                0x00016bc6       0x12 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016bc6                startup_task
  .text.OSA_TaskGetId
-                0x00016be0       0x10 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00016be0                OSA_TaskGetId
+                0x00016bd8       0x10 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016bd8                OSA_TaskGetId
  .text.OSA_TaskCreate
-                0x00016bf0       0x4c ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00016bf0                OSA_TaskCreate
+                0x00016be8       0x4c ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016be8                OSA_TaskCreate
  .text.OSA_SemaphoreCreate
-                0x00016c3c       0x20 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00016c3c                OSA_SemaphoreCreate
+                0x00016c34       0x20 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016c34                OSA_SemaphoreCreate
  .text.OSA_SemaphoreWait
-                0x00016c5c       0x62 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00016c5c                OSA_SemaphoreWait
+                0x00016c54       0x62 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016c54                OSA_SemaphoreWait
  .text.OSA_MutexCreate
-                0x00016cbe       0x1a ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00016cbe                OSA_MutexCreate
+                0x00016cb6       0x1a ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016cb6                OSA_MutexCreate
  .text.OSA_MutexLock
-                0x00016cd8       0x7a ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00016cd8                OSA_MutexLock
+                0x00016cd0       0x7a ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016cd0                OSA_MutexLock
  .text.OSA_MutexUnlock
-                0x00016d52       0x4e ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00016d52                OSA_MutexUnlock
+                0x00016d4a       0x4e ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016d4a                OSA_MutexUnlock
  .text.OSA_InstallIntHandler
-                0x00016da0       0x20 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x00016da0                OSA_InstallIntHandler
+                0x00016d98       0x20 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016d98                OSA_InstallIntHandler
  .text.osObjectAlloc
-                0x00016dc0       0x4a ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016db8       0x4a ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
  .text.osObjectIsAllocated
-                0x00016e0a       0x52 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016e02       0x52 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
  .text.osObjectFree
-                0x00016e5c       0x4a ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x00016e54       0x4a ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
  .text.ListAddTailMsg
-                0x00016ea6       0x26 ./framework/Messaging/Source/Messaging.o
-                0x00016ea6                ListAddTailMsg
+                0x00016e9e       0x26 ./framework/Messaging/Source/Messaging.o
+                0x00016e9e                ListAddTailMsg
  .text.ListAddHeadMsg
-                0x00016ecc       0x26 ./framework/Messaging/Source/Messaging.o
-                0x00016ecc                ListAddHeadMsg
+                0x00016ec4       0x26 ./framework/Messaging/Source/Messaging.o
+                0x00016ec4                ListAddHeadMsg
  .text.ListRemoveHeadMsg
-                0x00016ef2       0x2a ./framework/Messaging/Source/Messaging.o
-                0x00016ef2                ListRemoveHeadMsg
+                0x00016eea       0x2a ./framework/Messaging/Source/Messaging.o
+                0x00016eea                ListRemoveHeadMsg
  .text.ListGetHeadMsg
-                0x00016f1c       0x30 ./framework/Messaging/Source/Messaging.o
-                0x00016f1c                ListGetHeadMsg
+                0x00016f14       0x30 ./framework/Messaging/Source/Messaging.o
+                0x00016f14                ListGetHeadMsg
  .text.ListGetNextMsg
-                0x00016f4c       0x36 ./framework/Messaging/Source/Messaging.o
-                0x00016f4c                ListGetNextMsg
+                0x00016f44       0x36 ./framework/Messaging/Source/Messaging.o
+                0x00016f44                ListGetNextMsg
  .text.ListRemoveMsg
-                0x00016f82       0x20 ./framework/Messaging/Source/Messaging.o
-                0x00016f82                ListRemoveMsg
+                0x00016f7a       0x20 ./framework/Messaging/Source/Messaging.o
+                0x00016f7a                ListRemoveMsg
  .text.ListInit
-                0x00016fa2       0x2c ./framework/Lists/GenericList.o
-                0x00016fa2                ListInit
+                0x00016f9a       0x2c ./framework/Lists/GenericList.o
+                0x00016f9a                ListInit
  .text.ListAddTail
-                0x00016fce       0x76 ./framework/Lists/GenericList.o
-                0x00016fce                ListAddTail
+                0x00016fc6       0x76 ./framework/Lists/GenericList.o
+                0x00016fc6                ListAddTail
  .text.ListAddHead
-                0x00017044       0x76 ./framework/Lists/GenericList.o
-                0x00017044                ListAddHead
+                0x0001703c       0x76 ./framework/Lists/GenericList.o
+                0x0001703c                ListAddHead
  .text.ListRemoveHead
-                0x000170ba       0x68 ./framework/Lists/GenericList.o
-                0x000170ba                ListRemoveHead
+                0x000170b2       0x68 ./framework/Lists/GenericList.o
+                0x000170b2                ListRemoveHead
  .text.ListRemoveElement
-                0x00017122       0x80 ./framework/Lists/GenericList.o
-                0x00017122                ListRemoveElement
+                0x0001711a       0x80 ./framework/Lists/GenericList.o
+                0x0001711a                ListRemoveElement
  .text.ListGetSize
-                0x000171a2       0x14 ./framework/Lists/GenericList.o
-                0x000171a2                ListGetSize
+                0x0001719a       0x14 ./framework/Lists/GenericList.o
+                0x0001719a                ListGetSize
  .text.LED_TurnOnLed
-                0x000171b6       0x20 ./framework/LED/Source/LED.o
-                0x000171b6                LED_TurnOnLed
+                0x000171ae       0x20 ./framework/LED/Source/LED.o
+                0x000171ae                LED_TurnOnLed
  .text.LED_TurnOffLed
-                0x000171d6       0x20 ./framework/LED/Source/LED.o
-                0x000171d6                LED_TurnOffLed
+                0x000171ce       0x20 ./framework/LED/Source/LED.o
+                0x000171ce                LED_TurnOffLed
  .text.LED_ToggleLed
-                0x000171f6       0x20 ./framework/LED/Source/LED.o
-                0x000171f6                LED_ToggleLed
+                0x000171ee       0x20 ./framework/LED/Source/LED.o
+                0x000171ee                LED_ToggleLed
  .text.LED_TurnOffAllLeds
-                0x00017216       0x10 ./framework/LED/Source/LED.o
-                0x00017216                LED_TurnOffAllLeds
+                0x0001720e       0x10 ./framework/LED/Source/LED.o
+                0x0001720e                LED_TurnOffAllLeds
  .text.LED_TurnOnAllLeds
-                0x00017226       0x10 ./framework/LED/Source/LED.o
-                0x00017226                LED_TurnOnAllLeds
+                0x0001721e       0x10 ./framework/LED/Source/LED.o
+                0x0001721e                LED_TurnOnAllLeds
  .text.LED_StopFlashingAllLeds
-                0x00017236       0x12 ./framework/LED/Source/LED.o
-                0x00017236                LED_StopFlashingAllLeds
+                0x0001722e       0x12 ./framework/LED/Source/LED.o
+                0x0001722e                LED_StopFlashingAllLeds
  .text.LED_GpioSet
-                0x00017248       0x4a ./framework/LED/Source/LED.o
+                0x00017240       0x4a ./framework/LED/Source/LED.o
  .text.GPIO_SetPinsOutput
-                0x00017292       0x18 ./framework/GPIO/GPIO_Adapter.o
+                0x0001728a       0x18 ./framework/GPIO/GPIO_Adapter.o
  .text.GPIO_ClearPinsOutput
-                0x000172aa       0x18 ./framework/GPIO/GPIO_Adapter.o
+                0x000172a2       0x18 ./framework/GPIO/GPIO_Adapter.o
  .text.GPIO_TogglePinsOutput
-                0x000172c2       0x18 ./framework/GPIO/GPIO_Adapter.o
+                0x000172ba       0x18 ./framework/GPIO/GPIO_Adapter.o
  .text.GPIO_ReadPinInput
-                0x000172da       0x20 ./framework/GPIO/GPIO_Adapter.o
+                0x000172d2       0x20 ./framework/GPIO/GPIO_Adapter.o
  .text.PORT_GetPinsInterruptFlags
-                0x000172fa       0x16 ./framework/GPIO/GPIO_Adapter.o
+                0x000172f2       0x16 ./framework/GPIO/GPIO_Adapter.o
  .text.PORT_ClearPinsInterruptFlags
-                0x00017310       0x1a ./framework/GPIO/GPIO_Adapter.o
+                0x00017308       0x1a ./framework/GPIO/GPIO_Adapter.o
  .text.FLib_MemCpy
-                0x0001732a       0x38 ./framework/FunctionLib/FunctionLib.o
-                0x0001732a                FLib_MemCpy
+                0x00017322       0x38 ./framework/FunctionLib/FunctionLib.o
+                0x00017322                FLib_MemCpy
  .text.FLib_MemCpyReverseOrder
-                0x00017362       0x46 ./framework/FunctionLib/FunctionLib.o
-                0x00017362                FLib_MemCpyReverseOrder
+                0x0001735a       0x46 ./framework/FunctionLib/FunctionLib.o
+                0x0001735a                FLib_MemCpyReverseOrder
  .text.FLib_MemCmp
-                0x000173a8       0x52 ./framework/FunctionLib/FunctionLib.o
-                0x000173a8                FLib_MemCmp
+                0x000173a0       0x52 ./framework/FunctionLib/FunctionLib.o
+                0x000173a0                FLib_MemCmp
  .text.FLib_MemSet
-                0x000173fa       0x38 ./framework/FunctionLib/FunctionLib.o
-                0x000173fa                FLib_MemSet
+                0x000173f2       0x38 ./framework/FunctionLib/FunctionLib.o
+                0x000173f2                FLib_MemSet
  .text.NV_VerifyCrcOverHWParameters
-                0x00017432       0x4e ./framework/Flash/Internal/Flash_Adapter.o
+                0x0001742a       0x4e ./framework/Flash/Internal/Flash_Adapter.o
  .text.ADC16_EnableHardwareTrigger
-                0x00017480       0x3a ./framework/DCDC/Source/DCDC.o
+                0x00017478       0x3a ./framework/DCDC/Source/DCDC.o
  .text.ADC16_DoAutoCalibration
-                0x000174ba      0x118 ./drivers/fsl_adc16.o
-                0x000174ba                ADC16_DoAutoCalibration
+                0x000174b2      0x118 ./drivers/fsl_adc16.o
+                0x000174b2                ADC16_DoAutoCalibration
  .text.ADC16_SetChannelMuxMode
-                0x000175d2       0x3a ./drivers/fsl_adc16.o
-                0x000175d2                ADC16_SetChannelMuxMode
+                0x000175ca       0x3a ./drivers/fsl_adc16.o
+                0x000175ca                ADC16_SetChannelMuxMode
  .text.ADC16_SetHardwareCompareConfig
-                0x0001760c       0x90 ./drivers/fsl_adc16.o
-                0x0001760c                ADC16_SetHardwareCompareConfig
+                0x00017604       0x90 ./drivers/fsl_adc16.o
+                0x00017604                ADC16_SetHardwareCompareConfig
  .text.ADC16_SetHardwareAverage
-                0x0001769c       0x40 ./drivers/fsl_adc16.o
-                0x0001769c                ADC16_SetHardwareAverage
+                0x00017694       0x40 ./drivers/fsl_adc16.o
+                0x00017694                ADC16_SetHardwareAverage
  .text.ADC16_GetStatusFlags
-                0x000176dc       0x3a ./drivers/fsl_adc16.o
-                0x000176dc                ADC16_GetStatusFlags
+                0x000176d4       0x3a ./drivers/fsl_adc16.o
+                0x000176d4                ADC16_GetStatusFlags
  .text.CLOCK_BootToFeeMode
-                0x00017716       0x4e ./drivers/fsl_clock.o
-                0x00017716                CLOCK_BootToFeeMode
+                0x0001770e       0x4e ./drivers/fsl_clock.o
+                0x0001770e                CLOCK_BootToFeeMode
  .text.DisableGlobalIRQ
-                0x00017764       0x1e ./drivers/fsl_common.o
+                0x0001775c       0x1e ./drivers/fsl_common.o
  .text.EnableGlobalIRQ
-                0x00017782       0x1c ./drivers/fsl_common.o
+                0x0001777a       0x1c ./drivers/fsl_common.o
  .text.DSPI_IsMaster
-                0x0001779e       0x18 ./drivers/fsl_dspi.o
+                0x00017796       0x18 ./drivers/fsl_dspi.o
  .text.GPIO_WritePinOutput
-                0x000177b6       0x34 ./drivers/fsl_gpio.o
+                0x000177ae       0x34 ./drivers/fsl_gpio.o
  .text.LPUART_EnableInterrupts
-                0x000177ea       0x3a ./drivers/fsl_lpuart.o
-                0x000177ea                LPUART_EnableInterrupts
+                0x000177e2       0x3a ./drivers/fsl_lpuart.o
+                0x000177e2                LPUART_EnableInterrupts
  .text.LPUART_DisableInterrupts
-                0x00017824       0x3e ./drivers/fsl_lpuart.o
-                0x00017824                LPUART_DisableInterrupts
+                0x0001781c       0x3e ./drivers/fsl_lpuart.o
+                0x0001781c                LPUART_DisableInterrupts
  .text.LPUART_GetStatusFlags
-                0x00017862       0x18 ./drivers/fsl_lpuart.o
-                0x00017862                LPUART_GetStatusFlags
+                0x0001785a       0x18 ./drivers/fsl_lpuart.o
+                0x0001785a                LPUART_GetStatusFlags
  .text.ltc_check_key_size
-                0x0001787a       0x1a ./drivers/fsl_ltc.o
-                0x0001787a                ltc_check_key_size
+                0x00017872       0x1a ./drivers/fsl_ltc.o
+                0x00017872                ltc_check_key_size
  .text.ltc_wait
-                0x00017894       0x96 ./drivers/fsl_ltc.o
-                0x00017894                ltc_wait
+                0x0001788c       0x96 ./drivers/fsl_ltc.o
+                0x0001788c                ltc_wait
  .text.ltc_memcpy
-                0x0001792a       0x30 ./drivers/fsl_ltc.o
-                0x0001792a                ltc_memcpy
+                0x00017922       0x30 ./drivers/fsl_ltc.o
+                0x00017922                ltc_memcpy
  .text.ltc_get_word_from_unaligned
-                0x0001795a       0x3a ./drivers/fsl_ltc.o
+                0x00017952       0x3a ./drivers/fsl_ltc.o
  .text.ltc_set_unaligned_from_word
-                0x00017994       0x50 ./drivers/fsl_ltc.o
+                0x0001798c       0x50 ./drivers/fsl_ltc.o
  .text.ltc_set_key
-                0x000179e4       0x4e ./drivers/fsl_ltc.o
+                0x000179dc       0x4e ./drivers/fsl_ltc.o
  .text.ltc_set_context
-                0x00017a32       0xac ./drivers/fsl_ltc.o
-                0x00017a32                ltc_set_context
+                0x00017a2a       0xac ./drivers/fsl_ltc.o
+                0x00017a2a                ltc_set_context
  .text.ltc_get_context
-                0x00017ade       0xaa ./drivers/fsl_ltc.o
-                0x00017ade                ltc_get_context
+                0x00017ad6       0xaa ./drivers/fsl_ltc.o
+                0x00017ad6                ltc_get_context
  .text.ltc_symmetric_init
-                0x00017b88       0x3e ./drivers/fsl_ltc.o
+                0x00017b80       0x3e ./drivers/fsl_ltc.o
  .text.ltc_symmetric_init_final
-                0x00017bc6       0x3e ./drivers/fsl_ltc.o
+                0x00017bbe       0x3e ./drivers/fsl_ltc.o
  .text.ltc_symmetric_process
-                0x00017c04       0xe6 ./drivers/fsl_ltc.o
-                0x00017c04                ltc_symmetric_process
+                0x00017bfc       0xe6 ./drivers/fsl_ltc.o
+                0x00017bfc                ltc_symmetric_process
  .text.ltc_symmetric_process_data
-                0x00017cea       0x82 ./drivers/fsl_ltc.o
-                0x00017cea                ltc_symmetric_process_data
+                0x00017ce2       0x82 ./drivers/fsl_ltc.o
+                0x00017ce2                ltc_symmetric_process_data
  .text.ltc_move_block_to_ififo
-                0x00017d6c       0x66 ./drivers/fsl_ltc.o
+                0x00017d64       0x66 ./drivers/fsl_ltc.o
  .text.ltc_move_to_ififo
-                0x00017dd2       0x7e ./drivers/fsl_ltc.o
+                0x00017dca       0x7e ./drivers/fsl_ltc.o
  .text.ltc_symmetric_process_data_multiple
-                0x00017e50      0x1ac ./drivers/fsl_ltc.o
+                0x00017e48      0x1ac ./drivers/fsl_ltc.o
  .text.ltc_aes_received_mac_compare
-                0x00017ffc       0x78 ./drivers/fsl_ltc.o
+                0x00017ff4       0x78 ./drivers/fsl_ltc.o
  .text.ltc_aes_process_tag
-                0x00018074       0x4c ./drivers/fsl_ltc.o
+                0x0001806c       0x4c ./drivers/fsl_ltc.o
  .text.ltc_aes_ccm_check_input_args
-                0x000180c0       0x94 ./drivers/fsl_ltc.o
+                0x000180b8       0x94 ./drivers/fsl_ltc.o
  .text.swap_bytes
-                0x00018154       0x32 ./drivers/fsl_ltc.o
+                0x0001814c       0x32 ./drivers/fsl_ltc.o
  .text.ltc_aes_ccm_context_init
-                0x00018186       0xd2 ./drivers/fsl_ltc.o
+                0x0001817e       0xd2 ./drivers/fsl_ltc.o
  .text.LTC_AES_EncryptTagCcm
-                0x00018258       0x58 ./drivers/fsl_ltc.o
-                0x00018258                LTC_AES_EncryptTagCcm
+                0x00018250       0x58 ./drivers/fsl_ltc.o
+                0x00018250                LTC_AES_EncryptTagCcm
  .text.LTC_AES_DecryptTagCcm
-                0x000182b0       0x86 ./drivers/fsl_ltc.o
-                0x000182b0                LTC_AES_DecryptTagCcm
+                0x000182a8       0x86 ./drivers/fsl_ltc.o
+                0x000182a8                LTC_AES_DecryptTagCcm
  .text.TPM_EnableInterrupts
-                0x00018336       0x82 ./drivers/fsl_tpm.o
-                0x00018336                TPM_EnableInterrupts
+                0x0001832e       0x82 ./drivers/fsl_tpm.o
+                0x0001832e                TPM_EnableInterrupts
  .text.trng_ReadEntropy
-                0x000183b8       0x34 ./drivers/fsl_trng.o
+                0x000183b0       0x34 ./drivers/fsl_trng.o
  .text.TRNG_GetRandomData
-                0x000183ec       0xe6 ./drivers/fsl_trng.o
-                0x000183ec                TRNG_GetRandomData
+                0x000183e4       0xe6 ./drivers/fsl_trng.o
+                0x000183e4                TRNG_GetRandomData
  *(SORT_BY_ALIGNMENT(.rodata))
- *fill*         0x000184d2        0x2 
- .rodata        0x000184d4       0x18 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
- .rodata        0x000184ec       0x80 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(divsf3.o)
- .rodata        0x0001856c       0x40 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(mulsf3.o)
- .rodata        0x000185ac       0x60 C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\libs\lib802.15.4_mac_06_cm0.a(MacPib.o)
- .rodata        0x0001860c       0x1c C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\libs\lib802.15.4_mac_06_cm0.a(MacVersion.o)
- .rodata        0x00018628        0x2 C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\libs\lib802.15.4_mac_06_cm0.a(MacMain.o)
-                0x00018628                gMacLocalDataSize
+ *fill*         0x000184ca        0x2 
+ .rodata        0x000184cc       0x18 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
+ .rodata        0x000184e4       0x80 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(divsf3.o)
+ .rodata        0x00018564       0x40 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(mulsf3.o)
+ .rodata        0x000185a4       0x60 C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\libs\lib802.15.4_mac_06_cm0.a(MacPib.o)
+ .rodata        0x00018604       0x1c C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\libs\lib802.15.4_mac_06_cm0.a(MacVersion.o)
+ .rodata        0x00018620        0x2 C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\libs\lib802.15.4_mac_06_cm0.a(MacMain.o)
+                0x00018620                gMacLocalDataSize
  *(SORT_BY_ALIGNMENT(.rodata*))
- *fill*         0x0001862a        0x6 
+ *fill*         0x00018622        0x6 
  .rodata.mExtendedAddress
-                0x00018630        0x8 ./source/mwa_coordinator.o
+                0x00018628        0x8 ./source/mwa_coordinator.o
  .rodata.str1.4
-                0x00018638        0x8 ./source/MyNewTask.o
+                0x00018630        0x8 ./source/MyNewTask.o
  .rodata.App_init.str1.4
-                0x00018640       0x40 ./source/mwa_coordinator.o
+                0x00018638       0x40 ./source/mwa_coordinator.o
  .rodata.AppThread.str1.4
-                0x00018680      0x141 ./source/mwa_coordinator.o
+                0x00018678      0x141 ./source/mwa_coordinator.o
                                 0x145 (size before relaxing)
- *fill*         0x000187c1        0x3 
+ *fill*         0x000187b9        0x3 
  .rodata.AppThread
-                0x000187c4       0x18 ./source/mwa_coordinator.o
+                0x000187bc       0x18 ./source/mwa_coordinator.o
  .rodata.App_StartScan.str1.4
-                0x000187dc       0x71 ./source/mwa_coordinator.o
- *fill*         0x0001884d        0x3 
+                0x000187d4       0x71 ./source/mwa_coordinator.o
+ *fill*         0x00018845        0x3 
  .rodata.App_HandleScanEdConfirm.str1.4
-                0x00018850       0xac ./source/mwa_coordinator.o
+                0x00018848       0xac ./source/mwa_coordinator.o
  .rodata.App_StartCoordinator.str1.4
-                0x000188fc       0x35 ./source/mwa_coordinator.o
- *fill*         0x00018931        0x3 
+                0x000188f4       0x35 ./source/mwa_coordinator.o
+ *fill*         0x00018929        0x3 
  .rodata.App_SendAssociateResponse.str1.4
-                0x00018934       0x3a ./source/mwa_coordinator.o
- *fill*         0x0001896e        0x2 
+                0x0001892c       0x3a ./source/mwa_coordinator.o
+ *fill*         0x00018966        0x2 
  .rodata.App_HandleMlmeInput.str1.4
-                0x00018970       0x6f ./source/mwa_coordinator.o
- *fill*         0x000189df        0x1 
+                0x00018968       0x6f ./source/mwa_coordinator.o
+ *fill*         0x000189d7        0x1 
  .rodata.PHY_InterruptHandler
-                0x000189e0       0x18 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
+                0x000189d8       0x18 ./ieee_802.15.4/phy/source/MKW41Z/PhyISR.o
  .rodata.PhyPlmeSetPIBRequest
-                0x000189f8       0x44 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x000189f0       0x44 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
  .rodata.PhyPlmeGetPIBRequest
-                0x00018a3c       0x44 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
+                0x00018a34       0x44 ./ieee_802.15.4/phy/source/MKW41Z/PhyPlmeData.o
  .rodata.MAC_PLME_SapHandler
-                0x00018a80       0x24 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x00018a78       0x24 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
  .rodata.str1.4
-                0x00018aa4        0x9 ./ieee_802.15.4/mac/source/App/MacGlobals.o
- *fill*         0x00018aad        0x3 
+                0x00018a9c        0x9 ./ieee_802.15.4/mac/source/App/MacGlobals.o
+ *fill*         0x00018aa5        0x3 
  .rodata.vTaskStartScheduler.str1.4
-                0x00018ab0        0x5 ./freertos/tasks.o
- *fill*         0x00018ab5        0x3 
+                0x00018aa8        0x5 ./freertos/tasks.o
+ *fill*         0x00018aad        0x3 
  .rodata.xTimerCreateTimerTask.str1.4
-                0x00018ab8        0x8 ./freertos/timers.o
+                0x00018ab0        0x8 ./freertos/timers.o
  .rodata.prvProcessReceivedCommands
-                0x00018ac0       0x28 ./freertos/timers.o
+                0x00018ab8       0x28 ./freertos/timers.o
  .rodata.prvCheckForValidListAndQueue.str1.4
-                0x00018ae8        0x5 ./freertos/timers.o
- *fill*         0x00018aed        0x3 
+                0x00018ae0        0x5 ./freertos/timers.o
+ *fill*         0x00018ae5        0x3 
  .rodata.ant_mode_config
-                0x00018af0       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_ant_config.o
-                0x00018af0                ant_mode_config
+                0x00018ae8       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_ant_config.o
+                0x00018ae8                ant_mode_config
  .rodata.xcvr_ANT_1mbps_config
-                0x00018b38       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_ant_config.o
-                0x00018b38                xcvr_ANT_1mbps_config
+                0x00018b30       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_ant_config.o
+                0x00018b30                xcvr_ANT_1mbps_config
  .rodata.ble_mode_config
-                0x00018ba8       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_ble_config.o
-                0x00018ba8                ble_mode_config
+                0x00018ba0       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_ble_config.o
+                0x00018ba0                ble_mode_config
  .rodata.xcvr_BLE_1mbps_config
-                0x00018bf0       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_ble_config.o
-                0x00018bf0                xcvr_BLE_1mbps_config
+                0x00018be8       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_ble_config.o
+                0x00018be8                xcvr_BLE_1mbps_config
  .rodata.xcvr_common_config
-                0x00018c60      0x23c ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_common_config.o
-                0x00018c60                xcvr_common_config
+                0x00018c58      0x23c ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_common_config.o
+                0x00018c58                xcvr_common_config
  .rodata.gfsk_bt_0p3_h_0p5_mode_config
-                0x00018e9c       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p3_h_0p5_config.o
-                0x00018e9c                gfsk_bt_0p3_h_0p5_mode_config
+                0x00018e94       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p3_h_0p5_config.o
+                0x00018e94                gfsk_bt_0p3_h_0p5_mode_config
  .rodata.xcvr_GFSK_BT_0p3_h_0p5_1mbps_config
-                0x00018ee4       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p3_h_0p5_config.o
-                0x00018ee4                xcvr_GFSK_BT_0p3_h_0p5_1mbps_config
+                0x00018edc       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p3_h_0p5_config.o
+                0x00018edc                xcvr_GFSK_BT_0p3_h_0p5_1mbps_config
  .rodata.xcvr_GFSK_BT_0p3_h_0p5_500kbps_config
-                0x00018f54       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p3_h_0p5_config.o
-                0x00018f54                xcvr_GFSK_BT_0p3_h_0p5_500kbps_config
+                0x00018f4c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p3_h_0p5_config.o
+                0x00018f4c                xcvr_GFSK_BT_0p3_h_0p5_500kbps_config
  .rodata.xcvr_GFSK_BT_0p3_h_0p5_250kbps_config
-                0x00018fc4       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p3_h_0p5_config.o
-                0x00018fc4                xcvr_GFSK_BT_0p3_h_0p5_250kbps_config
+                0x00018fbc       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p3_h_0p5_config.o
+                0x00018fbc                xcvr_GFSK_BT_0p3_h_0p5_250kbps_config
  .rodata.gfsk_bt_0p5_h_0p32_mode_config
-                0x00019034       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p32_config.o
-                0x00019034                gfsk_bt_0p5_h_0p32_mode_config
+                0x0001902c       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p32_config.o
+                0x0001902c                gfsk_bt_0p5_h_0p32_mode_config
  .rodata.xcvr_GFSK_BT_0p5_h_0p32_1mbps_config
-                0x0001907c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p32_config.o
-                0x0001907c                xcvr_GFSK_BT_0p5_h_0p32_1mbps_config
+                0x00019074       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p32_config.o
+                0x00019074                xcvr_GFSK_BT_0p5_h_0p32_1mbps_config
  .rodata.xcvr_GFSK_BT_0p5_h_0p32_500kbps_config
-                0x000190ec       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p32_config.o
-                0x000190ec                xcvr_GFSK_BT_0p5_h_0p32_500kbps_config
+                0x000190e4       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p32_config.o
+                0x000190e4                xcvr_GFSK_BT_0p5_h_0p32_500kbps_config
  .rodata.xcvr_GFSK_BT_0p5_h_0p32_250kbps_config
-                0x0001915c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p32_config.o
-                0x0001915c                xcvr_GFSK_BT_0p5_h_0p32_250kbps_config
+                0x00019154       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p32_config.o
+                0x00019154                xcvr_GFSK_BT_0p5_h_0p32_250kbps_config
  .rodata.gfsk_bt_0p5_h_0p5_mode_config
-                0x000191cc       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p5_config.o
-                0x000191cc                gfsk_bt_0p5_h_0p5_mode_config
+                0x000191c4       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p5_config.o
+                0x000191c4                gfsk_bt_0p5_h_0p5_mode_config
  .rodata.xcvr_GFSK_BT_0p5_h_0p5_1mbps_config
-                0x00019214       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p5_config.o
-                0x00019214                xcvr_GFSK_BT_0p5_h_0p5_1mbps_config
+                0x0001920c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p5_config.o
+                0x0001920c                xcvr_GFSK_BT_0p5_h_0p5_1mbps_config
  .rodata.xcvr_GFSK_BT_0p5_h_0p5_500kbps_config
-                0x00019284       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p5_config.o
-                0x00019284                xcvr_GFSK_BT_0p5_h_0p5_500kbps_config
+                0x0001927c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p5_config.o
+                0x0001927c                xcvr_GFSK_BT_0p5_h_0p5_500kbps_config
  .rodata.xcvr_GFSK_BT_0p5_h_0p5_250kbps_config
-                0x000192f4       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p5_config.o
-                0x000192f4                xcvr_GFSK_BT_0p5_h_0p5_250kbps_config
+                0x000192ec       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p5_config.o
+                0x000192ec                xcvr_GFSK_BT_0p5_h_0p5_250kbps_config
  .rodata.gfsk_bt_0p5_h_0p7_mode_config
-                0x00019364       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p7_config.o
-                0x00019364                gfsk_bt_0p5_h_0p7_mode_config
+                0x0001935c       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p7_config.o
+                0x0001935c                gfsk_bt_0p5_h_0p7_mode_config
  .rodata.xcvr_GFSK_BT_0p5_h_0p7_1mbps_config
-                0x000193ac       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p7_config.o
-                0x000193ac                xcvr_GFSK_BT_0p5_h_0p7_1mbps_config
+                0x000193a4       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p7_config.o
+                0x000193a4                xcvr_GFSK_BT_0p5_h_0p7_1mbps_config
  .rodata.xcvr_GFSK_BT_0p5_h_0p7_500kbps_config
-                0x0001941c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p7_config.o
-                0x0001941c                xcvr_GFSK_BT_0p5_h_0p7_500kbps_config
+                0x00019414       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p7_config.o
+                0x00019414                xcvr_GFSK_BT_0p5_h_0p7_500kbps_config
  .rodata.xcvr_GFSK_BT_0p5_h_0p7_250kbps_config
-                0x0001948c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p7_config.o
-                0x0001948c                xcvr_GFSK_BT_0p5_h_0p7_250kbps_config
+                0x00019484       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_0p7_config.o
+                0x00019484                xcvr_GFSK_BT_0p5_h_0p7_250kbps_config
  .rodata.gfsk_bt_0p5_h_1p0_mode_config
-                0x000194fc       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_1p0_config.o
-                0x000194fc                gfsk_bt_0p5_h_1p0_mode_config
+                0x000194f4       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_1p0_config.o
+                0x000194f4                gfsk_bt_0p5_h_1p0_mode_config
  .rodata.xcvr_GFSK_BT_0p5_h_1p0_1mbps_config
-                0x00019544       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_1p0_config.o
-                0x00019544                xcvr_GFSK_BT_0p5_h_1p0_1mbps_config
+                0x0001953c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_1p0_config.o
+                0x0001953c                xcvr_GFSK_BT_0p5_h_1p0_1mbps_config
  .rodata.xcvr_GFSK_BT_0p5_h_1p0_500kbps_config
-                0x000195b4       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_1p0_config.o
-                0x000195b4                xcvr_GFSK_BT_0p5_h_1p0_500kbps_config
+                0x000195ac       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_1p0_config.o
+                0x000195ac                xcvr_GFSK_BT_0p5_h_1p0_500kbps_config
  .rodata.xcvr_GFSK_BT_0p5_h_1p0_250kbps_config
-                0x00019624       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_1p0_config.o
-                0x00019624                xcvr_GFSK_BT_0p5_h_1p0_250kbps_config
+                0x0001961c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p5_h_1p0_config.o
+                0x0001961c                xcvr_GFSK_BT_0p5_h_1p0_250kbps_config
  .rodata.gfsk_bt_0p7_h_0p5_mode_config
-                0x00019694       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p7_h_0p5_config.o
-                0x00019694                gfsk_bt_0p7_h_0p5_mode_config
+                0x0001968c       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p7_h_0p5_config.o
+                0x0001968c                gfsk_bt_0p7_h_0p5_mode_config
  .rodata.xcvr_GFSK_BT_0p7_h_0p5_1mbps_config
-                0x000196dc       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p7_h_0p5_config.o
-                0x000196dc                xcvr_GFSK_BT_0p7_h_0p5_1mbps_config
+                0x000196d4       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p7_h_0p5_config.o
+                0x000196d4                xcvr_GFSK_BT_0p7_h_0p5_1mbps_config
  .rodata.xcvr_GFSK_BT_0p7_h_0p5_500kbps_config
-                0x0001974c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p7_h_0p5_config.o
-                0x0001974c                xcvr_GFSK_BT_0p7_h_0p5_500kbps_config
+                0x00019744       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p7_h_0p5_config.o
+                0x00019744                xcvr_GFSK_BT_0p7_h_0p5_500kbps_config
  .rodata.xcvr_GFSK_BT_0p7_h_0p5_250kbps_config
-                0x000197bc       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p7_h_0p5_config.o
-                0x000197bc                xcvr_GFSK_BT_0p7_h_0p5_250kbps_config
+                0x000197b4       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_gfsk_bt_0p7_h_0p5_config.o
+                0x000197b4                xcvr_GFSK_BT_0p7_h_0p5_250kbps_config
  .rodata.xcvr_1mbps_config
-                0x0001982c       0x38 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_mode_datarate_config.o
-                0x0001982c                xcvr_1mbps_config
+                0x00019824       0x38 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_mode_datarate_config.o
+                0x00019824                xcvr_1mbps_config
  .rodata.xcvr_500kbps_config
-                0x00019864       0x38 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_mode_datarate_config.o
-                0x00019864                xcvr_500kbps_config
+                0x0001985c       0x38 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_mode_datarate_config.o
+                0x0001985c                xcvr_500kbps_config
  .rodata.xcvr_250kbps_config
-                0x0001989c       0x38 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_mode_datarate_config.o
-                0x0001989c                xcvr_250kbps_config
+                0x00019894       0x38 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_mode_datarate_config.o
+                0x00019894                xcvr_250kbps_config
  .rodata.msk_mode_config
-                0x000198d4       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_msk_config.o
-                0x000198d4                msk_mode_config
+                0x000198cc       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_msk_config.o
+                0x000198cc                msk_mode_config
  .rodata.xcvr_MSK_1mbps_config
-                0x0001991c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_msk_config.o
-                0x0001991c                xcvr_MSK_1mbps_config
+                0x00019914       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_msk_config.o
+                0x00019914                xcvr_MSK_1mbps_config
  .rodata.xcvr_MSK_500kbps_config
-                0x0001998c       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_msk_config.o
-                0x0001998c                xcvr_MSK_500kbps_config
+                0x00019984       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_msk_config.o
+                0x00019984                xcvr_MSK_500kbps_config
  .rodata.xcvr_MSK_250kbps_config
-                0x000199fc       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_msk_config.o
-                0x000199fc                xcvr_MSK_250kbps_config
+                0x000199f4       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_msk_config.o
+                0x000199f4                xcvr_MSK_250kbps_config
  .rodata.zgbe_mode_config
-                0x00019a6c       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_zgbe_config.o
-                0x00019a6c                zgbe_mode_config
+                0x00019a64       0x48 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_zgbe_config.o
+                0x00019a64                zgbe_mode_config
  .rodata.xcvr_ZIGBEE_500kbps_config
-                0x00019ab4       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_zgbe_config.o
-                0x00019ab4                xcvr_ZIGBEE_500kbps_config
+                0x00019aac       0x70 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_zgbe_config.o
+                0x00019aac                xcvr_ZIGBEE_500kbps_config
  .rodata.xcvr_802_15_4_500kbps_config
-                0x00019b24       0x38 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_zgbe_config.o
-                0x00019b24                xcvr_802_15_4_500kbps_config
+                0x00019b1c       0x38 ./framework/XCVR/MKW41Z4/cfgs_kw4x_3x_2x/fsl_xcvr_zgbe_config.o
+                0x00019b1c                xcvr_802_15_4_500kbps_config
  .rodata.mapTable
-                0x00019b5c      0x400 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
-                0x00019b5c                mapTable
+                0x00019b54      0x400 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
+                0x00019b54                mapTable
  .rodata.XCVR_GetDefaultConfig
-                0x00019f5c       0x28 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
+                0x00019f54       0x28 ./framework/XCVR/MKW41Z4/fsl_xcvr.o
  .rodata.rx_bba_dcoc_dac_trim_DCest
-                0x00019f84       0x2c ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
+                0x00019f7c       0x2c ./framework/XCVR/MKW41Z4/fsl_xcvr_trim.o
  .rodata.BLOCK_1_IFR
-                0x00019fb0       0x10 ./framework/XCVR/MKW41Z4/ifr_radio.o
-                0x00019fb0                BLOCK_1_IFR
+                0x00019fa8       0x10 ./framework/XCVR/MKW41Z4/ifr_radio.o
+                0x00019fa8                BLOCK_1_IFR
  .rodata.mTpmConfig
-                0x00019fc0        0xa ./framework/TimersManager/Source/TMR_Adapter.o
- *fill*         0x00019fca        0x2 
+                0x00019fb8        0xa ./framework/TimersManager/Source/TMR_Adapter.o
+ *fill*         0x00019fc2        0x2 
  .rodata.str1.4
-                0x00019fcc        0x9 ./framework/TimersManager/Source/TimersManager.o
- *fill*         0x00019fd5        0x3 
+                0x00019fc4        0x9 ./framework/TimersManager/Source/TimersManager.o
+ *fill*         0x00019fcd        0x3 
  .rodata.str1.4
-                0x00019fd8       0x12 ./framework/SerialManager/Source/SerialManager.o
- *fill*         0x00019fea        0x2 
+                0x00019fd0       0x12 ./framework/SerialManager/Source/SerialManager.o
+ *fill*         0x00019fe2        0x2 
  .rodata.Serial_InitInterface
-                0x00019fec       0x2c ./framework/SerialManager/Source/SerialManager.o
+                0x00019fe4       0x2c ./framework/SerialManager/Source/SerialManager.o
  .rodata.osEventInfo
-                0x0001a018        0xc ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x0001a018                osEventInfo
+                0x0001a010        0xc ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x0001a010                osEventInfo
  .rodata.str1.4
-                0x0001a024        0xd ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
- *fill*         0x0001a031        0x3 
+                0x0001a01c        0xd ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+ *fill*         0x0001a029        0x3 
  .rodata.str1.4
-                0x0001a034       0x1e ./framework/ModuleInfo/ModuleInfo.o
- *fill*         0x0001a052        0x2 
+                0x0001a02c       0x1e ./framework/ModuleInfo/ModuleInfo.o
+ *fill*         0x0001a04a        0x2 
  .rodata.PORT_SetPinConfig.str1.4
-                0x0001a054       0xa9 ./framework/GPIO/GPIO_Adapter.o
- *fill*         0x0001a0fd        0x3 
+                0x0001a04c       0xa9 ./framework/GPIO/GPIO_Adapter.o
+ *fill*         0x0001a0f5        0x3 
  .rodata.maPortBases
-                0x0001a100        0xc ./framework/GPIO/GPIO_Adapter.o
+                0x0001a0f8        0xc ./framework/GPIO/GPIO_Adapter.o
  .rodata.maGpioBases
-                0x0001a10c        0xc ./framework/GPIO/GPIO_Adapter.o
+                0x0001a104        0xc ./framework/GPIO/GPIO_Adapter.o
  .rodata.mProdDataIdentifier
-                0x0001a118        0xa ./framework/Flash/Internal/Flash_Adapter.o
- *fill*         0x0001a122        0x2 
+                0x0001a110        0xa ./framework/Flash/Internal/Flash_Adapter.o
+ *fill*         0x0001a11a        0x2 
  .rodata.ADC16_GetChannelConversionValue.str1.4
-                0x0001a124       0xbe ./framework/DCDC/Source/DCDC.o
- *fill*         0x0001a1e2        0x2 
+                0x0001a11c       0xbe ./framework/DCDC/Source/DCDC.o
+ *fill*         0x0001a1da        0x2 
  .rodata.adcConfig
-                0x0001a1e4        0x9 ./framework/DCDC/Source/DCDC.o
- *fill*         0x0001a1ed        0x3 
+                0x0001a1dc        0x9 ./framework/DCDC/Source/DCDC.o
+ *fill*         0x0001a1e5        0x3 
  .rodata.vbatChanConfig
-                0x0001a1f0        0x8 ./framework/DCDC/Source/DCDC.o
-                0x0001a1f0                vbatChanConfig
+                0x0001a1e8        0x8 ./framework/DCDC/Source/DCDC.o
+                0x0001a1e8                vbatChanConfig
  .rodata.bgapChanConfig
-                0x0001a1f8        0x8 ./framework/DCDC/Source/DCDC.o
-                0x0001a1f8                bgapChanConfig
+                0x0001a1f0        0x8 ./framework/DCDC/Source/DCDC.o
+                0x0001a1f0                bgapChanConfig
  .rodata.ADC16_GetInstance.str1.4
-                0x0001a200       0x35 ./drivers/fsl_adc16.o
- *fill*         0x0001a235        0x3 
+                0x0001a1f8       0x35 ./drivers/fsl_adc16.o
+ *fill*         0x0001a22d        0x3 
  .rodata.ADC16_Init.str1.4
-                0x0001a238       0x20 ./drivers/fsl_adc16.o
+                0x0001a230       0x20 ./drivers/fsl_adc16.o
  .rodata.ADC16_SetChannelConfig.str1.4
-                0x0001a258       0x51 ./drivers/fsl_adc16.o
- *fill*         0x0001a2a9        0x3 
+                0x0001a250       0x51 ./drivers/fsl_adc16.o
+ *fill*         0x0001a2a1        0x3 
  .rodata.ADC16_GetChannelStatusFlags.str1.4
-                0x0001a2ac       0x2f ./drivers/fsl_adc16.o
- *fill*         0x0001a2db        0x1 
+                0x0001a2a4       0x2f ./drivers/fsl_adc16.o
+ *fill*         0x0001a2d3        0x1 
  .rodata.CLOCK_GetMcgExtClkFreq.str1.4
-                0x0001a2dc       0x3f ./drivers/fsl_clock.o
- *fill*         0x0001a31b        0x1 
+                0x0001a2d4       0x3f ./drivers/fsl_clock.o
+ *fill*         0x0001a313        0x1 
  .rodata.CLOCK_GetOsc0ErClkFreq.str1.4
-                0x0001a31c       0x1e ./drivers/fsl_clock.o
- *fill*         0x0001a33a        0x2 
+                0x0001a314       0x1e ./drivers/fsl_clock.o
+ *fill*         0x0001a332        0x2 
  .rodata.fllFactorTable.1
-                0x0001a33c       0x10 ./drivers/fsl_clock.o
+                0x0001a334       0x10 ./drivers/fsl_clock.o
  .rodata.__assertion_failed.str1.4
-                0x0001a34c        0x4 ./drivers/fsl_common.o
+                0x0001a344        0x4 ./drivers/fsl_common.o
  .rodata.SPI0_DriverIRQHandler.str1.4
-                0x0001a350       0x22 ./drivers/fsl_dspi.o
- *fill*         0x0001a372        0x2 
+                0x0001a348       0x22 ./drivers/fsl_dspi.o
+ *fill*         0x0001a36a        0x2 
  .rodata.SPI1_DriverIRQHandler.str1.4
-                0x0001a374       0x22 ./drivers/fsl_dspi.o
- *fill*         0x0001a396        0x2 
+                0x0001a36c       0x22 ./drivers/fsl_dspi.o
+ *fill*         0x0001a38e        0x2 
  .rodata.GPIO_PinInit.str1.4
-                0x0001a398       0x17 ./drivers/fsl_gpio.o
- *fill*         0x0001a3af        0x1 
+                0x0001a390       0x17 ./drivers/fsl_gpio.o
+ *fill*         0x0001a3a7        0x1 
  .rodata.LPUART_GetInstance.str1.4
-                0x0001a3b0       0x38 ./drivers/fsl_lpuart.o
+                0x0001a3a8       0x38 ./drivers/fsl_lpuart.o
  .rodata.LPUART_Init.str1.4
-                0x0001a3e8       0x44 ./drivers/fsl_lpuart.o
+                0x0001a3e0       0x44 ./drivers/fsl_lpuart.o
  .rodata.LPUART_GetDefaultConfig.str1.4
-                0x0001a42c       0x1a ./drivers/fsl_lpuart.o
- *fill*         0x0001a446        0x2 
+                0x0001a424       0x1a ./drivers/fsl_lpuart.o
+ *fill*         0x0001a43e        0x2 
  .rodata.LPUART_SetBaudRate.str1.4
-                0x0001a448       0x20 ./drivers/fsl_lpuart.o
+                0x0001a440       0x20 ./drivers/fsl_lpuart.o
  .rodata.s_tpmBases
-                0x0001a468        0xc ./drivers/fsl_tpm.o
+                0x0001a460        0xc ./drivers/fsl_tpm.o
  .rodata.s_tpmClocks
-                0x0001a474        0xc ./drivers/fsl_tpm.o
+                0x0001a46c        0xc ./drivers/fsl_tpm.o
  .rodata.TPM_GetInstance.str1.4
-                0x0001a480       0x28 ./drivers/fsl_tpm.o
+                0x0001a478       0x28 ./drivers/fsl_tpm.o
  .rodata.TPM_Init.str1.4
-                0x0001a4a8       0x16 ./drivers/fsl_tpm.o
- *fill*         0x0001a4be        0x2 
+                0x0001a4a0       0x16 ./drivers/fsl_tpm.o
+ *fill*         0x0001a4b6        0x2 
  .rodata.TPM_SetupOutputCompare.str1.4
-                0x0001a4c0       0x42 ./drivers/fsl_tpm.o
- *fill*         0x0001a502        0x2 
+                0x0001a4b8       0x42 ./drivers/fsl_tpm.o
+ *fill*         0x0001a4fa        0x2 
  .rodata.trng_GetInstance.str1.4
-                0x0001a504       0x35 ./drivers/fsl_trng.o
- *fill*         0x0001a539        0x3 
+                0x0001a4fc       0x35 ./drivers/fsl_trng.o
+ *fill*         0x0001a531        0x3 
  .rodata.trng_SetStatisticalCheckLimit
-                0x0001a53c       0x28 ./drivers/fsl_trng.o
+                0x0001a534       0x28 ./drivers/fsl_trng.o
  .rodata.mDcdcDefaultConfig
-                0x0001a564       0x14 ./board/board.o
-                0x0001a564                mDcdcDefaultConfig
+                0x0001a55c       0x14 ./board/board.o
+                0x0001a55c                mDcdcDefaultConfig
  .rodata.simConfig_BOARD_BootClockRUN
-                0x0001a578        0x8 ./board/clock_config.o
-                0x0001a578                simConfig_BOARD_BootClockRUN
+                0x0001a570        0x8 ./board/clock_config.o
+                0x0001a570                simConfig_BOARD_BootClockRUN
  .rodata._global_impure_ptr
-                0x0001a580        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
-                0x0001a580                _global_impure_ptr
+                0x0001a578        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-impure.o)
+                0x0001a578                _global_impure_ptr
  .rodata.mShortAddress
-                0x0001a584        0x2 ./source/mwa_coordinator.o
+                0x0001a57c        0x2 ./source/mwa_coordinator.o
  .rodata.mPanId
-                0x0001a586        0x2 ./source/mwa_coordinator.o
+                0x0001a57e        0x2 ./source/mwa_coordinator.o
  .rodata.gPhyIndirectQueueSize_c
-                0x0001a588        0x1 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
-                0x0001a588                gPhyIndirectQueueSize_c
+                0x0001a580        0x1 ./ieee_802.15.4/phy/source/MKW41Z/PhyPacketProcessor.o
+                0x0001a580                gPhyIndirectQueueSize_c
  .rodata.gPhyPoolId
-                0x0001a589        0x1 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
-                0x0001a589                gPhyPoolId
+                0x0001a581        0x1 ./ieee_802.15.4/phy/source/MKW41Z/PhyStateMachine.o
+                0x0001a581                gPhyPoolId
  .rodata.gMacPoolId
-                0x0001a58a        0x1 ./ieee_802.15.4/mac/source/App/MacGlobals.o
-                0x0001a58a                gMacPoolId
+                0x0001a582        0x1 ./ieee_802.15.4/mac/source/App/MacGlobals.o
+                0x0001a582                gMacPoolId
  .rodata.gMacNoOfInstances
-                0x0001a58b        0x1 ./ieee_802.15.4/mac/source/App/MacGlobals.o
-                0x0001a58b                gMacNoOfInstances
+                0x0001a583        0x1 ./ieee_802.15.4/mac/source/App/MacGlobals.o
+                0x0001a583                gMacNoOfInstances
  .rodata.gMacWipeSecurityTables
-                0x0001a58c        0x1 ./ieee_802.15.4/mac/source/App/MacGlobals.o
-                0x0001a58c                gMacWipeSecurityTables
+                0x0001a584        0x1 ./ieee_802.15.4/mac/source/App/MacGlobals.o
+                0x0001a584                gMacWipeSecurityTables
  .rodata.gUseRtos_c
-                0x0001a58d        0x1 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
-                0x0001a58d                gUseRtos_c
+                0x0001a585        0x1 ./framework/OSAbstraction/Source/fsl_os_abstraction_free_rtos.o
+                0x0001a585                gUseRtos_c
  *(SORT_BY_ALIGNMENT(.glue_7))
- .glue_7        0x0001a58e        0x0 linker stubs
+ .glue_7        0x0001a586        0x0 linker stubs
  *(SORT_BY_ALIGNMENT(.glue_7t))
- .glue_7t       0x0001a58e        0x0 linker stubs
+ .glue_7t       0x0001a586        0x0 linker stubs
  *(SORT_BY_ALIGNMENT(.eh_frame))
- *fill*         0x0001a58e        0x2 
- .eh_frame      0x0001a590        0x0 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+ *fill*         0x0001a586        0x2 
+ .eh_frame      0x0001a588        0x0 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x0001a590        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x0001a590                _init
- .init          0x0001a594        0x8 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
+ .init          0x0001a588        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x0001a588                _init
+ .init          0x0001a58c        0x8 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x0001a59c        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
-                0x0001a59c                _fini
- .fini          0x0001a5a0        0x8 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
-                0x0001a5a8                . = ALIGN (0x4)
+ .fini          0x0001a594        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crti.o
+                0x0001a594                _fini
+ .fini          0x0001a598        0x8 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtn.o
+                0x0001a5a0                . = ALIGN (0x4)
 
-.vfp11_veneer   0x0001a5a8        0x0
- .vfp11_veneer  0x0001a5a8        0x0 linker stubs
+.vfp11_veneer   0x0001a5a0        0x0
+ .vfp11_veneer  0x0001a5a0        0x0 linker stubs
 
-.v4_bx          0x0001a5a8        0x0
- .v4_bx         0x0001a5a8        0x0 linker stubs
+.v4_bx          0x0001a5a0        0x0
+ .v4_bx         0x0001a5a0        0x0 linker stubs
 
-.iplt           0x0001a5a8        0x0
- .iplt          0x0001a5a8        0x0 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0001a5a0        0x0
+ .iplt          0x0001a5a0        0x0 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.NVM_TABLE      0x0001a5a8        0x0
-                0x0001a5a8                . = ALIGN (0x4)
+.NVM_TABLE      0x0001a5a0        0x0
+                0x0001a5a0                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__start_NVM_TABLE = .)
  *(SORT_BY_ALIGNMENT(.NVM_TABLE))
                 [!provide]                PROVIDE (__stop_NVM_TABLE = .)
-                0x0001a5a8                . = ALIGN (0x4)
+                0x0001a5a0                . = ALIGN (0x4)
 
-.VERSION_TAGS   0x0001a5a8       0x18
-                0x0001a5a8                . = ALIGN (0x4)
+.VERSION_TAGS   0x0001a5a0       0x18
+                0x0001a5a0                . = ALIGN (0x4)
                 [!provide]                PROVIDE (__start_VERSION_TAGS = .)
  *(SORT_BY_ALIGNMENT(.VERSION_TAGS))
- .VERSION_TAGS  0x0001a5a8        0xc ./framework/ModuleInfo/ModuleInfo.o
-                0x0001a5a8                FWK_VERSION
- .VERSION_TAGS  0x0001a5b4        0xc C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\libs\lib802.15.4_mac_06_cm0.a(MacVersion.o)
-                0x0001a5b4                MAC_VERSION
- .VERSION_TAGS  0x0001a5c0        0x0 C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\libs\lib802.15.4_mac_06_cm0.a(MacVersion.o)
+ .VERSION_TAGS  0x0001a5a0        0xc ./framework/ModuleInfo/ModuleInfo.o
+                0x0001a5a0                FWK_VERSION
+ .VERSION_TAGS  0x0001a5ac        0xc C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\libs\lib802.15.4_mac_06_cm0.a(MacVersion.o)
+                0x0001a5ac                MAC_VERSION
+ .VERSION_TAGS  0x0001a5b8        0x0 C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos\libs\lib802.15.4_mac_06_cm0.a(MacVersion.o)
                 [!provide]                PROVIDE (__stop_VERSION_TAGS = .)
-                0x0001a5c0                . = ALIGN (0x4)
+                0x0001a5b8                . = ALIGN (0x4)
 
 .ARM.extab
  *(SORT_BY_ALIGNMENT(.ARM.extab*) SORT_BY_ALIGNMENT(.gnu.linkonce.armextab.*))
 
-.ARM            0x0001a5c0        0x8
-                0x0001a5c0                __exidx_start = .
+.ARM            0x0001a5b8        0x8
+                0x0001a5b8                __exidx_start = .
  *(SORT_BY_ALIGNMENT(.ARM.exidx*))
- .ARM.exidx     0x0001a5c0        0x8 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .ARM.exidx     0x0001a5b8        0x8 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
                                  0x10 (size before relaxing)
- .ARM.exidx     0x0001a5c8        0x0 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0001a5c0        0x0 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
                                   0x8 (size before relaxing)
-                0x0001a5c8                __exidx_end = .
+                0x0001a5c0                __exidx_end = .
 
-.rel.dyn        0x0001a5c8        0x0
- .rel.iplt      0x0001a5c8        0x0 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x0001a5c0        0x0
+ .rel.iplt      0x0001a5c0        0x0 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.ctors          0x0001a5c8        0x0
-                0x0001a5c8                __CTOR_LIST__ = .
+.ctors          0x0001a5c0        0x0
+                0x0001a5c0                __CTOR_LIST__ = .
  *crtbegin.o(SORT_BY_ALIGNMENT(.ctors))
  *crtbegin?.o(SORT_BY_ALIGNMENT(.ctors))
  *(SORT_BY_ALIGNMENT(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.ctors.*)))
  *(SORT_BY_ALIGNMENT(.ctors))
-                0x0001a5c8                __CTOR_END__ = .
+                0x0001a5c0                __CTOR_END__ = .
 
-.dtors          0x0001a5c8        0x0
-                0x0001a5c8                __DTOR_LIST__ = .
+.dtors          0x0001a5c0        0x0
+                0x0001a5c0                __DTOR_LIST__ = .
  *crtbegin.o(SORT_BY_ALIGNMENT(.dtors))
  *crtbegin?.o(SORT_BY_ALIGNMENT(.dtors))
  *(SORT_BY_ALIGNMENT(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors))
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.dtors.*)))
  *(SORT_BY_ALIGNMENT(.dtors))
-                0x0001a5c8                __DTOR_END__ = .
+                0x0001a5c0                __DTOR_END__ = .
 
-.preinit_array  0x0001a5c8        0x0
-                0x0001a5c8                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0001a5c0        0x0
+                0x0001a5c0                PROVIDE (__preinit_array_start = .)
  *(SORT_BY_ALIGNMENT(.preinit_array*))
-                0x0001a5c8                PROVIDE (__preinit_array_end = .)
+                0x0001a5c0                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0001a5c8        0x8
-                0x0001a5c8                PROVIDE (__init_array_start = .)
+.init_array     0x0001a5c0        0x8
+                0x0001a5c0                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.init_array.*)))
  .init_array.00000
-                0x0001a5c8        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-__call_atexit.o)
+                0x0001a5c0        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc.a(lib_a-__call_atexit.o)
  *(SORT_BY_ALIGNMENT(.init_array*))
- .init_array    0x0001a5cc        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x0001a5d0                PROVIDE (__init_array_end = .)
+ .init_array    0x0001a5c4        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0001a5c8                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0001a5d0        0x4
-                0x0001a5d0                PROVIDE (__fini_array_start = .)
+.fini_array     0x0001a5c8        0x4
+                0x0001a5c8                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(SORT_BY_ALIGNMENT(.fini_array.*)))
  *(SORT_BY_ALIGNMENT(.fini_array*))
- .fini_array    0x0001a5d0        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x0001a5d4                PROVIDE (__fini_array_end = .)
-                0x0001a5d4                __etext = .
-                0x0001a5d4                __DATA_ROM = .
+ .fini_array    0x0001a5c8        0x4 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0001a5cc                PROVIDE (__fini_array_end = .)
+                0x0001a5cc                __etext = .
+                0x0001a5cc                __DATA_ROM = .
 
 .mtb            0x20000000        0x0
                 0x20000000                . = ALIGN (0x8)
@@ -5092,7 +5092,7 @@ LOAD c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32
                 0x20000000                __VECTOR_RAM = __VECTOR_RAM__
                 0x000000c0                __RAM_VECTOR_TABLE_SIZE_BYTES = (__interrupts_ram_end__ - __interrupts_ram_start__)
 
-.data           0x200000c0      0x5f0 load address 0x0001a5d4
+.data           0x200000c0      0x5f0 load address 0x0001a5cc
                 0x200000c0                . = ALIGN (0x4)
                 0x200000c0                __DATA_RAM = .
                 0x200000c0                __data_start__ = .
@@ -5213,14 +5213,14 @@ LOAD c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32
  *(SORT_BY_ALIGNMENT(.jcr*))
                 0x200006b0                . = ALIGN (0x4)
                 0x200006b0                __data_end__ = .
-                0x0001abc4                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
+                0x0001abbc                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
                 0x0007d7ff                text_end = (ORIGIN (TEXT_region2) + LENGTH (TEXT_region2))
                 0x00000001                ASSERT ((__DATA_END <= text_end), region m_text overflowed with text and data)
 
-.igot.plt       0x200006b0        0x0 load address 0x0001abc4
+.igot.plt       0x200006b0        0x0 load address 0x0001abbc
  .igot.plt      0x200006b0        0x0 c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.6.0.202112161359/tools/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.bss            0x200006b0     0x43f0 load address 0x0001abc8
+.bss            0x200006b0     0x43f0 load address 0x0001abc0
                 0x200006b0                . = ALIGN (0x4)
                 0x200006b0                __START_BSS = .
                 0x200006b0                __bss_start__ = .
@@ -5543,7 +5543,7 @@ LOAD c:/nxp/mcuxpressoide_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.win32
                 0x20004aa0                . = (. + __size_heap__)
                 0x20004aa0                __HeapLimit = .
 
-.stack          0x20004aa0      0x200 load address 0x0001efb8
+.stack          0x20004aa0      0x200 load address 0x0001efb0
                 0x20004aa0                . = ALIGN (0x8)
                 0x20004ca0                . = (. + __size_cstack__)
  *fill*         0x20004aa0      0x200 

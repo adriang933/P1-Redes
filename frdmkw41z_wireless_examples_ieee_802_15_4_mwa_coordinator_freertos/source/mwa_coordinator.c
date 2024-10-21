@@ -556,7 +556,7 @@ static void App_HandleScanEdConfirm(nwkMessage_t *pMsg)
   for(idx=0, n=0; n<16; n++)
   {
       /* Channel numbering is 11 to 26 both inclusive */
-      Channel = n + 11;
+      Channel = 25;
       if( (chMask & (1 << Channel)) )
       {
           if( pEdList[idx] < minEnergy )
