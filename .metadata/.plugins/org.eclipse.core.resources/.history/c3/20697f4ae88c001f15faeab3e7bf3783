@@ -1,0 +1,20 @@
+/*
+ * MyNewTask.h
+ *
+ *  Created on: 17 oct 2024
+ *      Author: adrgm
+ */
+
+#ifndef MYNEWTASK_H_
+#define MYNEWTASK_H_
+
+/* Fwk */
+#include "TimersManager.h"
+#include "FunctionLib.h"
+#include "LED.h"
+/* KSDK */
+#include "fsl_common.h"
+#include "EmbeddedTypes.h"
+#include "fsl_os_abstraction.h"
+
+#endif /* MYNEWTASK_H_ */
