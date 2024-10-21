@@ -1,4 +1,4 @@
-13:13:35 **** Incremental Build of configuration Debug for project frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos ****
+13:22:38 **** Incremental Build of configuration Debug for project frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos ****
 make -r -j8 all 
 Building file: ../source/mwa_coordinator.c
 Invoking: MCU C Compiler
@@ -28,5 +28,5 @@ arm-none-eabi-size "frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_fr
  107120	   9723	  18096	 134939	  20f1b	frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos.axf
  
 
-13:13:38 Build Finished. 0 errors, 1 warnings. (took 3s.55ms)
+13:22:39 Build Finished. 0 errors, 1 warnings. (took 782ms)
 

@@ -206,6 +206,7 @@ void main_task(uint32_t param)
         Phy_Init();
         RNG_Init(); /* RNG must be initialized after the PHY is Initialized */
         MAC_Init();
+        MyTask_Init();
 #if mEnterLowPowerWhenIdle_c
         PWR_Init();
         PWR_DisallowDeviceToSleep();
@@ -552,6 +553,7 @@ void AppThread(osaTaskParam_t argument)
                             /* Startup the timer */
                             TMR_StartLowPowerTimer(mTimer_c, gTmrSingleShotTimer_c ,mPollInterval, AppPollWaitTimeout, NULL );
                             /* Go to the listen state */
+                            MyTaskTimer_Start();
                             gState = stateListen;
                             OSA_EventSet(mAppEvent, gAppEvtDummyEvent_c); 
                         }        
