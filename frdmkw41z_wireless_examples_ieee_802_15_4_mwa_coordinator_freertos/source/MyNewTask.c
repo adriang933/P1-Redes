@@ -55,7 +55,7 @@ myTaskTimerCallback function */
    break;
   case gMyNewTaskEvent3_c: /* Event to stop the timer */
    ledsState = 0;
-   TurnOffLeds();
+//   TurnOffLeds();
    TMR_StopTimer(myTimerID);
    break;
   default:

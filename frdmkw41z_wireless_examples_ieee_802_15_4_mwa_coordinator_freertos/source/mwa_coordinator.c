@@ -384,6 +384,7 @@ void AppThread(uint32_t argument)
           {
               /* Process it */
               App_HandleMcpsInput(pMsgIn, 0);
+
               /* Messages from the MCPS must always be freed. */
               MSG_Free(pMsgIn);
               pMsgIn = NULL;
@@ -809,6 +810,35 @@ static uint8_t App_HandleMlmeInput(nwkMessage_t *pMsg, uint8_t appInstance)
 ******************************************************************************/
 static void App_HandleMcpsInput(mcpsToNwkMessage_t *pMsgIn, uint8_t appInstance)
 {
+	LED_StopFlashingAllLeds();
+
+    switch(pMsgIn->msgData.dataInd.pMsdu[0])
+    {
+    case 0:
+    	Led2On();
+    	Led3Off();
+    	Led4Off();
+      break;
+
+    case 1:
+    	Led2Off();
+    	Led3On();
+    	Led4Off();
+      break;
+    case 2:
+    	Led2Off();
+    	Led3Off();
+    	Led4On();
+       break;
+    case 3:
+    	Led2On();
+    	Led3On();
+    	Led4On();
+       break;
+
+    default:
+      break;
+    }
   switch(pMsgIn->msgType)
   {
     /* The MCPS-Data confirm is sent by the MAC to the network
