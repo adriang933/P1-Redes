@@ -16,7 +16,33 @@
 #include "fsl_common.h"
 #include "EmbeddedTypes.h"
 #include "fsl_os_abstraction.h"
+#include "mwa_end_device.h"
+#include "LED.h"
+#include "Keyboard.h"
+#include "SecLib.h"
+#include "SerialManager.h"
+#include "RNG_Interface.h"
+#include "Panic.h"
+#include "MemManager.h"
+#include "TimersManager.h"
+#include "FunctionLib.h"
 
+
+#if mEnterLowPowerWhenIdle_c
+  #include "PWR_Interface.h"
+#endif
+
+#if gNvmTestActive_d
+  #include "NVM_Interface.h"
+#endif
+
+/* 802.15.4 */
+#include "PhyInterface.h"
+#include "MacInterface.h"
+
+/* KSDK */
+#include "board.h"
+#include "fsl_os_abstraction.h"
 #define gMyNewTaskEvent1_c (1 << 0)
 #define gMyNewTaskEvent2_c (1 << 1)
 #define gMyNewTaskEvent3_c (1 << 2)

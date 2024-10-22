@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="maMyAddress"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="maMyAddress"/>
+			<item value="App_TransmitUartData"/>
+			<item value="pMsdu"/>
+			<item value="mMacInstance"/>
+			<item value="App_TransmitData"/>
+			<item value="macInstance"/>
+			<item value="msduHandle"/>
+			<item value="mMsduHandle"/>
+			<item value="mcpsToNwkMessage_t"/>
 			<item value="CAFE"/>
 			<item value="main"/>
 			<item value="App_HandleMcpsInput"/>
 			<item value="main\"/>
 			<item value="Received an MLME"/>
 			<item value="Based on the "/>
-			<item value="cafe"/>
-			<item value="response"/>
-			<item value="ready"/>
 		</list>
 		<list key="replacehistory">
 		</list>

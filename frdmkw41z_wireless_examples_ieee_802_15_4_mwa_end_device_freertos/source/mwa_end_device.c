@@ -137,6 +137,8 @@ static uint16_t mPollInterval;
 static anchor_t mMlmeNwkInputQueue;
 static anchor_t mMcpsNwkInputQueue;
 
+static nwkToMcpsMessage_t *mpPacket = NULL;
+
 static tmrTimerID_t mTimer_c = gTmrInvalidTimerID_c;
 
 static const uint64_t mExtendedAddress  = mMacExtendedAddress_c;
@@ -234,6 +236,58 @@ void main_task(uint32_t param)
     App_Idle_Task( param );
 }
 
+void SendLedCount(uint8_t LedCounter)
+
+{
+	mpPacket = NULL;
+	  if( (mcPendingPackets < mDefaultValueOfMaxPendingDataPackets_c) && (mpPacket == NULL) )
+	    {
+	        /* If the maximum number of pending data buffes is below maximum limit
+	        and we do not have a data buffer already then allocate one. */
+	        mpPacket = MSG_Alloc(sizeof(nwkToMcpsMessage_t) + gMaxPHYPacketSize_c);
+	    }
+	  if( mpPacket != NULL )
+	     {
+	         /* Data was available in the serial terminal interface receive buffer. Now create an
+	         MCPS-Data Request message containing the serial terminal interface data. */
+	         mpPacket->msgType = gMcpsDataReq_c;
+	         /* Create the header using coordinator information gained during
+	         the scan procedure. Also use the short address we were assigned
+	         by the coordinator during association. */
+	         mpPacket->msgData.dataReq.pMsdu = (uint8_t*)(&(mpPacket->msgData.dataReq.pMsdu)) + sizeof(uint8_t*);
+
+	         FLib_MemCpy(&mpPacket->msgData.dataReq.dstAddr, &mCoordInfo.coordAddress, 8);
+	         FLib_MemCpy(&mpPacket->msgData.dataReq.srcAddr, &maMyAddress, 8);
+	         FLib_MemCpy(&mpPacket->msgData.dataReq.dstPanId, &mCoordInfo.coordPanId, 2);
+	         FLib_MemCpy(&mpPacket->msgData.dataReq.srcPanId, &mCoordInfo.coordPanId, 2);
+	         mpPacket->msgData.dataReq.dstAddrMode = mCoordInfo.coordAddrMode;
+	         mpPacket->msgData.dataReq.srcAddrMode = gAddrModeShortAddress_c;
+	         mpPacket->msgData.dataReq.msduLength = 9;
+	         // Signal to Coordinator that a sensor message follows
+	         mpPacket->msgData.dataReq.pMsdu[0] = LedCounter;
+	         // Put dummy sensor data into the data packet
+	         mpPacket->msgData.dataReq.pMsdu[1] = 0x1;
+	         mpPacket->msgData.dataReq.pMsdu[2] = 0x2;
+	         mpPacket->msgData.dataReq.pMsdu[3] = 0x3;
+	         mpPacket->msgData.dataReq.pMsdu[4] = 0x4;
+	         mpPacket->msgData.dataReq.pMsdu[5] = 0x5;
+	         mpPacket->msgData.dataReq.pMsdu[6] = 0x6;
+	         mpPacket->msgData.dataReq.pMsdu[7] = 0x7;
+	         mpPacket->msgData.dataReq.pMsdu[8] = 0x8;
+	         /* Request MAC level acknowledgment of the data packet */
+	         mpPacket->msgData.dataReq.txOptions = gMacTxOptionsAck_c;
+	         /* Give the data packet a handle. The handle is
+	         returned in the MCPS-Data Confirm message. */
+	         mpPacket->msgData.dataReq.msduHandle = mMsduHandle++;
+	         mpPacket->msgData.dataReq.securityLevel = gMacSecurityNone_c;
+	         /* Send the Data Request to the MCPS */
+	         (void)NWK_MCPS_SapHandler(mpPacket, macInstance);
+	         /* Prepare for another data buffer */
+	         mcPendingPackets++;
+	     }
+
+}
+
 /*! *********************************************************************************
 * \brief  This is the application's Idle task.
 *
@@ -261,27 +315,6 @@ void App_Idle_Task(uint32_t argument)
         NvIdle();
 #endif
 
-#if mEnterLowPowerWhenIdle_c
-        if( PWR_CheckIfDeviceCanGoToSleep() )
-        {
-            Serial_Print(interfaceId, "\n\rEntering in deep sleep mode...\n\r", gAllowToBlock_d);
-            wakeupReason = PWR_EnterLowPower();
-            PWR_DisallowDeviceToSleep();
-            Led1On();
-            Led2On();
-            Led3On();
-            Led4On();
-
-            if( wakeupReason.Bits.FromKeyBoard )
-            {
-                App_HandleKeys( gKBD_EventSW1_c );
-            }
-        }
-        else
-        {
-            PWR_EnterSleep();
-        }
-#endif
         if( !gUseRtos_c )
         {
             break;
@@ -578,6 +611,7 @@ void AppThread(osaTaskParam_t argument)
 
         case stateListen:
             /* Transmit to coordinator data received from UART. */
+
             if (ev & gAppEvtMessageFromMLME_c)
             {  
                 if (pMsgIn)
@@ -590,8 +624,9 @@ void AppThread(osaTaskParam_t argument)
             if (ev & gAppEvtRxFromUart_c)
             {      
                 /* get byte from UART */
-                App_TransmitUartData();
+              //  App_TransmitUartData();
             }
+
 #if gNvmTestActive_d  
             if (timeoutCounter >= mDefaultValueOfTimeoutError_c)
             {
@@ -1104,7 +1139,7 @@ static void App_TransmitUartData(void)
         
         /* Send the Data Request to the MCPS */
         (void)NWK_MCPS_SapHandler(mpPacket, macInstance);
-        
+
         /* Prepare for another data buffer */
         mpPacket = NULL;
         mcPendingPackets++;
@@ -1222,5 +1257,6 @@ resultType_t MCPS_NWK_SapHandler (mcpsToNwkMessage_t* pMsg, instanceId_t instanc
   /* Put the incoming MCPS message in the applications input queue. */
   MSG_Queue(&mMcpsNwkInputQueue, pMsg);
   OSA_EventSet(mAppEvent, gAppEvtMessageFromMCPS_c);
-  return gSuccess_c;
 }
+
+

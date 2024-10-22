@@ -5,7 +5,7 @@
  *      Author: adrgm
  */
 #include "MyNewTask.h"
-
+#include "mwa_end_device.h"
 osaEventId_t          mMyEvents;
 /* Global Variable to store our TimerID */
 tmrTimerID_t myTimerID = gTmrInvalidTimerID_c;
@@ -22,7 +22,6 @@ void My_Task(osaTaskParam_t argument)
 {
  osaEventFlags_t customEvent;
  myTimerID = TMR_AllocateTimer();
-
  while(1)
  {
   OSA_EventWait(mMyEvents, osaEventFlagsAll_c, FALSE, osaWaitForever_c,
@@ -48,30 +47,34 @@ myTaskTimerCallback function */
 	if (LedCounter == 4)
 	{
 		LedCounter = 1;
-
+		SendLedCount(LedCounter);
 		Led2On();
 		Led3Off();
 		Led4Off();
 	}else if (LedCounter == 0)
 		{
+			SendLedCount(LedCounter);
 			LedCounter++;
 			Led2On();
 			Led3Off();
 			Led4Off();
 		}else if (LedCounter == 1)
 		{
+			SendLedCount(LedCounter);
 			LedCounter++;
 			Led2Off();
 			Led3On();
 			Led4Off();
 		}else if (LedCounter == 2)
 		{
+			SendLedCount(LedCounter);
 			LedCounter++;
 			Led2Off();
 			Led3Off();
 			Led4On();
 		}else if (LedCounter == 3)
 		{
+			SendLedCount(LedCounter);
 			LedCounter++;
 			Led2On();
 			Led3On();
@@ -114,3 +117,4 @@ void MyTaskTimer_Start(void)
 {
 	OSA_EventSet(mMyEvents, gMyNewTaskEvent1_c);
 }
+
