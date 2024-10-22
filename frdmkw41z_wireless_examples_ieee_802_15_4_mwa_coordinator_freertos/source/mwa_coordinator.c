@@ -114,6 +114,9 @@ static instanceId_t   macInstance;
 static uint8_t        interfaceId;
 osaEventId_t          mAppEvent;
 
+static uint64_t EndivAdress;
+static uint8_t LQI;
+static uint8_t PayloadLen;
 /************************************************************************************
 *************************************************************************************
 * Public memory declarations
@@ -811,13 +814,21 @@ static uint8_t App_HandleMlmeInput(nwkMessage_t *pMsg, uint8_t appInstance)
 static void App_HandleMcpsInput(mcpsToNwkMessage_t *pMsgIn, uint8_t appInstance)
 {
 	LED_StopFlashingAllLeds();
-
+	FLib_MemCpy(&EndivAdress,&pMsgIn->msgData.dataInd.srcAddr, 8);
+	FLib_MemCpy( &LQI,&pMsgIn->msgData.dataInd.mpduLinkQuality, 1);
+	FLib_MemCpy( &PayloadLen,&pMsgIn->msgData.dataInd.msduLength, 1);
+	Serial_Print(interfaceId, "Received message from End Device with:\n\r", gAllowToBlock_d);
+	Serial_Print(interfaceId, "\n\rAddress...........0x", gAllowToBlock_d); Serial_PrintHex(interfaceId, (uint8_t*)&EndivAdress,8, gPrtHexNoFormat_c);
+	Serial_Print(interfaceId, "\n\rPayload length............0x", gAllowToBlock_d); Serial_PrintHex(interfaceId, (uint8_t*)&PayloadLen, 1, gPrtHexNoFormat_c);
+	Serial_Print(interfaceId, "\n\rLink Quality......0x", gAllowToBlock_d); Serial_PrintHex(interfaceId, &LQI, 1, gPrtHexNoFormat_c);
+	Serial_Print(interfaceId, "\n\r\n\r", gAllowToBlock_d);
     switch(pMsgIn->msgData.dataInd.pMsdu[0])
     {
     case 0:
     	Led2On();
     	Led3Off();
     	Led4Off();
+
       break;
 
     case 1:

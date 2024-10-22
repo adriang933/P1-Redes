@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="App_HandleKeys"/>
+		<item key="selection" value="mCoordInfo"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="mCoordInfo"/>
+			<item value="Link"/>
+			<item value="interfaceId"/>
 			<item value="App_HandleKeys"/>
 			<item value="main_task"/>
 			<item value="Main"/>
@@ -20,9 +23,6 @@
 			<item value="osaEventFlagsAll_c"/>
 			<item value="mAppEvent"/>
 			<item value="led"/>
-			<item value="LED_StopFlashingAllLeds"/>
-			<item value="Led"/>
-			<item value="App_HandleMcpsInput"/>
 		</list>
 		<list key="replacehistory">
 		</list>
