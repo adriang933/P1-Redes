@@ -14,8 +14,8 @@
 ../source/mwa_end_device.c:1086:13:App_TransmitUartData	24	static
 ../source/mwa_end_device.c:1168:16:AppPollWaitTimeout	32	static
 ../source/mwa_end_device.c:1208:13:App_HandleKeys	16	static
-../source/mwa_end_device.c:1263:14:MLME_NWK_SapHandler	16	static
-../source/mwa_end_device.c:1271:14:MCPS_NWK_SapHandler	16	static
-../source/mwa_end_device.c:1278:9:ButtonCounterUpdate	8	static
-../source/mwa_end_device.c:1283:9:IsButtonPressed	8	static
-../source/mwa_end_device.c:1288:6:ClearFlag	8	static
+../source/mwa_end_device.c:1265:14:MLME_NWK_SapHandler	16	static
+../source/mwa_end_device.c:1273:14:MCPS_NWK_SapHandler	16	static
+../source/mwa_end_device.c:1280:9:ButtonCounterUpdate	8	static
+../source/mwa_end_device.c:1285:9:IsButtonPressed	8	static
+../source/mwa_end_device.c:1290:6:ClearFlag	8	static

@@ -1237,6 +1237,7 @@ static void App_HandleKeys
 		}else{
 			gLedCounter = 1;
 			gCounterFlag = 1;
+			MyTaskTimer_Start();
 		}
     	break;
     case 1:
@@ -1247,6 +1248,7 @@ static void App_HandleKeys
 		}else{
 			gLedCounter = 2;
 			gCounterFlag = 1;
+			MyTaskTimer_Start();
 		}
     	break;
     default:

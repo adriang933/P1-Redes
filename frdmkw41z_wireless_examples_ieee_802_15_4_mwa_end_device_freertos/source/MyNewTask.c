@@ -41,17 +41,34 @@ void My_Task(osaTaskParam_t argument)
 myTaskTimerCallback function */
      NULL
    );
+   if(IsButtonPressed() == 1){
+	   ClearFlag();
+	   LedCounter = ButtonCounterUpdate();
+	   if (LedCounter == 1)
+	   		{
+	   			SendLedCount(LedCounter);
+	   			LedCounter++;
+	   			Led2Off();
+	   			Led3On();
+	   			Led4Off();
+	   		}else if (LedCounter == 2)
+	   		{
+	   			SendLedCount(LedCounter);
+	   			LedCounter++;
+	   			Led2Off();
+	   			Led3Off();
+	   			Led4On();
+	   		}
+   }else{
    TurnOffLeds(); /* Ensure all LEDs are turned off */
+   }
    break;
   case gMyNewTaskEvent2_c: /* Event called from myTaskTimerCallback */
-	 if(IsButtonPressed() == 1){
-		 LedCounter = ButtonCounterUpdate();
-		 ClearFlag();
-		 MyTaskTimer_Start();
-	 }else if (LedCounter == 4)
+	 if (LedCounter == 4)
 	{
-		LedCounter = 1;
+		LedCounter = 0;
 		SendLedCount(LedCounter);
+		LedCounter = 1;
 		Led2On();
 		Led3Off();
 		Led4Off();
