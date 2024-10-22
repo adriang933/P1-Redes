@@ -44,7 +44,11 @@ myTaskTimerCallback function */
    TurnOffLeds(); /* Ensure all LEDs are turned off */
    break;
   case gMyNewTaskEvent2_c: /* Event called from myTaskTimerCallback */
-	if (LedCounter == 4)
+	 if(IsButtonPressed() == 1){
+		 LedCounter = ButtonCounterUpdate();
+		 ClearFlag();
+		 MyTaskTimer_Start();
+	 }else if (LedCounter == 4)
 	{
 		LedCounter = 1;
 		SendLedCount(LedCounter);

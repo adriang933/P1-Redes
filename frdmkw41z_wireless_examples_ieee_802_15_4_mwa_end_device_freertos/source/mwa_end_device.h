@@ -16,6 +16,11 @@
 #include "EmbeddedTypes.h"
 
 void SendLedCount(uint8_t LedCounter);
+uint8_t ButtonCounterUpdate(void);
+uint8_t IsButtonPressed(void);
+void ClearFlag(void);
+
+
 /*! *********************************************************************************
 *************************************************************************************
 * Include

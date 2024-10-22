@@ -146,7 +146,8 @@ static instanceId_t   macInstance;
 static uint8_t        interfaceId;
 osaEventId_t          mAppEvent;
 osaTaskId_t           mAppTaskHandler;
-
+uint8_t gLedCounter = 5;
+uint8_t gCounterFlag = 0;
 #if gNvmTestActive_d
 
 static uint16_t timeoutCounter = 0;
@@ -1209,33 +1210,48 @@ static void App_HandleKeys
   key_event_t events  /*IN: Events from keyboard modul */
   )
 {
-#if gKBD_KeysCount_c > 0 
     switch ( events ) 
     { 
     case gKBD_EventLongSW1_c:
         OSA_EventSet(mAppEvent, gAppEvtPressedRestoreNvmBut_c);
     case gKBD_EventLongSW2_c:
     case gKBD_EventLongSW3_c:
-    case gKBD_EventLongSW4_c:
-    case gKBD_EventSW1_c:
-    case gKBD_EventSW2_c:
-    case gKBD_EventSW3_c:
-    case gKBD_EventSW4_c:
-#if gTsiSupported_d
-    case gKBD_EventSW5_c:    
-    case gKBD_EventSW6_c:    
-#endif
-#if gTsiSupported_d
-    case gKBD_EventLongSW5_c:
-    case gKBD_EventLongSW6_c:       
-#endif
         if(gState == stateInit)
         {
             LED_StopFlashingAllLeds();
             OSA_EventSet(mAppEvent, gAppEvtDummyEvent_c);
         }
-    }
-#endif
+    	break;
+    case gKBD_EventLongSW4_c:
+    	if(gState == stateInit)
+		{
+			LED_StopFlashingAllLeds();
+			OSA_EventSet(mAppEvent, gAppEvtDummyEvent_c);
+		}
+    	break;
+    case 2:
+    	if(gState == stateInit)
+		{
+			LED_StopFlashingAllLeds();
+			OSA_EventSet(mAppEvent, gAppEvtDummyEvent_c);
+		}else{
+			gLedCounter = 1;
+			gCounterFlag = 1;
+		}
+    	break;
+    case 1:
+    	if(gState == stateInit)
+		{
+			LED_StopFlashingAllLeds();
+			OSA_EventSet(mAppEvent, gAppEvtDummyEvent_c);
+		}else{
+			gLedCounter = 2;
+			gCounterFlag = 1;
+		}
+    	break;
+    default:
+     break;
+}
 }
 
 /******************************************************************************
@@ -1259,4 +1275,17 @@ resultType_t MCPS_NWK_SapHandler (mcpsToNwkMessage_t* pMsg, instanceId_t instanc
   OSA_EventSet(mAppEvent, gAppEvtMessageFromMCPS_c);
 }
 
+uint8_t ButtonCounterUpdate(void)
+{
+	return gLedCounter;
+}
 
+uint8_t IsButtonPressed(void)
+{
+	return gCounterFlag;
+}
+
+void ClearFlag(void)
+{
+	gCounterFlag = 0;
+}

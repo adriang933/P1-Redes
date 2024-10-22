@@ -1633,3 +1633,293 @@ Caused by: java.lang.IllegalArgumentException: Attempted to beginRule: R/, does 
 
 !ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-10-21 23:50:50.893
 !MESSAGE Telnet session connected on port 3330->64010 @ 127.0.0.1
+!SESSION 2024-10-22 12:04:06.650 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-10-22 12:04:27.074
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\adrgm'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.crt.log 4 -1 2024-10-22 12:27:15.553
+!MESSAGE Attempted to beginRule: R/, does not match outer scope rule: P/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos
+!STACK 0
+java.lang.Exception: org.eclipse.core.runtime.CoreException: Attempted to beginRule: R/, does not match outer scope rule: P/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos
+	at com.crt.utils.general.Reporter.log(Reporter.java:591)
+	at com.nxp.mcuxpresso.core.datamodels.SDKChipVendorDatabase.save(SDKChipVendorDatabase.java:521)
+	at com.crt.config.database.ChipVendor.save(ChipVendor.java:751)
+	at com.crt.config.database.TargetConfig.save(TargetConfig.java:1534)
+	at com.crt.config.SaveViewInfo.saving(SaveViewInfo.java:102)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:387)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:204)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:207)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1164)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143)
+	at org.eclipse.core.internal.resources.Project.close(Project.java:197)
+	at org.eclipse.ui.actions.CloseResourceAction.invokeOperation(CloseResourceAction.java:171)
+	at org.eclipse.ui.actions.WorkspaceAction.execute(WorkspaceAction.java:159)
+	at org.eclipse.ui.actions.WorkspaceAction$1.runInWorkspace(WorkspaceAction.java:459)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.core.runtime.CoreException: Attempted to beginRule: R/, does not match outer scope rule: P/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos
+	at org.eclipse.cdt.internal.core.settings.model.ExceptionFactory.createCoreException(ExceptionFactory.java:29)
+	at org.eclipse.cdt.internal.core.settings.model.AbstractCProjectDescriptionStorage.setProjectDescription(AbstractCProjectDescriptionStorage.java:211)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionStorageManager.setProjectDescription(CProjectDescriptionStorageManager.java:153)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:867)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:817)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:810)
+	at org.eclipse.cdt.core.model.CoreModel.setProjectDescription(CoreModel.java:1400)
+	at com.nxp.mcuxpresso.core.datamodels.SDKChipVendorDatabase.save(SDKChipVendorDatabase.java:516)
+	... 15 more
+Caused by: java.lang.IllegalArgumentException: Attempted to beginRule: R/, does not match outer scope rule: P/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_coordinator_freertos
+	at org.eclipse.core.runtime.Assert.isLegal(Assert.java:66)
+	at org.eclipse.core.internal.jobs.ThreadJob.illegalPush(ThreadJob.java:137)
+	at org.eclipse.core.internal.jobs.ThreadJob.push(ThreadJob.java:401)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:66)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:311)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:124)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2263)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2308)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2338)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:644)
+	at org.eclipse.cdt.internal.core.settings.model.AbstractCProjectDescriptionStorage.setProjectDescription(AbstractCProjectDescriptionStorage.java:209)
+	... 21 more
+
+!ENTRY com.crt.log 1 0 2024-10-22 12:51:42.253
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 12:51:42.257
+!MESSAGE RedlinkServer telnet session connected on port 3025->56263 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 12:51:54.043
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=56267, -g, -mi, -2, -pMKW41Z512xxx4, -vendor=NXP, --connectscript=kinetisconnect.scp, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/Debug, --flash-dir, C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/.mcuxpressoide_packages_support/MKW41Z512xxx4_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-10-22 12:51:56.637
+!MESSAGE Telnet session connected on port 3330->56271 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2024-10-22 12:54:47.156
+!MESSAGE An error occurred while getting register xpsr
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 10002 2024-10-22 12:54:47.156
+!MESSAGE Execution context not found
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 12:54:47.279
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 12:54:47.279
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 12:54:47.279
+!MESSAGE Unable to set an execution break - no resource available.
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 12:54:47.279
+!MESSAGE Debugging context: frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos LinkServer Debug
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 12:54:50.989
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 12:54:50.989
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 12:54:50.989
+!MESSAGE Unable to set an execution break - no resource available.
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 12:54:50.989
+!MESSAGE Debugging context: frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-10-22 12:54:53.536
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@2eccda33): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2024-10-22 12:54:53.536
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2024-10-22 12:54:53.740
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 12:54:54.259
+!MESSAGE RedlinkServer telnet session connected on port 3025->56314 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 12:54:54.263
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-10-22 12:54:54.273
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@51d9b817): Status ERROR: org.eclipse.cdt.dsf.gdb code=10003 Given context: (gdb[0].proc[42000].threadGroup[i1],gdb[0].proc[42000].OSthread[1]).thread[1], is already suspended.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10003 2024-10-22 12:54:54.273
+!MESSAGE Given context: (gdb[0].proc[42000].threadGroup[i1],gdb[0].proc[42000].OSthread[1]).thread[1], is already suspended.
+
+!ENTRY com.crt.log 1 0 2024-10-22 12:59:34.664
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 12:59:35.176
+!MESSAGE RedlinkServer telnet session connected on port 3025->56380 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 12:59:49.023
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=56392, -g, -mi, -2, -pMKW41Z512xxx4, -vendor=NXP, --connectscript=kinetisconnect.scp, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/Debug, --flash-dir, C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/.mcuxpressoide_packages_support/MKW41Z512xxx4_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-10-22 12:59:51.561
+!MESSAGE Telnet session connected on port 3330->56396 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2024-10-22 13:00:00.518
+!MESSAGE An error occurred while getting register xpsr
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 10002 2024-10-22 13:00:00.518
+!MESSAGE Execution context not found
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:00:00.798
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:00:00.798
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:00:00.798
+!MESSAGE Unable to set an execution break - no resource available.
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:00:00.798
+!MESSAGE Debugging context: frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-10-22 13:00:44.387
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@38eaaf30): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2024-10-22 13:00:44.387
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:00:44.579
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 13:00:45.089
+!MESSAGE RedlinkServer telnet session connected on port 3025->56413 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:00:45.090
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-10-22 13:00:53.631
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.ImmediateRequestMonitor@7a454c7b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2024-10-22 13:00:53.631
+!MESSAGE Suspend operation timeout.
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:01:00.739
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 13:01:01.254
+!MESSAGE RedlinkServer telnet session connected on port 3025->56419 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:01:10.742
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=56422, -g, -mi, -2, -pMKW41Z512xxx4, -vendor=NXP, --connectscript=kinetisconnect.scp, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/Debug, --flash-dir, C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/.mcuxpressoide_packages_support/MKW41Z512xxx4_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-10-22 13:01:13.271
+!MESSAGE Telnet session connected on port 3330->56426 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2024-10-22 13:01:16.068
+!MESSAGE An error occurred while getting register xpsr
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 10002 2024-10-22 13:01:16.069
+!MESSAGE Execution context not found
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:01:16.346
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:01:16.346
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:01:16.346
+!MESSAGE Unable to set an execution break - no resource available.
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:01:16.346
+!MESSAGE Debugging context: frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos LinkServer Debug
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:01:23.338
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:01:23.338
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:01:23.338
+!MESSAGE Unable to set an execution break - no resource available.
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:01:23.338
+!MESSAGE Debugging context: frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos LinkServer Debug
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:01:39.480
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 13:01:39.988
+!MESSAGE RedlinkServer telnet session connected on port 3025->56435 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:01:49.381
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=56438, -g, -mi, -2, -pMKW41Z512xxx4, -vendor=NXP, --connectscript=kinetisconnect.scp, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/Debug, --flash-dir, C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/.mcuxpressoide_packages_support/MKW41Z512xxx4_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-10-22 13:01:51.953
+!MESSAGE Telnet session connected on port 3330->56441 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:22:18.982
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 13:22:19.496
+!MESSAGE RedlinkServer telnet session connected on port 3025->57306 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:24:00.092
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=57398, -g, -mi, -2, -pMKW41Z512xxx4, -vendor=NXP, --connectscript=kinetisconnect.scp, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/Debug, --flash-dir, C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/.mcuxpressoide_packages_support/MKW41Z512xxx4_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-10-22 13:24:02.634
+!MESSAGE Telnet session connected on port 3330->57401 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:26:13.719
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:26:13.719
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:26:13.719
+!MESSAGE Unable to set an execution break - no resource available.
+!SUBENTRY 1 com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:26:13.719
+!MESSAGE Debugging context: frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos LinkServer Debug
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2024-10-22 13:26:16.144
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_0_NS$16@b380f4b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2024-10-22 13:26:16.144
+!MESSAGE Connection is shut down
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:26:16.352
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 13:26:16.865
+!MESSAGE RedlinkServer telnet session connected on port 3025->57436 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2024-10-22 13:26:16.867
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:26:35.791
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 13:26:36.299
+!MESSAGE RedlinkServer telnet session connected on port 3025->57441 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:26:45.432
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=57444, -g, -mi, -2, -pMKW41Z512xxx4, -vendor=NXP, --connectscript=kinetisconnect.scp, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/Debug, --flash-dir, C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/.mcuxpressoide_packages_support/MKW41Z512xxx4_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-10-22 13:26:47.974
+!MESSAGE Telnet session connected on port 3330->57448 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:29:19.382
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 13:29:19.898
+!MESSAGE RedlinkServer telnet session connected on port 3025->57486 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:29:29.436
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=57490, -g, -mi, -2, -pMKW41Z512xxx4, -vendor=NXP, --connectscript=kinetisconnect.scp, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/Debug, --flash-dir, C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/.mcuxpressoide_packages_support/MKW41Z512xxx4_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-10-22 13:29:31.982
+!MESSAGE Telnet session connected on port 3330->57493 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:30:48.211
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 13:30:48.722
+!MESSAGE RedlinkServer telnet session connected on port 3025->57536 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:30:57.767
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=57539, -g, -mi, -2, -pMKW41Z512xxx4, -vendor=NXP, --connectscript=kinetisconnect.scp, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/Debug, --flash-dir, C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/.mcuxpressoide_packages_support/MKW41Z512xxx4_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-10-22 13:31:00.355
+!MESSAGE Telnet session connected on port 3330->57542 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:33:41.726
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2024-10-22 13:33:42.239
+!MESSAGE RedlinkServer telnet session connected on port 3025->57582 @ 127.0.0.1
+
+!ENTRY com.crt.log 1 0 2024-10-22 13:35:02.482
+!MESSAGE Starting GDB server [ C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries//crt_emu_cm_redlink, --server, :10989, -msg-port=57603, -g, -mi, -2, -pMKW41Z512xxx4, -vendor=NXP, --connectscript=kinetisconnect.scp, --reset=, -ProbeHandle=1, -CoreIndex=0, -cache=disable, --flash-hashing, --flash-driver=, -x, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos/Debug, --flash-dir, C:/nxp/MCUXpressoIDE_11.6.0_8187/ide/plugins/com.nxp.mcuxpresso.tools.bin.win32_11.6.0.202207121507/binaries/Flash, --flash-dir, C:/Users/adrgm/Documents/MCUXpressoIDE_11.6.0_8187/workspace/Wireless/.mcuxpressoide_packages_support/MKW41Z512xxx4_support/Flash, --telnet, 3330 ]
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2024-10-22 13:35:05.024
+!MESSAGE Telnet session connected on port 3330->57606 @ 127.0.0.1
