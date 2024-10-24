@@ -1040,3 +1040,27 @@ resultType_t MCPS_NWK_SapHandler (mcpsToNwkMessage_t* pMsg, instanceId_t instanc
   OSA_EventSet(mAppEvent, gAppEvtMessageFromMCPS_c);
   return gSuccess_c;
 }
+/****************** FASE 2 ******************************************/
+/* struct for Node Info */
+
+#define Num_Nodos 5
+
+typedef struct {
+    uint16_t shortAddress;
+    uint64_t extendedAddress;
+    _Bool rxOnWhenIdle;
+    _Bool devType;
+} NodeInfo_t;
+
+/* Node array */
+NodeInfo_t Node_One;
+
+/**** Info association Function  ******/
+void NodeInfoAssociation(uint16_t sAddr, uint64_t eAddr, _Bool Idle, _Bool dType) {
+	Node_One.shortAddress = sAddr;
+	Node_One.extendedAddress = eAddr;
+	Node_One.rxOnWhenIdle = Idle;
+	Node_One.devType = dType;
+}
+
+
