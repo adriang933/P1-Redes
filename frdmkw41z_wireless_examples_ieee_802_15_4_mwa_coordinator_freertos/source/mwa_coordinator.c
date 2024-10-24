@@ -1052,15 +1052,22 @@ typedef struct {
     _Bool devType;
 } NodeInfo_t;
 
-/* Node array */
-NodeInfo_t Node_One;
+typedef struct {
+	NodeInfo_t Nodes[4];
+}Nodes_t;
+
+Nodes_t Nodes;
 
 /**** Info association Function  ******/
 void NodeInfoAssociation(uint16_t sAddr, uint64_t eAddr, _Bool Idle, _Bool dType) {
-	Node_One.shortAddress = sAddr;
-	Node_One.extendedAddress = eAddr;
-	Node_One.rxOnWhenIdle = Idle;
-	Node_One.devType = dType;
+	Nodes.Nodes[0].shortAddress = 0x12345;
 }
+
+/*** PENDIENTE ***
+ *
+ * Averiguar donde encontrar el RFF O FDD
+ * Buscar que variable contiene cada cosa
+ */
+
 
 
