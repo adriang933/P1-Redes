@@ -710,6 +710,24 @@ static uint8_t App_StartCoordinator( uint8_t appInstance )
 *   errorAllocFailed:      A message buffer could not be allocated.
 *
 ******************************************************************************/
+/****************** FASE 2 ******************************************/
+/* struct for Node Info */
+
+#define Num_Nodos 5
+
+typedef struct {
+    uint16_t shortAddress;
+    uint64_t extendedAddress;
+    _Bool rxOnWhenIdle;
+    _Bool devType;
+} NodeInfo_t;
+
+typedef struct {
+	NodeInfo_t Nodes_structures[4];
+}Nodes_t;
+
+Nodes_t *Nodes;
+
 static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstance)
 {
   mlmeMessage_t *pMsg;
@@ -732,6 +750,7 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstan
        different short addresses. However, if a device do not want to use
        short addresses at all in the PAN, a short address of 0xFFFE must
        be assigned to it. */
+
     if(pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoAllocAddr_c)
     {
       /* Assign a unique short address less than 0xfffe if the device requests so. */
@@ -750,7 +769,6 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstan
     /* Do not use security */
     pAssocRes->securityLevel = gMacSecurityNone_c;
 
-    /* Save device info. */
     FLib_MemCpy(&mDeviceShortAddress, &pAssocRes->assocShortAddress, 2);
     FLib_MemCpy(&mDeviceLongAddress,  &pAssocRes->deviceAddress,     8);
     
@@ -773,6 +791,52 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstan
     Serial_Print(interfaceId,"Message allocation failed!\n\r", gAllowToBlock_d);
     return errorAllocFailed;
   }
+
+  /************************** FASE 2: STRUCT Y COORDINATOR **************************/
+  /************************** Save device info. *********************************/
+
+  /* First we need to save the 1st extended address in the struct, save it in the first struct */
+
+  FLib_MemCpy(&Nodes->Nodes_structures[0].extendedAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+  Nodes->Nodes_structures[0].rxOnWhenIdle = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoDeviceFfd_c);
+  Nodes->Nodes_structures[0].devType = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoRxWhenIdle_c);
+  Nodes->Nodes_structures[0].shortAddress = 0x0001;
+
+  /* Saving the extended address logic */
+  if(pMsgIn->msgData.associateInd.deviceAddress != Nodes->Nodes_structures[0].extendedAddress)
+  {
+	  FLib_MemCpy(&Nodes->Nodes_structures[1].extendedAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+	  Nodes->Nodes_structures[1].rxOnWhenIdle = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoDeviceFfd_c);
+	  Nodes->Nodes_structures[1].devType = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoRxWhenIdle_c);
+	  Nodes->Nodes_structures[1].shortAddress = 0x0002;
+
+  }
+  if(pMsgIn->msgData.associateInd.deviceAddress != Nodes->Nodes_structures[1].extendedAddress)
+  {
+	  FLib_MemCpy(&Nodes->Nodes_structures[2].extendedAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+	  Nodes->Nodes_structures[2].rxOnWhenIdle = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoDeviceFfd_c);
+	  Nodes->Nodes_structures[2].devType = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoRxWhenIdle_c);
+	  Nodes->Nodes_structures[2].shortAddress = 0x0003;
+  }
+
+  if(pMsgIn->msgData.associateInd.deviceAddress != Nodes->Nodes_structures[2].extendedAddress)
+  {
+	  FLib_MemCpy(&Nodes->Nodes_structures[3].extendedAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+	  Nodes->Nodes_structures[3].rxOnWhenIdle = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoDeviceFfd_c);
+	  Nodes->Nodes_structures[3].devType = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoRxWhenIdle_c);
+	  Nodes->Nodes_structures[3].shortAddress = 0x0004;
+  }
+
+  if(pMsgIn->msgData.associateInd.deviceAddress != Nodes->Nodes_structures[3].extendedAddress)
+  {
+	  FLib_MemCpy(&Nodes->Nodes_structures[4].extendedAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+	  Nodes->Nodes_structures[4].rxOnWhenIdle = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoDeviceFfd_c);
+	  Nodes->Nodes_structures[4].devType = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoRxWhenIdle_c);
+	  Nodes->Nodes_structures[4].shortAddress = 0x0005;
+  }
+
+
+  /************************** End Fase 2 *******************************************/
 }
 
 /******************************************************************************
@@ -1040,34 +1104,7 @@ resultType_t MCPS_NWK_SapHandler (mcpsToNwkMessage_t* pMsg, instanceId_t instanc
   OSA_EventSet(mAppEvent, gAppEvtMessageFromMCPS_c);
   return gSuccess_c;
 }
-/****************** FASE 2 ******************************************/
-/* struct for Node Info */
 
-#define Num_Nodos 5
-
-typedef struct {
-    uint16_t shortAddress;
-    uint64_t extendedAddress;
-    _Bool rxOnWhenIdle;
-    _Bool devType;
-} NodeInfo_t;
-
-typedef struct {
-	NodeInfo_t Nodes[4];
-}Nodes_t;
-
-Nodes_t Nodes;
-
-/**** Info association Function  ******/
-void NodeInfoAssociation(uint16_t sAddr, uint64_t eAddr, _Bool Idle, _Bool dType) {
-	Nodes.Nodes[0].shortAddress = 0x12345;
-}
-
-/*** PENDIENTE ***
- *
- * Averiguar donde encontrar el RFF O FDD
- * Buscar que variable contiene cada cosa
- */
 
 
 
