@@ -147,6 +147,15 @@ uint8_t gState;
 * \remarks
 *
 ********************************************************************************** */
+/********************************* structs for phase 2 ******************************/
+/* struct for Node Info */
+
+typedef struct {
+	mlmeMessage_t Nodes_structures[4];
+}Nodes_t;
+
+Nodes_t *Nodes;
+
 void main_task(uint32_t param)
 {
     static uint8_t initialized = FALSE;
@@ -188,6 +197,12 @@ void main_task(uint32_t param)
 *****************************************************************************/
 void App_init( void )
 {
+	Nodes->Nodes_structures[0].msgData.associateRes.deviceAddress = 0;
+	Nodes->Nodes_structures[1].msgData.associateRes.deviceAddress = 0;
+	Nodes->Nodes_structures[2].msgData.associateRes.deviceAddress = 0;
+	Nodes->Nodes_structures[3].msgData.associateRes.deviceAddress = 0;
+	Nodes->Nodes_structures[4].msgData.associateRes.deviceAddress = 0;
+
     mAppEvent = OSA_EventCreate(TRUE);
     /* The initial application state */
     gState = stateInit;
@@ -359,6 +374,7 @@ void AppThread(uint32_t argument)
               {      
                   /* Process it */
                   ret = App_HandleMlmeInput(pMsgIn, 0);
+
                   MyTaskTimer_Stop();   /* STOP Timer from MY NEW TASK*/
                   /* Messages from the MLME must always be freed. */
               }
@@ -711,132 +727,133 @@ static uint8_t App_StartCoordinator( uint8_t appInstance )
 *
 ******************************************************************************/
 /****************** FASE 2 ******************************************/
-/* struct for Node Info */
-
-#define Num_Nodos 5
-
-typedef struct {
-    uint16_t shortAddress;
-    uint64_t extendedAddress;
-    _Bool rxOnWhenIdle;
-    _Bool devType;
-} NodeInfo_t;
-
-typedef struct {
-	NodeInfo_t Nodes_structures[4];
-}Nodes_t;
-
-Nodes_t *Nodes;
-
-static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstance)
-{
-  mlmeMessage_t *pMsg;
-  mlmeAssociateRes_t *pAssocRes;
- 
-  Serial_Print(interfaceId,"Sending the MLME-Associate Response message to the MAC...", gAllowToBlock_d);
- 
-  /* Allocate a message for the MLME */
-  pMsg = MSG_AllocType(mlmeMessage_t);
-  if(pMsg != NULL)
-  {
-    /* This is a MLME-ASSOCIATE.res command */
-    pMsg->msgType = gMlmeAssociateRes_c;
-
-    /* Create the Associate response message data. */
-    pAssocRes = &pMsg->msgData.associateRes;
-
-    /* Assign a short address to the device. In this example we simply
-       choose 0x0001. Though, all devices and coordinators in a PAN must have
-       different short addresses. However, if a device do not want to use
-       short addresses at all in the PAN, a short address of 0xFFFE must
-       be assigned to it. */
-
-    if(pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoAllocAddr_c)
-    {
-      /* Assign a unique short address less than 0xfffe if the device requests so. */
-      pAssocRes->assocShortAddress = 0x0001;
-    }
-    else
-    {
-      /* A short address of 0xfffe means that the device is granted access to
-         the PAN (Associate successful) but that long addressing is used.*/
-      pAssocRes->assocShortAddress = 0xFFFE;
-    }
-    /* Get the 64 bit address of the device requesting association. */
-    FLib_MemCpy(&pAssocRes->deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
-    /* Association granted. May also be gPanAtCapacity_c or gPanAccessDenied_c. */
-    pAssocRes->status = gSuccess_c;
-    /* Do not use security */
-    pAssocRes->securityLevel = gMacSecurityNone_c;
-
-    FLib_MemCpy(&mDeviceShortAddress, &pAssocRes->assocShortAddress, 2);
-    FLib_MemCpy(&mDeviceLongAddress,  &pAssocRes->deviceAddress,     8);
-    
-    /* Send the Associate Response to the MLME. */
-    if( gSuccess_c == NWK_MLME_SapHandler( pMsg, macInstance ) )
-    {
-      Serial_Print( interfaceId,"Done\n\r", gAllowToBlock_d );
-      return errorNoError;
-    }
-    else
-    {
-      /* One or more parameters in the message were invalid. */
-      Serial_Print( interfaceId,"Invalid parameter!\n\r", gAllowToBlock_d );
-      return errorInvalidParameter;
-    }
-  }
-  else
-  {
-    /* Allocation of a message buffer failed. */
-    Serial_Print(interfaceId,"Message allocation failed!\n\r", gAllowToBlock_d);
-    return errorAllocFailed;
-  }
+static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstance) {
 
   /************************** FASE 2: STRUCT Y COORDINATOR **************************/
-  /************************** Save device info. *********************************/
+	switch(pMsgIn->msgData.associateInd.deviceAddress)
+	{
+	case(0x0001):
+  		Nodes->Nodes_structures[0] = MSG_AllocType(mlmeMessage_t);
+  	 	Nodes->Nodes_structures[0].msgType = gMlmeAssociateRes_c;
+  	 	 	 Nodes->Nodes_structures[0].msgData.associateRes.securityLevel = gMacSecurityNone_c;
+  	 	     FLib_MemCpy(&mDeviceShortAddress, &Nodes->Nodes_structures[0].msgData.associateRes.assocShortAddress, 2);
+  	 	     FLib_MemCpy(&mDeviceLongAddress,  &Nodes->Nodes_structures[0].msgData.associateRes.deviceAddress,     8);
+  	 	     NWK_MLME_SapHandler(&Nodes->Nodes_structures[0], macInstance);
+ break;
 
-  /* First we need to save the 1st extended address in the struct, save it in the first struct */
+  	 case(0x0002):
+  		  			 Nodes->Nodes_structures[1] = MSG_AllocType(mlmeMessage_t);
+  		  	 	 	 Nodes->Nodes_structures[1].msgType = gMlmeAssociateRes_c;
+  		  	 	 	 Nodes->Nodes_structures[1].msgData.associateRes.securityLevel = gMacSecurityNone_c;
+  		  	FLib_MemCpy(&mDeviceShortAddress, &Nodes->Nodes_structures[1].msgData.associateRes.assocShortAddress, 2);
+  		  	 FLib_MemCpy(&mDeviceLongAddress,  &Nodes->Nodes_structures[1].msgData.associateRes.deviceAddress,     8);
+  		  	 NWK_MLME_SapHandler(&Nodes->Nodes_structures[1], macInstance);
+     break;
 
-  FLib_MemCpy(&Nodes->Nodes_structures[0].extendedAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
-  Nodes->Nodes_structures[0].rxOnWhenIdle = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoDeviceFfd_c);
-  Nodes->Nodes_structures[0].devType = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoRxWhenIdle_c);
-  Nodes->Nodes_structures[0].shortAddress = 0x0001;
+  	 case(0x0003):
+  		  		  			 Nodes->Nodes_structures[2] = MSG_AllocType(mlmeMessage_t);
+  		  		  	 	 	 Nodes->Nodes_structures[2].msgType = gMlmeAssociateRes_c;
+  		  		  	 	 	 Nodes->Nodes_structures[2].msgData.associateRes.securityLevel = gMacSecurityNone_c;
+  		  		  	FLib_MemCpy(&mDeviceShortAddress, &Nodes->Nodes_structures[2].msgData.associateRes.assocShortAddress, 2);
+  		  		  	 FLib_MemCpy(&mDeviceLongAddress,  &Nodes->Nodes_structures[2].msgData.associateRes.deviceAddress,     8);
+  		  		  	 NWK_MLME_SapHandler(&Nodes->Nodes_structures[2], macInstance);
+  	 break;
 
-  /* Saving the extended address logic */
-  if(pMsgIn->msgData.associateInd.deviceAddress != Nodes->Nodes_structures[0].extendedAddress)
-  {
-	  FLib_MemCpy(&Nodes->Nodes_structures[1].extendedAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
-	  Nodes->Nodes_structures[1].rxOnWhenIdle = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoDeviceFfd_c);
-	  Nodes->Nodes_structures[1].devType = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoRxWhenIdle_c);
-	  Nodes->Nodes_structures[1].shortAddress = 0x0002;
+  	 case(0x0004):
+  		  		  			 Nodes->Nodes_structures[3] = MSG_AllocType(mlmeMessage_t);
+  		  		  	 	 	 Nodes->Nodes_structures[3].msgType = gMlmeAssociateRes_c;
+  		  		  	 	 	 Nodes->Nodes_structures[3].msgData.associateRes.securityLevel = gMacSecurityNone_c;
+  		  		  	FLib_MemCpy(&mDeviceShortAddress, &Nodes->Nodes_structures[3].msgData.associateRes.assocShortAddress, 2);
+  		  		  	 FLib_MemCpy(&mDeviceLongAddress,  &Nodes->Nodes_structures[3].msgData.associateRes.deviceAddress,     8);
+  		  		  	 NWK_MLME_SapHandler(&Nodes->Nodes_structures[3], macInstance);
+  	  		 break;
+  	 case(0x0005):
+  		  		  			 Nodes->Nodes_structures[4] = MSG_AllocType(mlmeMessage_t);
+  		  		  	 	 	 Nodes->Nodes_structures[4].msgType = gMlmeAssociateRes_c;
+  		  		  	 	 	 Nodes->Nodes_structures[4].msgData.associateRes.securityLevel = gMacSecurityNone_c;
+  		  		  	FLib_MemCpy(&mDeviceShortAddress, &Nodes->Nodes_structures[4].msgData.associateRes.assocShortAddress, 2);
+  		  		  	 FLib_MemCpy(&mDeviceLongAddress,  &Nodes->Nodes_structures[4].msgData.associateRes.deviceAddress,     8);
+  		  		  	 NWK_MLME_SapHandler(&Nodes->Nodes_structures[4], macInstance);
+  	  		 break;
+  	 default:
+  		 if(Nodes->Nodes_structures[0].msgData.associateRes.deviceAddress == 0)
+  		 {
 
+  			  FLib_MemCpy(&Nodes->Nodes_structures[0].msgData.associateRes.deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+  			  //FLib_MemCpy(&Nodes->Nodes_structures[0].msgData.associateReq.capabilityInfo & gCapInfoDeviceFfd_c, &pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoDeviceFfd_c, 1);
+  			  //FLib_MemCpy(&Nodes->Nodes_structures[0].msgData.associateReq.capabilityInfo & gCapInfoRxWhenIdle_c, &pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoRxWhenIdle_c, 1);
+  			  Nodes->Nodes_structures[0].msgData.associateRes.assocShortAddress = 0x0001;
+
+  	  		 Nodes->Nodes_structures[0] = MSG_AllocType(mlmeMessage_t);
+  	  	 	 Nodes->Nodes_structures[0].msgType = gMlmeAssociateRes_c;
+  	  	 	 Nodes->Nodes_structures[0].msgData.associateRes.securityLevel = gMacSecurityNone_c;
+  	  	 	 FLib_MemCpy(&mDeviceShortAddress, &Nodes->Nodes_structures[0].msgData.associateRes.assocShortAddress, 2);
+  	  	 	 FLib_MemCpy(&mDeviceLongAddress,  &Nodes->Nodes_structures[0].msgData.associateRes.deviceAddress,     8);
+  	  	 	 NWK_MLME_SapHandler(&Nodes->Nodes_structures[0], macInstance);
+  		 }
+
+  		 else if (Nodes->Nodes_structures[1].msgData.associateRes.deviceAddress == 0)
+  		 {
+
+ 			  FLib_MemCpy(&Nodes->Nodes_structures[1].msgData.associateRes.deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+ 			  //FLib_MemCpy(&Nodes->Nodes_structures[1].msgData.associateReq.capabilityInfo & gCapInfoDeviceFfd_c, &pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoDeviceFfd_c, 1);
+ 			  //FLib_MemCpy(&Nodes->Nodes_structures[1].msgData.associateReq.capabilityInfo & gCapInfoRxWhenIdle_c, &pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoRxWhenIdle_c, 1);
+ 			  Nodes->Nodes_structures[1].msgData.associateRes.assocShortAddress = 0x0002;
+
+ 	  		 Nodes->Nodes_structures[1] = MSG_AllocType(mlmeMessage_t);
+ 	  	 	 Nodes->Nodes_structures[1].msgType = gMlmeAssociateRes_c;
+ 	  	 	 Nodes->Nodes_structures[1].msgData.associateRes.securityLevel = gMacSecurityNone_c;
+ 	  	 	 FLib_MemCpy(&mDeviceShortAddress, &Nodes->Nodes_structures[1].msgData.associateRes.assocShortAddress, 2);
+ 	  	 	 FLib_MemCpy(&mDeviceLongAddress,  &Nodes->Nodes_structures[1].msgData.associateRes.deviceAddress,     8);
+ 	  	 	 NWK_MLME_SapHandler(&Nodes->Nodes_structures[1], macInstance);
+  		 }
+
+  		 else if(Nodes->Nodes_structures[2].msgData.associateRes.deviceAddress == 0)
+  		 {
+			 FLib_MemCpy(&Nodes->Nodes_structures[2].msgData.associateRes.deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+			 //FLib_MemCpy(&Nodes->Nodes_structures[2].msgData.associateReq.capabilityInfo & gCapInfoDeviceFfd_c, &pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoDeviceFfd_c, 1);
+			 //FLib_MemCpy(&Nodes->Nodes_structures[2].msgData.associateReq.capabilityInfo & gCapInfoRxWhenIdle_c, &pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoRxWhenIdle_c, 1);
+			 Nodes->Nodes_structures[2].msgData.associateRes.assocShortAddress = 0x0003;
+
+	  		 Nodes->Nodes_structures[2] = MSG_AllocType(mlmeMessage_t);
+	  	 	 Nodes->Nodes_structures[2].msgType = gMlmeAssociateRes_c;
+	  	 	 Nodes->Nodes_structures[2].msgData.associateRes.securityLevel = gMacSecurityNone_c;
+	  	 	 FLib_MemCpy(&mDeviceShortAddress, &Nodes->Nodes_structures[2].msgData.associateRes.assocShortAddress, 2);
+	  	 	 FLib_MemCpy(&mDeviceLongAddress,  &Nodes->Nodes_structures[2].msgData.associateRes.deviceAddress,     8);
+	  	 	 NWK_MLME_SapHandler(&Nodes->Nodes_structures[2], macInstance);
+  		 }
+
+  		 else if(Nodes->Nodes_structures[3].msgData.associateRes.deviceAddress == 0)
+  		 {
+			 FLib_MemCpy(&Nodes->Nodes_structures[3].msgData.associateRes.deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+			 //FLib_MemCpy(&Nodes->Nodes_structures[3].msgData.associateReq.capabilityInfo & gCapInfoDeviceFfd_c, &pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoDeviceFfd_c, 1);
+			 //FLib_MemCpy(&Nodes->Nodes_structures[3].msgData.associateReq.capabilityInfo & gCapInfoRxWhenIdle_c, &pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoRxWhenIdle_c, 1);
+			 Nodes->Nodes_structures[3].msgData.associateRes.assocShortAddress = 0x0004;
+
+	  		 Nodes->Nodes_structures[3] = MSG_AllocType(mlmeMessage_t);
+	  	 	 Nodes->Nodes_structures[3].msgType = gMlmeAssociateRes_c;
+	  	 	 Nodes->Nodes_structures[3].msgData.associateRes.securityLevel = gMacSecurityNone_c;
+	  	 	 FLib_MemCpy(&mDeviceShortAddress, &Nodes->Nodes_structures[3].msgData.associateRes.assocShortAddress, 2);
+	  	 	 FLib_MemCpy(&mDeviceLongAddress,  &Nodes->Nodes_structures[3].msgData.associateRes.deviceAddress,     8);
+	  	 	 NWK_MLME_SapHandler(&Nodes->Nodes_structures[3], macInstance);
+  		 }
+ 		 else if(Nodes->Nodes_structures[4].msgData.associateRes.deviceAddress== 0)
+  		 {
+			 FLib_MemCpy(&Nodes->Nodes_structures[4].msgData.associateRes.deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
+			 //FLib_MemCpy(&Nodes->Nodes_structures[4].msgData.associateReq.capabilityInfo & gCapInfoDeviceFfd_c, &pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoDeviceFfd_c, 1);
+			 //FLib_MemCpy(&Nodes->Nodes_structures[4].msgData.associateReq.capabilityInfo & gCapInfoRxWhenIdle_c, &pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoRxWhenIdle_c, 1);
+			 Nodes->Nodes_structures[4].msgData.associateRes.assocShortAddress = 0x0005;
+
+	  		 Nodes->Nodes_structures[4] = MSG_AllocType(mlmeMessage_t);
+	  	 	 Nodes->Nodes_structures[4].msgType = gMlmeAssociateRes_c;
+	  	 	 Nodes->Nodes_structures[4].msgData.associateRes.securityLevel = gMacSecurityNone_c;
+	  	 	 FLib_MemCpy(&mDeviceShortAddress, &Nodes->Nodes_structures[4].msgData.associateRes.assocShortAddress, 2);
+	  	 	 FLib_MemCpy(&mDeviceLongAddress,  &Nodes->Nodes_structures[4].msgData.associateRes.deviceAddress,     8);
+	  	 	 NWK_MLME_SapHandler(&Nodes->Nodes_structures[4], macInstance);
+  		 }
+  		 break;
   }
-  if(pMsgIn->msgData.associateInd.deviceAddress != Nodes->Nodes_structures[1].extendedAddress)
-  {
-	  FLib_MemCpy(&Nodes->Nodes_structures[2].extendedAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
-	  Nodes->Nodes_structures[2].rxOnWhenIdle = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoDeviceFfd_c);
-	  Nodes->Nodes_structures[2].devType = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoRxWhenIdle_c);
-	  Nodes->Nodes_structures[2].shortAddress = 0x0003;
-  }
-
-  if(pMsgIn->msgData.associateInd.deviceAddress != Nodes->Nodes_structures[2].extendedAddress)
-  {
-	  FLib_MemCpy(&Nodes->Nodes_structures[3].extendedAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
-	  Nodes->Nodes_structures[3].rxOnWhenIdle = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoDeviceFfd_c);
-	  Nodes->Nodes_structures[3].devType = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoRxWhenIdle_c);
-	  Nodes->Nodes_structures[3].shortAddress = 0x0004;
-  }
-
-  if(pMsgIn->msgData.associateInd.deviceAddress != Nodes->Nodes_structures[3].extendedAddress)
-  {
-	  FLib_MemCpy(&Nodes->Nodes_structures[4].extendedAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
-	  Nodes->Nodes_structures[4].rxOnWhenIdle = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoDeviceFfd_c);
-	  Nodes->Nodes_structures[4].devType = (pMsgIn->msgData.associateInd.capabilityInfo = gCapInfoRxWhenIdle_c);
-	  Nodes->Nodes_structures[4].shortAddress = 0x0005;
-  }
-
-
-  /************************** End Fase 2 *******************************************/
+	   return errorNoError;
 }
 
 /******************************************************************************
