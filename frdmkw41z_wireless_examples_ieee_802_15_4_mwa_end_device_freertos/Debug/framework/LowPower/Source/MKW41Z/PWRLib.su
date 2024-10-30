@@ -1,5 +1,5 @@
-C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/core_cm0plus.h:745:22:NVIC_EnableIRQ	16	static
-C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/core_cm0plus.h:804:22:NVIC_SetPriority	24	static
+S:\Workspace\Inalambrico\practicas\p1\P1-Redes\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/core_cm0plus.h:745:22:NVIC_EnableIRQ	16	static
+S:\Workspace\Inalambrico\practicas\p1\P1-Redes\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/core_cm0plus.h:804:22:NVIC_SetPriority	24	static
 ../framework/LowPower/Source/MKW41Z/PWRLib.c:154:6:PWRLib_ConfigRSIM	24	static
 ../framework/LowPower/Source/MKW41Z/PWRLib.c:365:8:PWRLib_ClearRSIMDsmInt	8	static
 ../framework/LowPower/Source/MKW41Z/PWRLib.c:385:6:PWRLib_ConfigLLWU	16	static

@@ -1,7 +1,7 @@
-C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/core_cm0plus.h:745:22:NVIC_EnableIRQ	16	static
-C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/core_cm0plus.h:791:22:NVIC_ClearPendingIRQ	16	static
-C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/core_cm0plus.h:804:22:NVIC_SetPriority	24	static
-C:\Users\adrgm\Documents\MCUXpressoIDE_11.6.0_8187\workspace\Wireless\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\drivers/fsl_clock.h:580:20:CLOCK_EnableClock	24	static
+S:\Workspace\Inalambrico\practicas\p1\P1-Redes\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/core_cm0plus.h:745:22:NVIC_EnableIRQ	16	static
+S:\Workspace\Inalambrico\practicas\p1\P1-Redes\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/core_cm0plus.h:791:22:NVIC_ClearPendingIRQ	16	static
+S:\Workspace\Inalambrico\practicas\p1\P1-Redes\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\CMSIS/core_cm0plus.h:804:22:NVIC_SetPriority	24	static
+S:\Workspace\Inalambrico\practicas\p1\P1-Redes\frdmkw41z_wireless_examples_ieee_802_15_4_mwa_end_device_freertos\drivers/fsl_clock.h:580:20:CLOCK_EnableClock	24	static
 ../framework/TimersManager/Source/TimersManager.c:296:20:TMR_GetTimerStatus	16	static
 ../framework/TimersManager/Source/TimersManager.c:309:13:TMR_SetTimerStatus	16	static
 ../framework/TimersManager/Source/TimersManager.c:323:23:TMR_GetTimerType	16	static

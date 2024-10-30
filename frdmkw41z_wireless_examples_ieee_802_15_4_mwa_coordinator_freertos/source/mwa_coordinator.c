@@ -737,10 +737,6 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstan
 
 	  mlmeMessage_t *pMsg;
 	  mlmeAssociateRes_t *pAssocRes;
-	  pMsg = MSG_AllocType(mlmeMessage_t);
-
-	  pAssocRes = &pMsg->msgData.associateRes;
-
 
 	if (ext1 == 0)
 	{
@@ -758,6 +754,8 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstan
 
 	if (pMsgIn->msgData.associateInd.deviceAddress == ext1)
 	{
+		pMsg = MSG_AllocType(mlmeMessage_t);
+		pAssocRes = &pMsg->msgData.associateRes;
 		/**************** Struct 1 values *****************/
 		FLib_MemCpy(&Nodes->Nodes_structures[0].msgData.associateRes.deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
 		Nodes->Nodes_structures[0].msgData.associateReq.capabilityInfo = pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoDeviceFfd_c;
@@ -781,15 +779,17 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstan
 	}
 	else if (pMsgIn->msgData.associateInd.deviceAddress == ext2)
 	{
+		pMsg = MSG_AllocType(mlmeMessage_t);
+		pAssocRes = &pMsg->msgData.associateRes;
 		/**************** Struct 2 values *****************/
 		FLib_MemCpy(&Nodes->Nodes_structures[1].msgData.associateRes.deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
 		Nodes->Nodes_structures[1].msgData.associateReq.capabilityInfo = pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoDeviceFfd_c;
 		Nodes->Nodes_structures[1].msgData.associateReq.capabilityInfo = pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoRxWhenIdle_c;
-		Nodes->Nodes_structures[1].msgData.associateRes.assocShortAddress = 0x0010;
+		Nodes->Nodes_structures[1].msgData.associateRes.assocShortAddress = 0x0002;
 
 		/**************** Response ***********************/
 		pMsg->msgType = gMlmeAssociateRes_c;
-		pAssocRes->assocShortAddress = 0x0010;
+		pAssocRes->assocShortAddress = 0x0002;
 		FLib_MemCpy(&pAssocRes->deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
 		pAssocRes->status = gSuccess_c;
 		pAssocRes->securityLevel = gMacSecurityNone_c;
@@ -803,15 +803,17 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstan
 	}
 	else if(pMsgIn->msgData.associateInd.deviceAddress == ext3)
 	{
+		pMsg = MSG_AllocType(mlmeMessage_t);
+		pAssocRes = &pMsg->msgData.associateRes;
 		/**************** Struct 3 values *****************/
 		FLib_MemCpy(&Nodes->Nodes_structures[2].msgData.associateRes.deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
 		Nodes->Nodes_structures[2].msgData.associateReq.capabilityInfo = pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoDeviceFfd_c;
 		Nodes->Nodes_structures[2].msgData.associateReq.capabilityInfo = pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoRxWhenIdle_c;
-		Nodes->Nodes_structures[2].msgData.associateRes.assocShortAddress = 0x0011;
+		Nodes->Nodes_structures[2].msgData.associateRes.assocShortAddress = 0x003;
 
 		/**************** Response ***********************/
 		pMsg->msgType = gMlmeAssociateRes_c;
-		pAssocRes->assocShortAddress = 0x0011;
+		pAssocRes->assocShortAddress = 0x0003;
 	    FLib_MemCpy(&pAssocRes->deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
 		pAssocRes->status = gSuccess_c;
 		pAssocRes->securityLevel = gMacSecurityNone_c;
@@ -825,15 +827,17 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstan
 	}
 	else if(pMsgIn->msgData.associateInd.deviceAddress == ext4)
 	{
+		pMsg = MSG_AllocType(mlmeMessage_t);
+		pAssocRes = &pMsg->msgData.associateRes;
 		/**************** Struct 4 values *****************/
 		FLib_MemCpy(&Nodes->Nodes_structures[3].msgData.associateRes.deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
 		Nodes->Nodes_structures[3].msgData.associateReq.capabilityInfo = pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoDeviceFfd_c;
 		Nodes->Nodes_structures[3].msgData.associateReq.capabilityInfo = pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoRxWhenIdle_c;
-		Nodes->Nodes_structures[3].msgData.associateRes.assocShortAddress = 0x0100;
+		Nodes->Nodes_structures[3].msgData.associateRes.assocShortAddress = 0x0004;
 
 		/**************** Response ***********************/
 		pMsg->msgType = gMlmeAssociateRes_c;
-		pAssocRes->assocShortAddress = 0x0100;
+		pAssocRes->assocShortAddress = 0x0004;
 		FLib_MemCpy(&pAssocRes->deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
 		pAssocRes->status = gSuccess_c;
 		pAssocRes->securityLevel = gMacSecurityNone_c;
@@ -847,15 +851,17 @@ static uint8_t App_SendAssociateResponse(nwkMessage_t *pMsgIn, uint8_t appInstan
 	}
 	else if(pMsgIn->msgData.associateInd.deviceAddress == ext5)
 	{
+		pMsg = MSG_AllocType(mlmeMessage_t);
+	    pAssocRes = &pMsg->msgData.associateRes;
 		/**************** Struct 4 values *****************/
 		FLib_MemCpy(&Nodes->Nodes_structures[4].msgData.associateRes.deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
 		Nodes->Nodes_structures[4].msgData.associateReq.capabilityInfo = pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoDeviceFfd_c;
 		Nodes->Nodes_structures[4].msgData.associateReq.capabilityInfo = pMsgIn->msgData.associateInd.capabilityInfo & gCapInfoRxWhenIdle_c;
-		Nodes->Nodes_structures[4].msgData.associateRes.assocShortAddress = 0x1000;
+		Nodes->Nodes_structures[4].msgData.associateRes.assocShortAddress = 0x0005;
 
 		/**************** Response ***********************/
 		pMsg->msgType = gMlmeAssociateRes_c;
-		pAssocRes->assocShortAddress = 0x1000;
+		pAssocRes->assocShortAddress = 0x0005;
 		FLib_MemCpy(&pAssocRes->deviceAddress, &pMsgIn->msgData.associateInd.deviceAddress, 8);
 		pAssocRes->status = gSuccess_c;
 		pAssocRes->securityLevel = gMacSecurityNone_c;

@@ -35,7 +35,7 @@
 								<option id="com.crt.advproject.cpp.exe.debug.option.optimization.level.1024703894" superClass="com.crt.advproject.cpp.exe.debug.option.optimization.level" useByScannerDiscovery="true"/>
 								<option id="gnu.cpp.compiler.option.optimization.flags.1539234211" superClass="gnu.cpp.compiler.option.optimization.flags" useByScannerDiscovery="false" value="-fno-common" valueType="string"/>
 								<option id="com.crt.advproject.cpp.exe.debug.option.debugging.level.1589919814" superClass="com.crt.advproject.cpp.exe.debug.option.debugging.level" useByScannerDiscovery="false"/>
-								<option id="gnu.cpp.compiler.option.debugging.other.304878690" superClass="gnu.cpp.compiler.option.debugging.other" useByScannerDiscovery="false"/>
+								<option id="gnu.cpp.compiler.option.debugging.other.304878690" superClass="gnu.cpp.compiler.option.debugging.other" useByScannerDiscovery="false" value="-gdwarf-4" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.debugging.prof.224615525" superClass="gnu.cpp.compiler.option.debugging.prof" useByScannerDiscovery="false"/>
 								<option id="gnu.cpp.compiler.option.debugging.gprof.1601168409" superClass="gnu.cpp.compiler.option.debugging.gprof" useByScannerDiscovery="false"/>
 								<option id="gnu.cpp.compiler.option.debugging.codecov.492085701" superClass="gnu.cpp.compiler.option.debugging.codecov" useByScannerDiscovery="false"/>
@@ -156,7 +156,7 @@
 								<option id="com.crt.advproject.gcc.exe.debug.option.optimization.level.476498804" superClass="com.crt.advproject.gcc.exe.debug.option.optimization.level" useByScannerDiscovery="true"/>
 								<option id="gnu.c.compiler.option.optimization.flags.470619848" superClass="gnu.c.compiler.option.optimization.flags" useByScannerDiscovery="false" value="-fno-common" valueType="string"/>
 								<option id="com.crt.advproject.gcc.exe.debug.option.debugging.level.1220468113" superClass="com.crt.advproject.gcc.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.default" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.debugging.other.1836959142" superClass="gnu.c.compiler.option.debugging.other" useByScannerDiscovery="false"/>
+								<option id="gnu.c.compiler.option.debugging.other.1836959142" superClass="gnu.c.compiler.option.debugging.other" useByScannerDiscovery="false" value="-gdwarf-4" valueType="string"/>
 								<option id="gnu.c.compiler.option.debugging.prof.647310324" superClass="gnu.c.compiler.option.debugging.prof" useByScannerDiscovery="false"/>
 								<option id="gnu.c.compiler.option.debugging.gprof.1599138266" superClass="gnu.c.compiler.option.debugging.gprof" useByScannerDiscovery="false"/>
 								<option id="gnu.c.compiler.option.debugging.codecov.1221221128" superClass="gnu.c.compiler.option.debugging.codecov" useByScannerDiscovery="false"/>
@@ -444,7 +444,7 @@
 								<option id="gnu.cpp.compiler.option.include.paths.2121313169" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false"/>
 								<option id="gnu.cpp.compiler.option.include.files.142372794" superClass="gnu.cpp.compiler.option.include.files" useByScannerDiscovery="false"/>
 								<option id="gnu.cpp.compiler.option.optimization.flags.1165251092" superClass="gnu.cpp.compiler.option.optimization.flags" useByScannerDiscovery="false" value="-fno-common" valueType="string"/>
-								<option id="gnu.cpp.compiler.option.debugging.other.272055561" superClass="gnu.cpp.compiler.option.debugging.other" useByScannerDiscovery="false"/>
+								<option id="gnu.cpp.compiler.option.debugging.other.272055561" superClass="gnu.cpp.compiler.option.debugging.other" useByScannerDiscovery="false" value="-gdwarf-4" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.debugging.prof.779576608" superClass="gnu.cpp.compiler.option.debugging.prof" useByScannerDiscovery="false"/>
 								<option id="gnu.cpp.compiler.option.debugging.gprof.644621165" superClass="gnu.cpp.compiler.option.debugging.gprof" useByScannerDiscovery="false"/>
 								<option id="gnu.cpp.compiler.option.debugging.codecov.444071159" superClass="gnu.cpp.compiler.option.debugging.codecov" useByScannerDiscovery="false"/>
@@ -564,7 +564,7 @@
 								<option id="gnu.c.compiler.option.include.files.221426737" superClass="gnu.c.compiler.option.include.files" useByScannerDiscovery="false"/>
 								<option id="gnu.c.compiler.option.optimization.flags.165319978" superClass="gnu.c.compiler.option.optimization.flags" useByScannerDiscovery="false" value="-fno-common" valueType="string"/>
 								<option id="com.crt.advproject.gcc.exe.release.option.debugging.level.1329117991" superClass="com.crt.advproject.gcc.exe.release.option.debugging.level" useByScannerDiscovery="false"/>
-								<option id="gnu.c.compiler.option.debugging.other.804947407" superClass="gnu.c.compiler.option.debugging.other" useByScannerDiscovery="false"/>
+								<option id="gnu.c.compiler.option.debugging.other.804947407" superClass="gnu.c.compiler.option.debugging.other" useByScannerDiscovery="false" value="-gdwarf-4" valueType="string"/>
 								<option id="gnu.c.compiler.option.debugging.prof.1019635052" superClass="gnu.c.compiler.option.debugging.prof" useByScannerDiscovery="false"/>
 								<option id="gnu.c.compiler.option.debugging.gprof.1876017001" superClass="gnu.c.compiler.option.debugging.gprof" useByScannerDiscovery="false"/>
 								<option id="gnu.c.compiler.option.debugging.codecov.1237358652" superClass="gnu.c.compiler.option.debugging.codecov" useByScannerDiscovery="false"/>
@@ -877,4 +877,5 @@
 	</storageModule>
 	<storageModule moduleId="refreshScope"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule moduleId="openCmsis"/>
 </cproject>
